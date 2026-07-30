@@ -1,65 +1,469 @@
 {
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "brand": [
-    { "title": "瑞幸咖啡 x 黑神话：悟空联名爆火", "desc": "瑞幸联动黑神话悟空推出限定饮品，线上线下齐发力，单日销量破千万杯。", "tags": ["跨界联名"], "source": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-06-23/doc-incymrvw8867890.shtml" },
-    { "title": "蜜雪冰城雪王 IP 出海东南亚", "desc": "雪王形象本土化改编，在越南/泰国引发模仿潮，门店数突破 5000 家。", "tags": ["IP出海"], "source": "36氪", "url": "https://www.36kr.com/p/2988888888888" },
-    { "title": "Apple Vision Pro 2 营销叙事转向生产力", "desc": "苹果将空间计算定位从娱乐转向办公协作，B端营销材料全面改版。", "tags": ["科技"], "source": "The Verge", "url": "https://www.theverge.com/apple" },
-    { "title": "Duolingo 杀死 Duo 鸟事件营销", "desc": "多邻国官方宣布\"杀死\"吉祥物 Duo，全球社交媒体疯传讨论量破亿。", "tags": ["事件营销"], "source": "Adweek", "url": "https://www.adweek.com/brand-marketing/" },
-    { "title": "李子园粉色液体二次创作走红", "desc": "用户自发将李子园甜牛奶包装进行二次创作，品牌顺势推出粉色主题月活动。", "tags": ["UGC"], "source": "SocialBeta", "url": "https://socialbeta.com/t/case-study/" },
-    { "title": "OpenAI Sora 视频生成引爆创意圈", "desc": "AI 生成的电影级短视频刷屏，广告公司纷纷展示 Sora 创意应用案例。", "tags": ["AI营销"], "source": "Campaign Asia", "url": "https://campaignasia.com/" },
-    { "title": "喜茶「喜茶一下」谐音梗出圈", "desc": "喜茶借高考季推「喜茶一下」谐音文案，话题阅读量超 3 亿。", "tags": ["借势营销"], "source": "梅花网", "url": "https://www.meihua.info/" },
-    { "title": "小米汽车 SU7 交付仪式感营销", "desc": "交车仪式堪比婚礼，车主自发传播形成病毒式裂变。", "tags": ["体验营销"], "source": "极客公园", "url": "https://www.geekpark.net/" },
-    { "title": "PENFOLD 平面设计师羊群事件", "desc": "英国墨水品牌 PENFOLD 发起\"羊群入侵城市\"户外装置艺术，伦敦街头打卡爆满。", "tags": ["户外创意"], "source": "AdsoftheWorld", "url": "https://www.adsoftheworld.com/" },
-    { "title": "优衣库 UT 联名 KAWS 再度售罄", "desc": "KAWS x 优衣库 UT 系列线上 3 秒售罄，二手市场溢价超 5 倍。", "tags": ["限量联名"], "source": "Hypebeast", "url": "https://hypebeast.com/" }
+    {
+      "title": "没名分，抢戏份 | 2026足球盛宴品牌营销“有意思”案例TOP20",
+      "desc": "没名分，抢戏份 | 2026足球盛宴品牌营销“有意思”案例TOP20 新浪网",
+      "tags": [
+        "创意"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9idnAtMHpkYTVidEtxQy0teTBSZmdVZlFYeFJDUXJ1MjZTNl9OVFdpOTFNMHhfaHJZenN0dzl5MXpmSlRiTlp3Q0FYQWdEalltMjdXcEJha1JuajFybi1kdUNPeUYteWZZZXlUaVZpSQ?oc=5"
+    },
+    {
+      "title": "2025十大标杆营销案例！",
+      "desc": "2025十大标杆营销案例！ 新浪网",
+      "tags": [
+        "创意"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5qRUxXRUpwTnhINUN4cUM2MExPVnQ0cmo0aF9IX3NBUTVpZDA0WXR6M1FMYy0zaE5qbW92eVQ1alY0X3JLaXV2ajhLUVE2bm44WG9zZHlBLUVmUFd2YldaRzlOSkY1VDFSUjN2Ny1iRHh4VDIya0E?oc=5"
+    },
+    {
+      "title": "2026年3大营销洞察：当品牌离开舞台中央",
+      "desc": "2026年3大营销洞察：当品牌离开舞台中央 36 Kr",
+      "tags": [
+        "创意"
+      ],
+      "source": "36 Kr",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5YQnp1dld0WWFfTlBvMHVCWEdDYldNMThDd3VVa2tuZ1ZtSGJoaXFPSDgxN0hIUHlhZW01YmNDZG9fNGxuUDJhajRxWk9GQQ?oc=5"
+    },
+    {
+      "title": "2026世界杯六大品牌营销案例盘点",
+      "desc": "2026世界杯六大品牌营销案例盘点 品牌方舟BrandArk",
+      "tags": [
+        "创意"
+      ],
+      "source": "品牌方舟BrandArk",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE03ekpmcHhORjhCWkl0YV80UDltM2lBc3NiV01EOGJxaWtGZ2FSR1dWeUxBcUtJem5hUFBIRFQwTHlUMjEySUVXUDlLdw?oc=5"
+    },
+    {
+      "title": "2025 创意格局重塑：解码品牌叙事新趋势 | 广告",
+      "desc": "2025 创意格局重塑：解码品牌叙事新趋势 | 广告 Campaign 中国",
+      "tags": [
+        "创意"
+      ],
+      "source": "Campaign 中国",
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPMlVCS2ZYZWplR2tCVlRvZXlYeVo4eE5ONmg3NmFNTmRTZlc5cVpvbHFrVGlNWk5uVVkwd3lYWmpNXzRyUEFOVzlmVmo4MFAwalJKNElhejBvMUFCOV9xZTBoN0t2ZF9VQmswZGIwbFZEckpwc0tEVG1nT0ZqcmM4dldKcURlMmxkc0pKWWpEWk9MQjZoQ2F2Z1BhZ01XMlg4dUhabTZCaE5lMDlNMERCdWkzUEpRSTdMbk5IbEQ3MF9HNUZmZ2FMSVNzZzNDTUpxSUtRNi1INHpTdVduc09wTVJjRENOT2REVW41YUxlTmduS1hvUkl4ZTBKUjZYNG5zUDdnckNDMW41enJUcnczR1MzYU1FSlNiSWpHck4zUQ?oc=5"
+    },
+    {
+      "title": "对于广告和创意而言，现在是前所未有的好时机| 广告",
+      "desc": "对于广告和创意而言，现在是前所未有的好时机| 广告 Campaign 中国",
+      "tags": [
+        "创意"
+      ],
+      "source": "Campaign 中国",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxPNVlUaFZVV0VNS1lheFE3VElxbFU3dUlwTWF6Q29DREdTUmlnM0pIcGRtYmV0QW90ajVqa0xBeEJZSVhqaTgzNnpucEd4Z0hEcnJnelk0aUtuMFAzaGR0bVdYVzhHYmJvUFFmbkhieC1xTHhjdEVqcVYzZmQ4WXN5R25uNFZvTkVlQTZkZFl1WU9OeVRLcHBrbnU4V1ZpQUpwd1pRZVV4M1hHUF82RXJZV1FoMXhGbXZTc01BOEpGcmQybkFpVmtsSUo3cXpxRG9JbzhIQXJzZERvTDJuODlkVVFrejhhSnhUZHJwZWwwR0FmWEhMZUFYQ0hjb19UaXJzVUJKcmx2Rmh3SHA4UG9oTDhqMlM2Y1V4VERuT2JKUmdZS3ROUVppUUVxRWtaaEFYM0dOY2R6Z2Nvblhaa21EV0lEXzIycnZiV015eVlheEowNU4t?oc=5"
+    },
+    {
+      "title": "Campaign独家专访阳狮北京和上海首席创意官| 广告",
+      "desc": "Campaign独家专访阳狮北京和上海首席创意官| 广告 Campaign 中国",
+      "tags": [
+        "创意"
+      ],
+      "source": "Campaign 中国",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNaUtqVHcxclhYZXJydUNEYVFHSnp2S2VjR05ZTHROcm8yQy1DSFdSZUxyTWk2V2FDM3VVMmpQVlplQ3ktUEJGRGNCWGhpTm56RU1EYXR4ejJNTnRyd2RmakpyQzRELUUxNlFONFQzY1REWVZweW1mdVdCbGFlaUl6VGdPaVcwemxsbnBOdm5qMDJTcFJSS080cFhvbldEY0ZidjZldEFtSy1QVHlfUHJxNjVFRWRxUGhWNVVVc3ZzVm9SX0ZkbVJ2MUctQTFDTHpQY2pnbjNZX2JvTU1ZWTNib2RPbkdZSnpOWGdiakpaZTVaY3NVdDhsc0toUHduTEdTd2dSLXJTWFNLTGEwS0dKZzlVT09nSDFxci12SWxXNVV4RDQ?oc=5"
+    },
+    {
+      "title": "“创意无边界”——这是戎马广告保持独立性的秘密吗？",
+      "desc": "“创意无边界”——这是戎马广告保持独立性的秘密吗？ Campaign 中国",
+      "tags": [
+        "创意"
+      ],
+      "source": "Campaign 中国",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxPUHptY29uVkhXZWY5VVY5UGNwZUJJSW5WcU84SnRtQlBwNTh4bHJZNWQ2VXd2Z0VncjhQUF9wU1Q2YUY1cmh3dmxyRE50NVQtOWJJVUtyd0stVU94bUhnTUFiNS1ETHlUUWZPeUdOamJGellnZkxSVEVfVUYwdVdIYTVYZlFQZl9mcEtoaXpGcEJ2NWhBdG52akJOeWhGQnFmeUZwMUF0VDBnYnk0elVaNDg5SzQ4S2dVMktpS1llUnNKSnVDby1CUDFqMzVJanROcDg5TU81Z0NYUGhUS2FCbXRTMFlZU0Q3Nzdzc0J6eVdlRzJBWHJKNnBWNlJ3TUdNYWlXMlpOT3JDWktmVkJYVjRuQmdsU0p6dnA2WHpEQ3ZraGRaRXlYNHVmM0hYMndfUlJIVDAyOTZWNEF5cnJTdGlwcWNmWDZFZFRfSTJRcy14Rl82?oc=5"
+    },
+    {
+      "title": "2026 年病毒式营销活动：哪些方法有效，为何能够传播，以及品牌如何将注意力转化为收入",
+      "desc": "2026 年病毒式营销活动：哪些方法有效，为何能够传播，以及品牌如何将注意力转化为收入 ALM Corp",
+      "tags": [
+        "Viral"
+      ],
+      "source": "ALM Corp",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE93TVR3WDhSYjEtYjNrNndKUEFjcjVVVktsNzJGdmllMUpFV1ZkNV9KMEpZdERUNERQMTIyazB3YjhId0c5bG5lME5ZelJvLW5xS3RuMmlNeDlZUmQ3QVFPWGxWa2FhWVdwM1Rfa0dRQQ?oc=5"
+    },
+    {
+      "title": "Green Man Gaming Partners with Regroup China to Launch and Promote PC Game Bundl",
+      "desc": "Green Man Gaming Partners with Regroup China to Launch and Promote PC Game Bundles in China Green Man Gaming",
+      "tags": [
+        "创意"
+      ],
+      "source": "Green Man Gaming",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcFZmMTBzZDJic3l0b3QxQU44cHU5X0JMdU05Y1ZYYTNnR3BpWDk4akdXNVAwZHVueDVxcWZybjFiTFFNaG1IVkdFQUJXME9xRWlvSkFmTHhRYW50Z3M0eS1TTDJrUlVGekU4dWpFYWxVbm55emUyeVpvak9CX1pSZGlEQk9FZ1h2NVFKUjRmanpYcDBJeEQ1SnNBdDNmYVFlZXIzbQ?oc=5"
+    }
   ],
   "design": [
-    { "title": "Apple 2026 发布会视觉系统", "desc": "极简留白 + 微质感渐变，延续「少即是多」，交互动效更克制顺滑。", "tags": ["视觉"], "source": "Apple Design", "url": "https://www.apple.com/newsroom/" },
-    { "title": "玻璃拟态（Glassmorphism）2026 回潮", "desc": "半透明磨砂面板 + 背景模糊重新流行，常用于 Dashboard 与卡片设计。", "tags": ["UI趋势"], "source": "Dribbble", "url": "https://dribbble.com/search/glassmorphism-dashboard" },
-    { "title": "AI 生成式设计工具盘点", "desc": "Midjourney v7、Adobe Firefly、Figma AI 正在重塑从概念到成品的工作流。", "tags": ["AI设计"], "source": "Smashing Magazine", "url": "https://www.smashingmagazine.com/" },
-    { "title": "瑞士国际主义排版回潮", "desc": "网格系统、无衬线字体、强对齐——经典理性美学在品牌视觉中强势回归。", "tags": ["排版"], "source": "Typographic", "url": "https://typography.com/" },
-    { "title": "新拟态 vs 极简：2026 取舍", "desc": "设计师在「柔和立体」与「扁平极致」之间寻找平衡，强调可访问性。", "tags": ["趋势"], "source": "UX Collective", "url": "https://uxdesign.cc/" },
-    { "title": "可持续设计案例合集", "desc": "低碳配色、可回收包装、极简结构——「环保」成为品牌视觉新语言。", "tags": ["可持续"], "source": "Design Milk", "url": "https://designmilk.com/" },
-    { "title": "动态字体（Variable Fonts）实战", "desc": "单一字体文件涵盖粗细/宽度/斜率连续变化，网页性能与表现力双赢。", "tags": ["字体"], "source": "Fonts.google", "url": "https://fonts.google.com/specimen/Inter" },
-    { "title": "3D 元素在 UI 中爆发", "desc": "从图标到背景插图，3D 渲染元素让界面更有层次感和趣味性。", "tags": ["3D"], "source": "Behance", "url": "https://www.be.net/search?search=3d-ui-design" },
-    { "title": "暗色模式设计最佳实践", "desc": "不是简单的颜色反转——真正的暗色模式需要重新思考层级、对比和色彩心理学。", "tags": ["暗色模式"], "source": "CSS-Tricks", "url": "https://css-tricks.com/" },
-    { "title": "微交互细节决定体验", "desc": "按钮按压反馈、加载动画、下拉刷新——好的微交互让产品「活」起来。", "tags": ["交互"], "source": "Law of UX", "url": "https://lawsofux.com/" }
+    {
+      "title": "趋势坐标！「CMF趋势LAB_2026」3.18启幕，亮点全览",
+      "desc": "趋势坐标！「CMF趋势LAB_2026」3.18启幕，亮点全览 新华报业网",
+      "tags": [
+        "趋势"
+      ],
+      "source": "新华报业网",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9WeWR1b0NJbDFqdlFJX2dkQ0V3VTV3QXg1QVZDbEZiaVRzem1TanFKNUE1Vm5iejlVTXUxTFd6eEtIeGM5bE1IMEY1M0sxMUV1MmZrcnpUSzhXQW5hUHhSTGkxQ19nckxiRkNN?oc=5"
+    },
+    {
+      "title": "POP服装趋势网：以专业趋势赋能，为服装设计全面提效",
+      "desc": "POP服装趋势网：以专业趋势赋能，为服装设计全面提效 新浪网",
+      "tags": [
+        "趋势"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9sNVVRTlQ0RWFwUTVOMDFXTE16YlE2OFVXTllwQXoxb3NLSkdIYVFCNkZZeTVacXZ6TmZTRndvUVIzVFVtRnhRbE5tNVBhV21JekUwZ2dsdkF3bVdqYTF5eFZVWEhKblJqOFpqXzZCcUhHX3pRSjF6ZXVSSjM?oc=5"
+    },
+    {
+      "title": "抖音2026春夏时尚趋势大秀举办，“抖音趋势榜”正式亮相",
+      "desc": "抖音2026春夏时尚趋势大秀举办，“抖音趋势榜”正式亮相 21财经",
+      "tags": [
+        "趋势"
+      ],
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUDU2OG9IR0FmX3l6aWZrWUJPV1R1bXR4NjRMSjB5WGEwR0tGLUR2cjVTemJxeVFQSzdpZ1RvejZNLVU4QTM1UXJQRzlhMkhKLTRxc0hadmE4Y2lPRE9QZnNQRE11dFhvNlZuRHl4cFNGZmVqeTF2N0x6OVVrOW1ORnVJY2ZuVWNHRGVWLTA4YUdtZjBL?oc=5"
+    },
+    {
+      "title": "2026春夏·抖音趋势大秀抖音趋势大秀圆满落幕，时尚创作者尽显「新生」浪潮 —— 透过暮光蓝与海水绿，见证时尚新浪潮",
+      "desc": "2026春夏·抖音趋势大秀抖音趋势大秀圆满落幕，时尚创作者尽显「新生」浪潮 —— 透过暮光蓝与海水绿，见证时尚新浪潮 ELLE China",
+      "tags": [
+        "趋势"
+      ],
+      "source": "ELLE China",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1iakpwS1ZZYlh2Szh0T1dBMGtSNmxpR3hZcTQtMnQ0T0dnN1pRUUw0LU15RzRaZGlXb25uTWpRWGItWDhEelVxU2RQRlZkMEpCMl9zbTU5WDllU3VRMDdELVNpS241a0k?oc=5"
+    },
+    {
+      "title": "画廊 A | 住宅 / IAIA - Idea Art Interior Architects - 2",
+      "desc": "画廊 A | 住宅 / IAIA - Idea Art Interior Architects - 2 ArchDaily",
+      "tags": [
+        "趋势"
+      ],
+      "source": "ArchDaily",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTHFGSXdXeW5zVkdLZGd2dFZ1X3FUWW1uZ3RtNm5QTXR2a2NVdGtPWkR3c0tScUNfS0NtaFEycXdScTFMNFp1UjRoWUpST2t5RXZmRnBmUjhMREN3MGotTGx4SUJ6UlNFc3RQcTNLa1VtWHdBa0NoM2piRmtXSGd4Z2NDYnMwRGZXYm13M1ozWWdUczZvLWIxRlhlcnJqcXlXMDZxVGVfalNCUnpTNThxZldBc3VVVVlOUl9UdDlmQ2pfdGQ0STB4bElQTHlCZExnVjJvM0F4M1RrRVNtM1pnZDFNbVRQN3p1OEQyc2xYZw?oc=5"
+    },
+    {
+      "title": "感知中国 | 观察&体验 ：邂逅时尚视界，领略创意设计风采",
+      "desc": "感知中国 | 观察&体验 ：邂逅时尚视界，领略创意设计风采 潮新闻",
+      "tags": [
+        "灵感"
+      ],
+      "source": "潮新闻",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBqZWE2NmxmZ01ZT3kyOXFiVWpJQ2d5S1QzakhSUGo5VGplQUFOSm5pcExQMUNpMFBKVERDSlZ4cVFFOU9TN2cxd29UTnUxM1RlYnNybTR0MjFCTUxzdzFqYlRhOGFWbE1SUE8zOFduYWJnSU0?oc=5"
+    },
+    {
+      "title": "THOMAS SHEIBITZ: ABOUT 90 ELEMENTS/TOD IM DSCHUNGEL | 2008年2月22日 - 4月19日",
+      "desc": "THOMAS SHEIBITZ: ABOUT 90 ELEMENTS/TOD IM DSCHUNGEL | 2008年2月22日 - 4月19日 Tanya Bonakdar Gallery",
+      "tags": [
+        "灵感"
+      ],
+      "source": "Tanya Bonakdar Gallery",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNckZwa01sajE4MVNZLTdTSTdqTXcyQUZGNEQycGpnQkhsaVNEazhmUVJXaTc5T2c1TW05TDlCaE1FOXhfODI3bFBIVjFMTm81b0FxUjM3YnJad1I0QjVfMFRzZC1wTEZwaTFKUjlVbDVzQXhqY1lwalNMLUdBRTh5ZDZlNldZb2RzcWRiV0JKNlBkRU0tcGRBaTRPcnBRWkROOXFORmRLQlpwcXZKX0ZxOFotV0g2STZHRUFsYjJDbVdYRVNHbVZ2QzFITFA?oc=5"
+    },
+    {
+      "title": "'Inspiration from Landscape — Wang Qingli Art Exhibition' opens | 《山水引——王清丽艺术展》开",
+      "desc": "'Inspiration from Landscape — Wang Qingli Art Exhibition' opens | 《山水引——王清丽艺术展》开展 长江网",
+      "tags": [
+        "灵感"
+      ],
+      "source": "长江网",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBUWFxdDM2cUgxN1MzVU9LZ1lVMWo5OW96Wkw2M0w5ZGVQbXRzaDNLZzlLbWx5TDJ2cWdka3o5akMtcnZyVzdNS2NHWE0tZVc4WEJzTVpzUnRiTFpfQXQwdw?oc=5"
+    }
   ],
   "finance": [
-    { "title": "美伊停火引发市场避险情绪，油价跌破90美元", "desc": "美军暂停对伊朗空袭，布伦特原油一度大跌逾 7%。美债收益率下行，黄金攀升至近 4100 美元。", "tags": ["地缘政治"], "source": "Reuters", "url": "https://www.reuters.com/markets/commodities/" },
-    { "title": "油价重返100美元！全球投资者通胀恐慌加剧", "desc": "能源价格飙升 + 美国新关税 + AI 资本支出激增三重冲击下，布伦特原油突破 100 美元/桶。", "tags": ["通胀"], "source": "Bloomberg", "url": "https://www.bloomberg.com/markets" },
-    { "title": "超级央行周：美联储/英日央行利率决议前瞻", "desc": "本周迎来超级央行周：美联储周四公布利率决议（加息概率 33%）、英国央行和日本央行紧随其后。", "tags": ["货币政策"], "source": "CNBC", "url": "https://www.cnbc.com/world-central-banks/" },
-    { "title": "美股财报季高峰：微软/META/苹果/亚马逊本周扎堆", "desc": "约 1/3 标普 500 成分股本周公布财报。AI 巨额资本支出能否带来足够回报是最大疑虑。", "tags": ["财报季"], "source": "MarketWatch", "url": "https://www.marketwatch.com/investing" },
-    { "title": "国产软件股异动拉升，南天信息涨停", "desc": "南天信息直线涨停，科蓝软件涨超 15%，信创板块持续活跃。", "tags": ["A股"], "source": "东方财富", "url": "https://quote.eastmoney.com/" },
-    { "title": "日元处于 40 年低点，日本央行干预效果有限", "desc": "日元周线创两个多月来最大跌幅，处于 40 年低点。若央行无法实施更快速加息路径，日元很难摆脱弱势。", "tags": ["外汇"], "source": "FT中文网", "url": "https://www.ftchinese.com/" },
-    { "title": "黄金守住 4000 美元支撑位，贵金属整体走高", "desc": "尽管实际利率飙升，地缘避险需求和逢低买入支撑金价再次守住 4000 美元关口。", "tags": ["贵金属"], "source": "Kitco", "url": "https://www.kitco.com/gold-price-today-usa/" },
-    { "title": "费城半导体指数暴跌 5%，存储芯片首当其冲", "desc": "宏观担忧叠加基本面打击，半导体股全周承压。AI 投资回报疑虑令芯片板块遭遇抛售潮。", "tags": ["科技股"], "source": "Seeking Alpha", "url": "https://seekingalpha.com/sector/technology" },
-    { "title": "比特币反弹至 $65,298，加密市场情绪修复", "desc": "美伊局势缓和推动风险资产反弹，比特币涨 1.1%。市场关注监管动向及机构资金流向。", "tags": ["加密货币"], "source": "CoinDesk", "url": "https://www.coindesk.com/" },
-    { "title": "长鑫科技科创板上市，全球第四大存储芯片制造商", "desc": "中国最大的存储芯片制造商 CXMT 本周科创板上市，这是对 AI 信心的重要考验事件之一。", "tags": ["IPO"], "source": "华尔街见闻", "url": "https://wallstreetcn.com/" }
+    {
+      "title": "财经热点 | 纳入国家顶层部署的“六张网”是什么？一图梳理",
+      "desc": "财经热点 | 纳入国家顶层部署的“六张网”是什么？一图梳理 新浪网",
+      "tags": [
+        "市场"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1CSmRGNFJoQ3JXN05HNnhhOFlzdGg5dDhXcHpVejNieU0wWmFnTG9PV1VxeVJQNDEwYXYxaVh2a2tJTlZfNXFrcmVaazVpYmRZcHBvaGNvXzNGY2pONmxkNlBMdi02NnJ4dDI3LW55YTMzb2NzTnBNdUx3?oc=5"
+    },
+    {
+      "title": "快看",
+      "desc": "快看 蓝鲸财经",
+      "tags": [
+        "市场"
+      ],
+      "source": "蓝鲸财经",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8wUHhQV3lvN3FFMUNUWTRKOW40T0l2Q2w2X1h0SVZ3VG5raU5Ra2tsV2dhbURTSzR5ZHZDa3N4UGxGTVhrVlBEYVprbw?oc=5"
+    },
+    {
+      "title": "今日投资舆情热点",
+      "desc": "今日投资舆情热点 新浪网",
+      "tags": [
+        "市场"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9leml5b3cwcmx4S3NKbjRXOVVyR3dtWk8wWlRuVGt1Vl9lTFZvc0d5UU8zeWppeXh0X0U0UXNTdFVHTkxjSl9RNS1hTUlsVlBBQVh0NHNxM0NlT3RiYkhEc0hkaDF6cVdEckQyZlFR?oc=5"
+    },
+    {
+      "title": "今天A股，出现新热点！",
+      "desc": "今天A股，出现新热点！ 金融界",
+      "tags": [
+        "A股"
+      ],
+      "source": "金融界",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBGM3BBYWNtazY0Tjh3bWRHakl1MVdmWVM2WlVrb1hPTHZlNml4VFB1MlR2MXRqQVpwOXZwbEVIVFF0bGNrbUtzck1TbTNkZGJ3OHZ4bzhJVUFjYWc1cHpvbm5uRnBaV2dfMFVIN2JPZEsxdw?oc=5"
+    },
+    {
+      "title": "“反科技”标签大放异彩 这国股市在芯片动荡中创新高",
+      "desc": "“反科技”标签大放异彩 这国股市在芯片动荡中创新高 财联社",
+      "tags": [
+        "科技股"
+      ],
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFByYXdYM29BQi1LQ2IxTnZkTkZ5cWtRNDBXQ0F5RktWVnRXeGRLaHBrVWJrVUt1X1h0eDZ5dzc2NWdFNWFibUE?oc=5"
+    },
+    {
+      "title": "全球市场：纳指暴涨2%道指再创历史新高，特斯拉飙8%SpaceX涨7%，黄金暴跌1.6%跌破4000美元",
+      "desc": "全球市场：纳指暴涨2%道指再创历史新高，特斯拉飙8%SpaceX涨7%，黄金暴跌1.6%跌破4000美元 新浪网",
+      "tags": [
+        "大宗商品"
+      ],
+      "source": "新浪网",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE51Y0V6Y2h6YzJiYVdnblRhMHV4MTVuTkRoajJINWJCQXRiOC03cC1OU3BWWG9YanotbjczbjI2Mkd1Qm1DeTZmX1o3NXhaOGhYbnZOcnN1MGZZaHNjWDFjU0dSa1FsMWJNbU83VGZJX3pHdw?oc=5"
+    },
+    {
+      "title": "AI风暴席卷全球市场，印度股市意外成为资金\"避风港\"",
+      "desc": "AI风暴席卷全球市场，印度股市意外成为资金\"避风港\" 华尔街见闻",
+      "tags": [
+        "市场"
+      ],
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE52bEtXT2YtNHVjM05aYjhDLVlJajRuaGw1Mml5MzdoWS1PSUVqUFZtVkpmMGh2bnIxRy1id2FzMXpNeHF1a3JvWGFtU0tJUzlMODBN?oc=5"
+    },
+    {
+      "title": "美伊紧张局势缓和，全球市场反弹，日韩股市小幅上扬，油价大跌、债市走强",
+      "desc": "美伊紧张局势缓和，全球市场反弹，日韩股市小幅上扬，油价大跌、债市走强 富途牛牛",
+      "tags": [
+        "地缘政治"
+      ],
+      "source": "富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMjJGZmVjWlg3WHg0RjVtdFRaaUowSGlxckhxZ3ZxZVlsem5WZWh0TC0wSWtZeEltVk5CMW5mLXdJNjV6X0RlSlNoV1N1bWVld0N0WHZXNGI4dG9xUklUVVEybi1VTmlNQTVqWlk4V3g2WFRYWVJhWVNBWXBjakJtTmI1M0tOOFUySXBOWDVFNlRaQXpiWkZqTDhB?oc=5"
+    },
+    {
+      "title": "美联储“五连停”遭3票反对！沃什拒给加息时间表，誓言压通胀为何连续按兵不动",
+      "desc": "美联储“五连停”遭3票反对！沃什拒给加息时间表，誓言压通胀为何连续按兵不动 新京报",
+      "tags": [
+        "货币政策"
+      ],
+      "source": "新京报",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5ydmRZN0IzNnUzdldZY3RVUFpwMTNWQlJoVlI0M1ZOd3VFREhzWDQzXzZ0dzBXcnBIUVhDRzhRbXNHYzctTmpYR1M1UVJYWkY4UFV5TGtaMldtWlJUMF9LVGktcmI?oc=5"
+    },
+    {
+      "title": "美联储维持利率不变 3名委员倾向加息25个基点",
+      "desc": "美联储维持利率不变 3名委员倾向加息25个基点 RFI",
+      "tags": [
+        "货币政策"
+      ],
+      "source": "RFI",
+      "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOTDJxMWNxVk92Wm1HQThvQXViczBoLWdoaDZkNE55OVdMUFVsTF9hWExjS0ZORzM4d1VLdXZ2NEJVRXVNQlF0ejJIeVdteEY2X3ZmQS1HS2Z0aDRUVHdqSmJxT3JCekFpdHMzRHZUdkFZTzdNZk1WenhRQ0hvZElTYml3UWZKMk95WElSOVVRajJDMjJjOUVIaU92SXFJUURsQkZwY1VmWkVwWnVnNExLZjNVUEZHaXUtSTdBOXhZN2w0T2xqRy00eXJvS2htRkxtQVczcklJM1lFekx3dklTWVBhMW1IYjNpc0E0NlZNbjZQVmZSWjlDVlBCOGlQaUpzMF9HX0pVN3ZBQWh4QXFFbE45WGZKcUNnTUF2eWhfMGtHUmIySFRZNHRUQmVwMFZOSWJTYS1pYjluZkFpVkxLM1VXRm1uUWJn?oc=5"
+    }
   ],
   "books": [
-    { "title": "《百年孤独》", "author": "加西亚·马尔克斯", "cat": "classic", "desc": "魔幻现实主义巅峰，家族史诗。", "source": "经典名著" },
-    { "title": "《1984》", "author": "乔治·奥威尔", "cat": "classic", "desc": "反乌托邦经典，思想启蒙必读。", "source": "经典名著" },
-    { "title": "《小王子》", "author": "圣埃克苏佩里", "cat": "classic", "desc": "写给大人的童话，关于爱与责任。", "source": "经典名著" },
-    { "title": "《置身事内》", "author": "兰小欢", "cat": "econ", "desc": "读懂中国经济发展与政策逻辑。", "source": "经济" },
-    { "title": "《穷查理宝典》", "author": "查理·芒格", "cat": "econ", "desc": "多元思维模型与投资智慧。", "source": "经济" },
-    { "title": "《经济学原理》", "author": "曼昆", "cat": "econ", "desc": "最通俗的微观/宏观经济学入门。", "source": "经济" },
-    { "title": "《三体》", "author": "刘慈欣", "cat": "scifi", "desc": "中国科幻里程碑，宇宙文明史诗。", "source": "科幻" },
-    { "title": "《沙丘》", "author": "弗兰克·赫伯特", "cat": "scifi", "desc": "生态、宗教与权力的科幻巨著。", "source": "科幻" },
-    { "title": "《基地》", "author": "阿西莫夫", "cat": "scifi", "desc": "银河帝国的兴衰与心理史学。", "source": "科幻" },
-    { "title": "《活着》", "author": "余华", "cat": "novel", "desc": "苦难中生命韧性的当代经典。", "source": "小说" },
-    { "title": "《解忧杂货店》", "author": "东野圭吾", "cat": "novel", "desc": "温情治愈，时空交错的奇妙书信。", "source": "小说" },
-    { "title": "《追风筝的人》", "author": "卡勒德·胡赛尼", "cat": "novel", "desc": "关于救赎与友谊的动人小说。", "source": "小说" }
+    {
+      "title": "《百年孤独》",
+      "author": "加西亚·马尔克斯",
+      "cat": "classic",
+      "desc": "魔幻现实主义巅峰，家族史诗。",
+      "source": "经典名著"
+    },
+    {
+      "title": "《1984》",
+      "author": "乔治·奥威尔",
+      "cat": "classic",
+      "desc": "反乌托邦经典，思想启蒙必读。",
+      "source": "经典名著"
+    },
+    {
+      "title": "《小王子》",
+      "author": "圣埃克苏佩里",
+      "cat": "classic",
+      "desc": "写给大人的童话，关于爱与责任。",
+      "source": "经典名著"
+    },
+    {
+      "title": "《置身事内》",
+      "author": "兰小欢",
+      "cat": "econ",
+      "desc": "读懂中国经济发展与政策逻辑。",
+      "source": "经济"
+    },
+    {
+      "title": "《穷查理宝典》",
+      "author": "查理·芒格",
+      "cat": "econ",
+      "desc": "多元思维模型与投资智慧。",
+      "source": "经济"
+    },
+    {
+      "title": "《经济学原理》",
+      "author": "曼昆",
+      "cat": "econ",
+      "desc": "最通俗的微观/宏观经济学入门。",
+      "source": "经济"
+    },
+    {
+      "title": "《三体》",
+      "author": "刘慈欣",
+      "cat": "scifi",
+      "desc": "中国科幻里程碑，宇宙文明史诗。",
+      "source": "科幻"
+    },
+    {
+      "title": "《沙丘》",
+      "author": "弗兰克·赫伯特",
+      "cat": "scifi",
+      "desc": "生态、宗教与权力的科幻巨著。",
+      "source": "科幻"
+    },
+    {
+      "title": "《基地》",
+      "author": "阿西莫夫",
+      "cat": "scifi",
+      "desc": "银河帝国的兴衰与心理史学。",
+      "source": "科幻"
+    },
+    {
+      "title": "《活着》",
+      "author": "余华",
+      "cat": "novel",
+      "desc": "苦难中生命韧性的当代经典。",
+      "source": "小说"
+    },
+    {
+      "title": "《解忧杂货店》",
+      "author": "东野圭吾",
+      "cat": "novel",
+      "desc": "温情治愈，时空交错的奇妙书信。",
+      "source": "小说"
+    },
+    {
+      "title": "《追风筝的人》",
+      "author": "卡勒德·胡赛尼",
+      "cat": "novel",
+      "desc": "关于救赎与友谊的动人小说。",
+      "source": "小说"
+    }
   ],
   "idea": [
-    { "title": "沉浸式回家做饭 vlog 为什么这么火", "desc": "真实生活流 + 治愈系运镜，用户代入感强。", "tags": ["生活"], "platform": "抖音", "views": "3200万", "source": "抖音热点", "url": "https://www.douyin.com/search/沉浸式做饭vlog", "why": "「反精致」的真实感正在碾压摆拍，普通人视角 + 慢节奏最易引发收藏。" },
-    { "title": "0 基础学 AI 绘画 3 天出片", "desc": "保姆级教程，评论区求提示词。", "tags": ["知识"], "platform": "B站", "views": "1800万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=AI绘画教程", "why": "信息差永远有流量，把复杂工具拆成「3 天可复制」最抓新手。" },
-    { "title": "我用 100 块挑战米其林", "desc": "反差设定 + 过程翻车 + 反转结局。", "tags": ["美食"], "platform": "抖音", "views": "4500万", "source": "抖音热点", "url": "https://www.douyin.com/search/100块挑战米其林", "why": "「有限预算 + 高目标」的强冲突结构天然适合短视频叙事。" },
-    { "title": "打工人通勤妆容 5 分钟", "desc": "痛点明确、即刻可用。", "tags": ["美妆"], "platform": "小红书", "views": "2600万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=通勤妆容5分钟", "why": "场景化刚需 + 短时高效，收藏率远高于单纯种草。" },
-    { "title": "一只猫的 24 小时监控视角", "desc": "治愈萌宠 + 第一人称新奇感。", "tags": ["萌宠"], "platform": "抖音", "views": "5100万", "source": "抖音热点", "url": "https://www.douyin.com/search/猫咪24小时监控", "why": "「非人视角」制造新鲜感，情绪价值拉满，易被平台推流。" },
-    { "title": "县城咖啡店的一天", "desc": "小镇创业 + 慢生活情绪。", "tags": ["生活"], "platform": "B站", "views": "1400万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=县城咖啡店", "why": "下沉市场叙事 + 松弛感，契合当下「逃离内卷」情绪。" },
-    { "title": "把废旧衣架改成收纳神器", "desc": "低成本 DIY + 实用。", "tags": ["手工"], "platform": "小红书", "views": "2200万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=衣架收纳DIY", "why": "「变废为宝」满足成就感和省钱心理，教程类完播率高。" },
-    { "title": "30 秒看懂一个心理学效应", "desc": "高密度知识 + 强钩子开头。", "tags": ["知识"], "platform": "抖音", "views": "3900万", "source": "抖音热点", "url": "https://www.douyin.com/search/心理学效应科普", "why": "开头 3 秒抛出反直觉结论，是知识类爆款的标准打法。" },
-    { "title": "徒步西藏无人区的真实记录", "desc": "极致风景 + 生死张力。", "tags": ["旅行"], "platform": "B站", "views": "6700万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=徒步西藏无人区", "why": "稀缺体验 + 第一视角冒险，天然具备转发和传播势能。" },
-    { "title": "奶奶的复古穿搭翻红", "desc": "怀旧情绪 + 时尚反差。", "tags": ["时尚"], "platform": "小红书", "views": "1900万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=奶奶复古穿搭", "why": "「旧物新穿」踩中怀旧与可持续双重热点，易引发讨论。" }
+    {
+      "title": "老司机视频www;-老司 机视频www;2026最新版vv96.63.64 iphone版-2265安 卓网",
+      "desc": "老司机视频www;-老司 机视频www;2026最新版vv96.63.64 iphone版-2265安 卓网 福建省人民政府",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "1200万",
+      "source": "福建省人民政府",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdEVXYjVqSHRPNUNpbDhzcTg1UXZsNEtwU2JTWS04anBicU1UbDBBbXdZZVVKdEZLbjRZRkRZazVJVnlmTzh0QTZUdjg0VnNZNGF3U3lqLWQ1eG8ybzl3S3NqeTlpMEZSeV9ITUh2NXdIMjA1RlFwblI5NUxMWl90Y2RSbmdPTVN4WWlEeUlNbVc4YkE?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍",
+      "desc": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍 中华网科技频道",
+      "tags": [
+        "科技"
+      ],
+      "platform": "抖音",
+      "views": "3900万",
+      "source": "中华网科技频道",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1KeVRBaE1hOXo3RVgyLUo5cTRWZjNRS1JWTUhxUjd1dXprTFl2X1diOWZFam85WGpwcGw4TW16dmx6VlRhbEVOS2Rib3h5OVhoeUdtcXZIWTNKT3B4U1lCck5JREltamJvOXY2ZXk2Z2JEWHljY2c?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "2026上半年华语音乐热度榜单正式发布，《龙耀华夏》150亿播放登顶现象级金曲，徐良经典老歌《抽离》怀旧翻红",
+      "desc": "2026上半年华语音乐热度榜单正式发布，《龙耀华夏》150亿播放登顶现象级金曲，徐良经典老歌《抽离》怀旧翻红 ent.sina.cn",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "3900万",
+      "source": "ent.sina.cn",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1LMFFMVTNtVHhscF9ONFZ4UXgwM0NVbGhuZlgwWG0wTWVqVW9oQlo4TTYwdnZieHlCek40Q0JSQm0zc19oRV9NQUhsMGNDWldiZzk4a0xXdzMxMEJwX0M5Y2FBYU9yMXBndTVIcFFzOElpLVU?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "小白也能出大片！小云雀上线字节最新视频模型，一句话复刻热门爆款",
+      "desc": "小白也能出大片！小云雀上线字节最新视频模型，一句话复刻热门爆款 智东西",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "1800万",
+      "source": "智东西",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9BSEhqV0I1Vmd6dURzTHdiQVZ4SGtHZTRpd2pteXVCQWJTcjg1UWw0QWxoTnBGZ3NVQjg1MjFpc0dzd3NNanh0YQ?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "万斯计划将访匈牙利 为欧尔班助选",
+      "desc": "万斯计划将访匈牙利 为欧尔班助选 RFI",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "1800万",
+      "source": "RFI",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQME5VMDFzelZzdlJmaElQaldHN2xzUm1VQmdRXzRKRGFQaC1wMHdHaS1TZ21Wa01Eby1veUU5OGJReVVjd0p4alk4SVE0QUdfSng2WEwxNUxUVnhSV3UySjAwbjhWV2h3dFhZdS05ak5hcEZZOUQwMmE5WUx3MDF2TTJEWFUwTWlHN0k4QjBWenByNGFhNXZ6X085SGdPNVVtNkNyRGdpRzNIa05Qb2o5UDllSFdIVjlQRklpNlhjYVBiTkVQRGwwMURpUjVBNkdDTkY4U1o0TWZzRTlIZWttc25HVldVWFcyWXloTjItOThlMmxHYmdRaHdXb3Byak8wSnFEU3l1YVFuSlFoSXZhdmVZcHk?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "Kalau macam ni, sekali je terangkan auto faham😂 Kredit: TikTok @muthinuriyy P/s:",
+      "desc": "Kalau macam ni, sekali je terangkan auto faham😂 Kredit: TikTok @muthinuriyy P/s: Video di atas bukan hak milik Lobak Merah dan kami telah me",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "3100万",
+      "source": "instagram.com",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE53cnFvcjBqQ3hlbHZ5WmtxT2lMV0ozRENpWFVqOGZ2U0JiZjZEa0FLZlhMcUQ1NlptZXJVVE40TVlSdFVfNWlxSzZIRzRLbmpHR0JCcWV3?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "Happyness is free 😘 #youtube #viralvideo #trending #dance #kagaxtarentkids #fory",
+      "desc": "Happyness is free 😘 #youtube #viralvideo #trending #dance #kagaxtarentkids #foryou YouTube",
+      "tags": [
+        "热门"
+      ],
+      "platform": "YouTube",
+      "views": "4500万",
+      "source": "YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8wR1FYVmFBOUdtaDRLNzF3TEJ1X000Qnhfcm11aFFySEpMZjQyU0FpS2JWRU1MZHBiclJfQVRQalU1eS04Zzd6Q2diWjJEYU1ldC1sOGw4d2xzd3h0?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "UPDATE: Viral Video Of Baby Trapped In Myvi Draws Unwarranted Hate?",
+      "desc": "UPDATE: Viral Video Of Baby Trapped In Myvi Draws Unwarranted Hate? Carlist.my",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "1200万",
+      "source": "Carlist.my",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeDJRNFVTMl9oSnNaZmpJTW1RMUFNSldWS2pXemFkTk45cFdVLTFnVUtDc0xOczlhbUN2a2UtMkJ0NUZlX1NqZzludWwyR2RkV011bW0yN1pRaHk2elR1YS1LT1RhNzJXT1NQd2lRYXQxVGVuNDV1akh4MjNWZlpZUGp0NlZFXzhGRTMyVkFkWFlYaGRyVE13a2R5cHdjRHh4NGdsZlFlTUw0ZndYaUE?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "《2025年抖音热点年度数据报告》正式发布",
+      "desc": "《2025年抖音热点年度数据报告》正式发布 cn.chinadaily.com.cn",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "5200万",
+      "source": "cn.chinadaily.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1XdU1uSFZNZ1B0YWlMbjBVQk9iR2JQX1BpWTB2N2hTdjJSUkNhU1JEZGRjeE0taTE5eEtCb1hfQjdTLW1uWkkwcF8wZEphOC1ERXBNWWRwR2dtanlvYjVqY0pYTjZvdVZ5SDJQOExPZHZZZzNwZUtzS1lHd2s?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "[抖音生活服务&巨量引擎]：2025抖音生活服务营销特色人群价值白皮书：从热点到热店",
+      "desc": "[抖音生活服务&巨量引擎]：2025抖音生活服务营销特色人群价值白皮书：从热点到热店 发现报告",
+      "tags": [
+        "生活"
+      ],
+      "platform": "抖音",
+      "views": "1800万",
+      "source": "发现报告",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE96OEw3ZTU3Q3gxMXpsNWxyOXoyVm5HeGNWdktBNHhCY2IwTUhNUkZMM1U1Sm9ocTNPNmdjMFU0Z0lMdm9qdmpaNDJQeElRU0cw?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    }
   ]
 }
