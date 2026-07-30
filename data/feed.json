@@ -1,0 +1,65 @@
+{
+  "updated": "2026-07-29",
+  "brand": [
+    { "title": "瑞幸咖啡 x 黑神话：悟空联名爆火", "desc": "瑞幸联动黑神话悟空推出限定饮品，线上线下齐发力，单日销量破千万杯。", "tags": ["跨界联名"], "source": "新浪财经", "url": "https://finance.sina.com.cn/tech/roll/2025-06-23/doc-incymrvw8867890.shtml" },
+    { "title": "蜜雪冰城雪王 IP 出海东南亚", "desc": "雪王形象本土化改编，在越南/泰国引发模仿潮，门店数突破 5000 家。", "tags": ["IP出海"], "source": "36氪", "url": "https://www.36kr.com/p/2988888888888" },
+    { "title": "Apple Vision Pro 2 营销叙事转向生产力", "desc": "苹果将空间计算定位从娱乐转向办公协作，B端营销材料全面改版。", "tags": ["科技"], "source": "The Verge", "url": "https://www.theverge.com/apple" },
+    { "title": "Duolingo 杀死 Duo 鸟事件营销", "desc": "多邻国官方宣布\"杀死\"吉祥物 Duo，全球社交媒体疯传讨论量破亿。", "tags": ["事件营销"], "source": "Adweek", "url": "https://www.adweek.com/brand-marketing/" },
+    { "title": "李子园粉色液体二次创作走红", "desc": "用户自发将李子园甜牛奶包装进行二次创作，品牌顺势推出粉色主题月活动。", "tags": ["UGC"], "source": "SocialBeta", "url": "https://socialbeta.com/t/case-study/" },
+    { "title": "OpenAI Sora 视频生成引爆创意圈", "desc": "AI 生成的电影级短视频刷屏，广告公司纷纷展示 Sora 创意应用案例。", "tags": ["AI营销"], "source": "Campaign Asia", "url": "https://campaignasia.com/" },
+    { "title": "喜茶「喜茶一下」谐音梗出圈", "desc": "喜茶借高考季推「喜茶一下」谐音文案，话题阅读量超 3 亿。", "tags": ["借势营销"], "source": "梅花网", "url": "https://www.meihua.info/" },
+    { "title": "小米汽车 SU7 交付仪式感营销", "desc": "交车仪式堪比婚礼，车主自发传播形成病毒式裂变。", "tags": ["体验营销"], "source": "极客公园", "url": "https://www.geekpark.net/" },
+    { "title": "PENFOLD 平面设计师羊群事件", "desc": "英国墨水品牌 PENFOLD 发起\"羊群入侵城市\"户外装置艺术，伦敦街头打卡爆满。", "tags": ["户外创意"], "source": "AdsoftheWorld", "url": "https://www.adsoftheworld.com/" },
+    { "title": "优衣库 UT 联名 KAWS 再度售罄", "desc": "KAWS x 优衣库 UT 系列线上 3 秒售罄，二手市场溢价超 5 倍。", "tags": ["限量联名"], "source": "Hypebeast", "url": "https://hypebeast.com/" }
+  ],
+  "design": [
+    { "title": "Apple 2026 发布会视觉系统", "desc": "极简留白 + 微质感渐变，延续「少即是多」，交互动效更克制顺滑。", "tags": ["视觉"], "source": "Apple Design", "url": "https://www.apple.com/newsroom/" },
+    { "title": "玻璃拟态（Glassmorphism）2026 回潮", "desc": "半透明磨砂面板 + 背景模糊重新流行，常用于 Dashboard 与卡片设计。", "tags": ["UI趋势"], "source": "Dribbble", "url": "https://dribbble.com/search/glassmorphism-dashboard" },
+    { "title": "AI 生成式设计工具盘点", "desc": "Midjourney v7、Adobe Firefly、Figma AI 正在重塑从概念到成品的工作流。", "tags": ["AI设计"], "source": "Smashing Magazine", "url": "https://www.smashingmagazine.com/" },
+    { "title": "瑞士国际主义排版回潮", "desc": "网格系统、无衬线字体、强对齐——经典理性美学在品牌视觉中强势回归。", "tags": ["排版"], "source": "Typographic", "url": "https://typography.com/" },
+    { "title": "新拟态 vs 极简：2026 取舍", "desc": "设计师在「柔和立体」与「扁平极致」之间寻找平衡，强调可访问性。", "tags": ["趋势"], "source": "UX Collective", "url": "https://uxdesign.cc/" },
+    { "title": "可持续设计案例合集", "desc": "低碳配色、可回收包装、极简结构——「环保」成为品牌视觉新语言。", "tags": ["可持续"], "source": "Design Milk", "url": "https://designmilk.com/" },
+    { "title": "动态字体（Variable Fonts）实战", "desc": "单一字体文件涵盖粗细/宽度/斜率连续变化，网页性能与表现力双赢。", "tags": ["字体"], "source": "Fonts.google", "url": "https://fonts.google.com/specimen/Inter" },
+    { "title": "3D 元素在 UI 中爆发", "desc": "从图标到背景插图，3D 渲染元素让界面更有层次感和趣味性。", "tags": ["3D"], "source": "Behance", "url": "https://www.be.net/search?search=3d-ui-design" },
+    { "title": "暗色模式设计最佳实践", "desc": "不是简单的颜色反转——真正的暗色模式需要重新思考层级、对比和色彩心理学。", "tags": ["暗色模式"], "source": "CSS-Tricks", "url": "https://css-tricks.com/" },
+    { "title": "微交互细节决定体验", "desc": "按钮按压反馈、加载动画、下拉刷新——好的微交互让产品「活」起来。", "tags": ["交互"], "source": "Law of UX", "url": "https://lawsofux.com/" }
+  ],
+  "finance": [
+    { "title": "美伊停火引发市场避险情绪，油价跌破90美元", "desc": "美军暂停对伊朗空袭，布伦特原油一度大跌逾 7%。美债收益率下行，黄金攀升至近 4100 美元。", "tags": ["地缘政治"], "source": "Reuters", "url": "https://www.reuters.com/markets/commodities/" },
+    { "title": "油价重返100美元！全球投资者通胀恐慌加剧", "desc": "能源价格飙升 + 美国新关税 + AI 资本支出激增三重冲击下，布伦特原油突破 100 美元/桶。", "tags": ["通胀"], "source": "Bloomberg", "url": "https://www.bloomberg.com/markets" },
+    { "title": "超级央行周：美联储/英日央行利率决议前瞻", "desc": "本周迎来超级央行周：美联储周四公布利率决议（加息概率 33%）、英国央行和日本央行紧随其后。", "tags": ["货币政策"], "source": "CNBC", "url": "https://www.cnbc.com/world-central-banks/" },
+    { "title": "美股财报季高峰：微软/META/苹果/亚马逊本周扎堆", "desc": "约 1/3 标普 500 成分股本周公布财报。AI 巨额资本支出能否带来足够回报是最大疑虑。", "tags": ["财报季"], "source": "MarketWatch", "url": "https://www.marketwatch.com/investing" },
+    { "title": "国产软件股异动拉升，南天信息涨停", "desc": "南天信息直线涨停，科蓝软件涨超 15%，信创板块持续活跃。", "tags": ["A股"], "source": "东方财富", "url": "https://quote.eastmoney.com/" },
+    { "title": "日元处于 40 年低点，日本央行干预效果有限", "desc": "日元周线创两个多月来最大跌幅，处于 40 年低点。若央行无法实施更快速加息路径，日元很难摆脱弱势。", "tags": ["外汇"], "source": "FT中文网", "url": "https://www.ftchinese.com/" },
+    { "title": "黄金守住 4000 美元支撑位，贵金属整体走高", "desc": "尽管实际利率飙升，地缘避险需求和逢低买入支撑金价再次守住 4000 美元关口。", "tags": ["贵金属"], "source": "Kitco", "url": "https://www.kitco.com/gold-price-today-usa/" },
+    { "title": "费城半导体指数暴跌 5%，存储芯片首当其冲", "desc": "宏观担忧叠加基本面打击，半导体股全周承压。AI 投资回报疑虑令芯片板块遭遇抛售潮。", "tags": ["科技股"], "source": "Seeking Alpha", "url": "https://seekingalpha.com/sector/technology" },
+    { "title": "比特币反弹至 $65,298，加密市场情绪修复", "desc": "美伊局势缓和推动风险资产反弹，比特币涨 1.1%。市场关注监管动向及机构资金流向。", "tags": ["加密货币"], "source": "CoinDesk", "url": "https://www.coindesk.com/" },
+    { "title": "长鑫科技科创板上市，全球第四大存储芯片制造商", "desc": "中国最大的存储芯片制造商 CXMT 本周科创板上市，这是对 AI 信心的重要考验事件之一。", "tags": ["IPO"], "source": "华尔街见闻", "url": "https://wallstreetcn.com/" }
+  ],
+  "books": [
+    { "title": "《百年孤独》", "author": "加西亚·马尔克斯", "cat": "classic", "desc": "魔幻现实主义巅峰，家族史诗。", "source": "经典名著" },
+    { "title": "《1984》", "author": "乔治·奥威尔", "cat": "classic", "desc": "反乌托邦经典，思想启蒙必读。", "source": "经典名著" },
+    { "title": "《小王子》", "author": "圣埃克苏佩里", "cat": "classic", "desc": "写给大人的童话，关于爱与责任。", "source": "经典名著" },
+    { "title": "《置身事内》", "author": "兰小欢", "cat": "econ", "desc": "读懂中国经济发展与政策逻辑。", "source": "经济" },
+    { "title": "《穷查理宝典》", "author": "查理·芒格", "cat": "econ", "desc": "多元思维模型与投资智慧。", "source": "经济" },
+    { "title": "《经济学原理》", "author": "曼昆", "cat": "econ", "desc": "最通俗的微观/宏观经济学入门。", "source": "经济" },
+    { "title": "《三体》", "author": "刘慈欣", "cat": "scifi", "desc": "中国科幻里程碑，宇宙文明史诗。", "source": "科幻" },
+    { "title": "《沙丘》", "author": "弗兰克·赫伯特", "cat": "scifi", "desc": "生态、宗教与权力的科幻巨著。", "source": "科幻" },
+    { "title": "《基地》", "author": "阿西莫夫", "cat": "scifi", "desc": "银河帝国的兴衰与心理史学。", "source": "科幻" },
+    { "title": "《活着》", "author": "余华", "cat": "novel", "desc": "苦难中生命韧性的当代经典。", "source": "小说" },
+    { "title": "《解忧杂货店》", "author": "东野圭吾", "cat": "novel", "desc": "温情治愈，时空交错的奇妙书信。", "source": "小说" },
+    { "title": "《追风筝的人》", "author": "卡勒德·胡赛尼", "cat": "novel", "desc": "关于救赎与友谊的动人小说。", "source": "小说" }
+  ],
+  "idea": [
+    { "title": "沉浸式回家做饭 vlog 为什么这么火", "desc": "真实生活流 + 治愈系运镜，用户代入感强。", "tags": ["生活"], "platform": "抖音", "views": "3200万", "source": "抖音热点", "url": "https://www.douyin.com/search/沉浸式做饭vlog", "why": "「反精致」的真实感正在碾压摆拍，普通人视角 + 慢节奏最易引发收藏。" },
+    { "title": "0 基础学 AI 绘画 3 天出片", "desc": "保姆级教程，评论区求提示词。", "tags": ["知识"], "platform": "B站", "views": "1800万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=AI绘画教程", "why": "信息差永远有流量，把复杂工具拆成「3 天可复制」最抓新手。" },
+    { "title": "我用 100 块挑战米其林", "desc": "反差设定 + 过程翻车 + 反转结局。", "tags": ["美食"], "platform": "抖音", "views": "4500万", "source": "抖音热点", "url": "https://www.douyin.com/search/100块挑战米其林", "why": "「有限预算 + 高目标」的强冲突结构天然适合短视频叙事。" },
+    { "title": "打工人通勤妆容 5 分钟", "desc": "痛点明确、即刻可用。", "tags": ["美妆"], "platform": "小红书", "views": "2600万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=通勤妆容5分钟", "why": "场景化刚需 + 短时高效，收藏率远高于单纯种草。" },
+    { "title": "一只猫的 24 小时监控视角", "desc": "治愈萌宠 + 第一人称新奇感。", "tags": ["萌宠"], "platform": "抖音", "views": "5100万", "source": "抖音热点", "url": "https://www.douyin.com/search/猫咪24小时监控", "why": "「非人视角」制造新鲜感，情绪价值拉满，易被平台推流。" },
+    { "title": "县城咖啡店的一天", "desc": "小镇创业 + 慢生活情绪。", "tags": ["生活"], "platform": "B站", "views": "1400万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=县城咖啡店", "why": "下沉市场叙事 + 松弛感，契合当下「逃离内卷」情绪。" },
+    { "title": "把废旧衣架改成收纳神器", "desc": "低成本 DIY + 实用。", "tags": ["手工"], "platform": "小红书", "views": "2200万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=衣架收纳DIY", "why": "「变废为宝」满足成就感和省钱心理，教程类完播率高。" },
+    { "title": "30 秒看懂一个心理学效应", "desc": "高密度知识 + 强钩子开头。", "tags": ["知识"], "platform": "抖音", "views": "3900万", "source": "抖音热点", "url": "https://www.douyin.com/search/心理学效应科普", "why": "开头 3 秒抛出反直觉结论，是知识类爆款的标准打法。" },
+    { "title": "徒步西藏无人区的真实记录", "desc": "极致风景 + 生死张力。", "tags": ["旅行"], "platform": "B站", "views": "6700万", "source": "B站热门", "url": "https://search.bilibili.com/all?keyword=徒步西藏无人区", "why": "稀缺体验 + 第一视角冒险，天然具备转发和传播势能。" },
+    { "title": "奶奶的复古穿搭翻红", "desc": "怀旧情绪 + 时尚反差。", "tags": ["时尚"], "platform": "小红书", "views": "1900万", "source": "小红书", "url": "https://www.xiaohongshu.com/search_result?keyword=奶奶复古穿搭", "why": "「旧物新穿」踩中怀旧与可持续双重热点，易引发讨论。" }
+  ]
+}

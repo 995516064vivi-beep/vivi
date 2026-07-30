@@ -1,0 +1,33 @@
+name: 每日自动更新 Vivi 资讯
+
+on:
+  schedule:
+    # UTC 18:00 = 北京时间次日 02:00，每天刷新品牌/设计/财经
+    - cron: '0 18 * * *'
+  workflow_dispatch:   # 允许在 GitHub Actions 页面手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 抓取并生成 feed.json
+        run: python scripts/refresh_feed.py
+
+      - name: 提交更新
+        run: |
+          git config user.name "vivi-bot"
+          git config user.email "vivi-bot@users.noreply.github.com"
+          git add data/feed.json
+          git diff --cached --quiet || git commit -m "chore: 自动更新资讯 $(date +%Y-%m-%d)"
+          git push

@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivi 工作台</title>
+<link rel="icon" href="vivi-logo.png">
+<style>
+/* ========== 喜茶式暖色系视觉系统 ========== */
+:root {
+  --warm-cream: #FAF8F5;
+  --warm-bg: #F7F4EF;
+  --warm-card: #FFFFFF;
+  --warm-line: #EDE8E1;
+  --warm-line-hover: #DDD5C9;
+  --warm-ink: #3D3426;
+  --warm-ink-2: #6B6053;
+  --warm-ink-3: #A39B8C;
+  --warm-ink-4: #CCC5B8;
+  --warm-accent: #9B7B5A;
+  --warm-accent-deep: #7A5D40;
+  --warm-accent-soft: #F5F0EA;
+  --warm-accent-tint: #FAF7F2;
+  --warm-accent-light: #E8DFD3;
+  --warm-orange: #C4885A;
+  --warm-blue: #7A90A8;
+  --warm-purple: #947B9B;
+  --warm-red: #B86B6B;
+  --warm-green: #7A9178;
+  --radius-l: 20px;
+  --radius: 14px;
+  --radius-s: 10px;
+  --shadow: 0 1px 12px rgba(61,52,38,0.05);
+  --shadow-hover: 0 6px 24px rgba(61,52,38,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  background: linear-gradient(160deg, #FBF8F3 0%, #F4EDE4 55%, #EDE4D7 100%);
+  color: var(--warm-ink);
+  display: flex;
+  min-height: 100vh;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+.bg-decor { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.bg-decor span { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.55; }
+.bg-decor .b1 { width: 380px; height: 380px; top: -120px; right: -80px; background: #E7D6C2; }
+.bg-decor .b2 { width: 420px; height: 420px; bottom: -160px; left: -120px; background: #DDE4D6; }
+.bg-decor .b3 { width: 300px; height: 300px; top: 42%; left: 52%; background: #EBDBC0; opacity: 0.45; }
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 240px;
+  background: var(--warm-card);
+  border-right: 0.5px solid var(--warm-line);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 160;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.sidebar-header { padding: 40px 24px 28px; }
+.sidebar-logo { display: flex; align-items: center; gap: 12px; }
+.logo-img { width: 36px; height: 36px; object-fit: contain; }
+.sidebar-name { font-size: 18px; font-weight: 300; color: var(--warm-ink); letter-spacing: 1px; font-style: italic; }
+.sidebar-tag { font-size: 11px; color: var(--warm-ink-3); font-weight: 300; letter-spacing: 2px; margin-top: 3px; }
+
+.nav-list { list-style: none; padding: 10px 12px; flex: 1; }
+.nav-item { margin-bottom: 2px; }
+.nav-link {
+  display: flex; align-items: center; gap: 13px;
+  padding: 13px 16px; border-radius: var(--radius-s); cursor: pointer;
+  transition: all 0.25s ease; font-size: 14px; color: var(--warm-ink-2);
+  text-decoration: none; user-select: none; font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.nav-link:hover { background: var(--warm-accent-tint); color: var(--warm-accent-deep); }
+.nav-link.active {
+  background: var(--warm-accent-soft); color: var(--warm-accent-deep);
+  font-weight: 400; border-left: 2.5px solid var(--warm-accent);
+  border-radius: 0 8px 8px 0; padding-left: 14px;
+}
+.nav-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 16px; opacity: 0.55; flex-shrink: 0; }
+.nav-link.active .nav-icon { opacity: 0.85; }
+
+.sidebar-footer { padding: 20px 24px 28px; font-size: 11px; color: var(--warm-ink-4); letter-spacing: 0.5px; font-weight: 300; }
+.footer-status { display: inline-flex; align-items: center; gap: 6px; color: var(--warm-accent); font-weight: 400; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: var(--warm-accent); opacity: 0.7; }
+
+/* ===== Main ===== */
+.main-content { margin-left: 240px; flex: 1; min-height: 100vh; display: flex; flex-direction: column; position: relative; z-index: 1; }
+.top-bar {
+  background: transparent; padding: 32px 44px 8px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.menu-btn { display: none; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--warm-ink); padding: 4px; }
+.back-btn {
+  display: none; background: none; border: none; font-size: 18px; cursor: pointer;
+  color: var(--warm-ink-2); padding: 4px 10px; margin-right: 8px; transition: color 0.15s; font-weight: 300;
+}
+.back-btn:hover { color: var(--warm-accent); }
+.page-title { font-size: 22px; font-weight: 300; letter-spacing: 1px; color: var(--warm-ink); }
+.current-date { font-size: 13px; color: var(--warm-ink-4); letter-spacing: 0.5px; font-weight: 300; }
+.page-container { padding: 28px 44px 56px; max-width: 920px; width: 100%; margin: 0 auto; position: relative; }
+.page { display: none; animation: fade 0.35s ease; }
+.page.active { display: block; }
+@keyframes fade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+/* ===== Clock Module (毛玻璃) ===== */
+.clock-module {
+  position: relative;
+  background: rgba(255,255,255,0.42);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border-radius: var(--radius-l);
+  padding: 20px 24px;
+  color: var(--warm-ink);
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(155,123,90,0.14), inset 0 0.5px 0 rgba(255,255,255,0.7);
+  border: 0.5px solid rgba(255,255,255,0.6);
+  overflow: hidden;
+}
+.clock-top { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
+.clock-time { font-size: 34px; font-weight: 200; letter-spacing: 2px; line-height: 1; font-variant-numeric: tabular-nums; color: var(--warm-ink); }
+.clock-date { font-size: 12px; color: var(--warm-ink-2); font-weight: 300; letter-spacing: 0.3px; }
+.clock-greeting { font-size: 11px; color: var(--warm-ink-3); margin-top: 3px; font-weight: 300; letter-spacing: 0.5px; }
+
+/* ===== Daily Reminders ===== */
+.reminders { margin-top: 14px; border-top: 0.5px solid var(--warm-line); padding-top: 12px; position: relative; z-index: 1; }
+.reminders-title { font-size: 11px; color: var(--warm-ink-3); margin-bottom: 10px; letter-spacing: 0.8px; font-weight: 300; }
+.reminder-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.reminder-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; background: rgba(155,123,90,0.07);
+  border: 0.5px solid var(--warm-line);
+  padding: 6px 12px; border-radius: 20px; cursor: pointer; user-select: none;
+  transition: all 0.2s ease; font-weight: 300; letter-spacing: 0.3px; color: var(--warm-ink-2);
+}
+.reminder-pill:hover { background: rgba(155,123,90,0.13); border-color: var(--warm-line-hover); }
+.reminder-pill.checked { background: var(--warm-accent-soft); color: var(--warm-ink-4); text-decoration: line-through; }
+.reminder-pill input {
+  appearance: none; -webkit-appearance: none;
+  width: 14px; height: 14px; border: 1px solid var(--warm-ink-4); border-radius: 50%;
+  cursor: pointer; position: relative; background: transparent; flex-shrink: 0;
+}
+.reminder-pill input:checked { background: var(--warm-accent); border-color: var(--warm-accent); }
+.reminder-pill input:checked::after {
+  content: ''; position: absolute; left: 4px; top: 1.5px;
+  width: 3.5px; height: 6px; border: solid #fff; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+}
+
+/* ===== 自动计时浮标 ===== */
+.timer-badge {
+  position: fixed; bottom: 24px; left: calc(50% + 120px); transform: translateX(-50%);
+  display: none; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.6); backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 0.5px solid rgba(155,123,90,0.3); border-radius: 22px;
+  padding: 9px 18px; font-size: 12.5px; color: var(--warm-ink-2); font-weight: 300;
+  box-shadow: 0 8px 28px rgba(155,123,90,0.18); z-index: 60; letter-spacing: 0.3px;
+}
+.timer-badge .tb-ico { font-size: 14px; }
+.timer-badge .tb-time { font-variant-numeric: tabular-nums; color: var(--warm-accent-deep); font-weight: 400; }
+.timer-badge .tb-bar { width: 64px; height: 3px; background: var(--warm-line); border-radius: 2px; overflow: hidden; }
+.timer-badge .tb-fill { height: 100%; background: var(--warm-accent); border-radius: 2px; transition: width 0.4s ease; }
+.timer-badge .tb-tip { color: var(--warm-ink-4); }
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed; top: 28px; left: 50%; transform: translateX(-50%) translateY(-12px);
+  background: rgba(61,52,38,0.92); color: #fff; padding: 11px 22px; border-radius: 22px;
+  font-size: 13px; font-weight: 300; letter-spacing: 0.4px; z-index: 200;
+  box-shadow: 0 10px 30px rgba(61,52,38,0.25); opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease; backdrop-filter: blur(8px);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ===== Stats ===== */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+.stat-card {
+  background: var(--warm-card); border-radius: var(--radius-l); padding: 16px 16px;
+  border: 0.5px solid var(--warm-line); text-align: center;
+  transition: all 0.25s ease;
+}
+.stat-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.stat-num { font-size: 26px; font-weight: 200; color: var(--warm-accent-deep); line-height: 1.2; }
+.stat-label { font-size: 11px; color: var(--warm-ink-3); margin-top: 4px; font-weight: 300; letter-spacing: 0.5px; }
+.progress-wrap { margin-top: 10px; }
+.progress-bar { height: 3px; background: var(--warm-line); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--warm-accent), var(--warm-orange)); border-radius: 2px; transition: width 0.5s ease; }
+
+/* ===== Task Cards ===== */
+.task-list { display: flex; flex-direction: column; gap: 10px; }
+.task-card {
+  display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+  background: var(--warm-card); border-radius: var(--radius-l);
+  border: 0.5px solid var(--warm-line); cursor: pointer;
+  transition: all 0.25s ease; position: relative;
+}
+.task-card:hover { border-color: var(--warm-line-hover); box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.task-card.completed { opacity: 0.55; }
+.task-card.completed .task-name { text-decoration: line-through; color: var(--warm-ink-3); }
+.checkbox-wrapper { flex-shrink: 0; }
+.checkbox-wrapper input[type=checkbox] {
+  appearance: none; -webkit-appearance: none; width: 20px; height: 20px;
+  border: 1.5px solid var(--warm-ink-3); border-radius: 50%; cursor: pointer;
+  transition: all 0.2s ease; position: relative; flex-shrink: 0;
+}
+.checkbox-wrapper input:checked { background: var(--warm-accent); border-color: var(--warm-accent); }
+.checkbox-wrapper input:checked::after {
+  content: ''; position: absolute; left: 6px; top: 2.5px;
+  width: 5px; height: 9px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.task-info { flex: 1; min-width: 0; }
+.task-name { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); letter-spacing: 0.3px; }
+.dur { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; }
+.task-tag { font-size: 11px; color: var(--warm-accent); background: var(--warm-accent-soft); padding: 2px 8px; border-radius: 10px; margin-top: 4px; display: inline-block; font-weight: 300; }
+.task-arrow { font-size: 20px; color: var(--warm-ink-4); font-weight: 200; }
+.task-actions { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 0.2s; }
+.task-card:hover .task-actions { opacity: 1; }
+.btn-icon.delete { background: none; border: none; font-size: 14px; cursor: pointer; color: var(--warm-ink-3); padding: 4px; }
+.btn-icon.delete:hover { color: var(--warm-red); }
+
+.add-area { margin-top: 16px; }
+.add-task-area {
+  display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;
+  background: var(--warm-card); border: 0.5px dashed var(--warm-line); border-radius: var(--radius-s);
+  cursor: pointer; font-size: 13px; color: var(--warm-ink-3); font-weight: 300;
+  transition: all 0.2s; user-select: none;
+}
+.add-task-area:hover { border-color: var(--warm-accent); color: var(--warm-accent); }
+.add-form { display: none; margin-top: 14px; padding: 18px; background: var(--warm-accent-tint); border-radius: var(--radius); border: 0.5px solid var(--warm-line); }
+.add-form.show { display: block; animation: fade 0.25s ease; }
+.add-form input { width: 100%; padding: 10px 14px; border: 0.5px solid var(--warm-line); border-radius: var(--radius-s); font-size: 13px; font-weight: 300; background: var(--warm-card); color: var(--warm-ink); outline: none; margin-bottom: 8px; font-family: inherit; }
+.add-form input:focus { border-color: var(--warm-accent); }
+.form-actions { display: flex; gap: 8px; }
+.btn-primary { padding: 8px 18px; background: var(--warm-accent); color: #fff; border: none; border-radius: var(--radius-s); cursor: pointer; font-size: 12.5px; font-weight: 300; font-family: inherit; transition: opacity 0.2s; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost { padding: 8px 18px; background: transparent; color: var(--warm-ink-3); border: 0.5px solid var(--warm-line); border-radius: var(--radius-s); cursor: pointer; font-size: 12.5px; font-weight: 300; font-family: inherit; transition: all 0.2s; }
+.btn-ghost:hover { border-color: var(--warm-ink-3); color: var(--warm-ink); }
+
+/* ===== Detail Pages (IELTS/Violin/Yoga/Reading) ===== */
+.detail-page { max-width: 800px; }
+.detail-back { font-size: 13px; color: var(--warm-ink-3); cursor: pointer; margin-bottom: 18px; font-weight: 300; display: inline-block; transition: color 0.15s; }
+.detail-back:hover { color: var(--warm-accent); }
+.section-header { margin-bottom: 22px; }
+.section-title { font-size: 20px; font-weight: 300; color: var(--warm-ink); letter-spacing: 0.8px; margin-bottom: 6px; }
+.section-desc { font-size: 12.5px; color: var(--warm-ink-3); font-weight: 300; line-height: 1.6; letter-spacing: 0.3px; }
+
+.tabs { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab-btn {
+  padding: 8px 18px; border: 0.5px solid var(--warm-line); border-radius: 20px;
+  background: transparent; cursor: pointer; font-size: 13px; font-weight: 300;
+  color: var(--warm-ink-2); font-family: inherit; transition: all 0.2s;
+}
+.tab-btn:hover { border-color: var(--warm-accent); color: var(--warm-accent); }
+.tab-btn.active { background: var(--warm-accent); color: #fff; border-color: var(--warm-accent); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: fade 0.3s ease; }
+
+.resource-card {
+  padding: 18px 20px; background: var(--warm-card); border-radius: var(--radius);
+  border: 0.5px solid var(--warm-line); margin-bottom: 10px; cursor: pointer;
+  transition: all 0.25s ease;
+}
+.resource-card:hover { border-color: var(--warm-line-hover); box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.ielts-enter {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 24px; background: linear-gradient(135deg, var(--warm-accent-soft), var(--warm-accent-tint));
+  border-radius: var(--radius-l); border: 0.5px solid var(--warm-accent-light);
+  margin-bottom: 20px; cursor: pointer; transition: all 0.25s;
+}
+.ielts-enter:hover { box-shadow: 0 8px 28px rgba(155,123,90,0.15); transform: translateY(-2px); }
+.ielts-enter-text h3 { font-size: 16px; font-weight: 400; color: var(--warm-accent-deep); }
+.ielts-enter-text p { font-size: 12px; color: var(--warm-ink-3); margin-top: 4px; font-weight: 300; }
+.ielts-enter-arrow { font-size: 22px; color: var(--warm-accent); font-weight: 200; }
+.resource-title { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); margin-bottom: 3px; letter-spacing: 0.3px; }
+.resource-subtitle { font-size: 12.5px; color: var(--warm-ink-3); font-weight: 300; line-height: 1.5; }
+.resource-meta { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.resource-meta-item { font-size: 11px; color: var(--warm-ink-4); font-weight: 300; }
+.resource-badge { font-size: 10px; color: var(--warm-accent); background: var(--warm-accent-soft); padding: 1px 7px; border-radius: 8px; margin-left: 6px; font-weight: 300; }
+
+/* ===== Stages (Violin/Yoga) ===== */
+.stage-nav { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.stage-dots { display: flex; gap: 8px; }
+.stage-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--warm-line); transition: all 0.3s; }
+.stage-dot.done { background: var(--warm-green); }
+.stage-dot.current { background: var(--warm-accent); box-shadow: 0 0 0 3px var(--warm-accent-soft); transform: scale(1.2); }
+.stage-info { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; }
+.stage-title { font-size: 16px; font-weight: 400; color: var(--warm-ink); margin-bottom: 4px; }
+.stage-goal { font-size: 12.5px; color: var(--warm-ink-2); font-weight: 300; line-height: 1.6; margin-bottom: 6px; }
+.stage-standard { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; line-height: 1.5; }
+.practice-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.practice-item { padding: 16px 18px; background: var(--warm-card); border-radius: var(--radius); border: 0.5px solid var(--warm-line); }
+.practice-item-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.practice-checkbox {
+  appearance: none; -webkit-appearance: none; width: 18px; height: 18px;
+  border: 1.5px solid var(--warm-ink-3); border-radius: 50%; cursor: pointer;
+  transition: all 0.2s; position: relative; flex-shrink: 0;
+}
+.practice-checkbox:checked { background: var(--warm-accent); border-color: var(--warm-accent); }
+.practice-checkbox:checked::after {
+  content: ''; position: absolute; left: 5px; top: 2px;
+  width: 4px; height: 7px; border: solid #fff; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+}
+.practice-title { font-size: 14px; font-weight: 400; color: var(--warm-ink); }
+.practice-desc { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; line-height: 1.55; margin-left: 28px; }
+.practice-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.action-chip {
+  padding: 6px 14px; border: 0.5px solid var(--warm-line); border-radius: 16px;
+  background: transparent; cursor: pointer; font-size: 12px; font-weight: 300;
+  color: var(--warm-ink-2); font-family: inherit; transition: all 0.2s;
+}
+.action-chip:hover { border-color: var(--warm-accent); color: var(--warm-accent); }
+.action-chip.primary { background: var(--warm-accent); color: #fff; border-color: var(--warm-accent); }
+.action-chip.primary:hover { opacity: 0.88; }
+
+/* ===== News / Feed Cards (统一资讯卡片) ===== */
+.feed-toolbar {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+  flex-wrap: wrap; padding: 12px 16px; background: var(--warm-accent-tint);
+  border-radius: var(--radius-s); border: 0.5px solid var(--warm-line);
+}
+.feed-toolbar .toolbar-title { font-size: 13px; font-weight: 400; color: var(--warm-ink); flex: 1; }
+.toolbar-btn {
+  padding: 6px 14px; border: 0.5px solid var(--warm-line); border-radius: 16px;
+  background: var(--warm-card); cursor: pointer; font-size: 12px; font-weight: 300;
+  color: var(--warm-ink-2); font-family: inherit; transition: all 0.2s; display: inline-flex; align-items: center; gap: 5px;
+}
+.toolbar-btn:hover { border-color: var(--warm-accent); color: var(--warm-accent); }
+.toolbar-btn.active { background: var(--warm-accent); color: #fff; border-color: var(--warm-accent); }
+.date-picker { display: flex; gap: 4px; flex-wrap: wrap; }
+.date-chip {
+  padding: 5px 12px; border-radius: 14px; font-size: 11.5px; font-weight: 300;
+  cursor: pointer; border: 0.5px solid transparent; color: var(--warm-ink-3);
+  transition: all 0.2s; white-space: nowrap; background: transparent;
+}
+.date-chip:hover { color: var(--warm-ink); background: var(--warm-card); }
+.date-chip.active { background: var(--warm-accent); color: #fff; border-color: var(--warm-accent); }
+
+.nav-ico { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; flex:0 0 18px; }
+.nav-ico svg { width:18px; height:18px; }
+.btn-ico { display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px; }
+.btn-ico svg { width:14px; height:14px; }
+.update-badge.ok { color: var(--warm-accent-deep); }
+.update-badge.offline { color: var(--warm-ink-3); }
+.update-badge.loading { color: var(--warm-ink-2); }
+.update-badge .dot-off { width:5px; height:5px; border-radius:50%; background: var(--warm-ink-4); }
+
+.news-card {
+  padding: 18px 20px; background: var(--warm-card); border-radius: var(--radius);
+  border: 0.5px solid var(--warm-line); margin-bottom: 10px;
+  transition: all 0.25s ease; position: relative; cursor: default;
+}
+.news-card:hover { border-color: var(--warm-line-hover); box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.news-card .fav-star {
+  position: absolute; top: 14px; right: 14px; font-size: 16px; cursor: pointer;
+  color: var(--warm-ink-4); transition: all 0.2s; opacity: 0;
+}
+.news-card:hover .fav-star { opacity: 1; }
+.news-card .fav-star.favorited { opacity: 1; color: #E8B84A; }
+.news-title { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); margin-bottom: 6px; line-height: 1.45; letter-spacing: 0.3px; padding-right: 24px; }
+.news-title a { color: var(--warm-ink); text-decoration: none; transition: color 0.15s; }
+.news-title a:hover { color: var(--warm-accent); }
+.news-desc { font-size: 12.5px; color: var(--warm-ink-3); line-height: 1.6; margin-bottom: 10px; font-weight: 300; }
+.news-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.news-tag { font-size: 10.5px; padding: 2px 8px; border-radius: 8px; font-weight: 300; }
+.tag-viral { background: #FEE8E0; color: #C45A3A; }
+.tag-brand { background: #FFF3E0; color: #B86B30; }
+.tag-hot { background: #FFE0E0; color: #B86B6B; }
+.tag-design { background: #E8F0FE; color: #5B7BB0; }
+.tag-finance { background: #E8EDF0; color: #5A6B7A; }
+.tag-global { background: #F0E8FE; color: #7B5B9B; }
+.tag-trend { background: #E8F5E8; color: #5A8B5A; }
+.news-source { font-size: 11px; color: var(--warm-ink-4); font-weight: 300; }
+.news-link {
+  display: inline-block; margin-top: 10px; font-size: 12px; color: var(--warm-accent);
+  text-decoration: none; font-weight: 300; letter-spacing: 0.3px; transition: opacity 0.15s;
+}
+.news-link:hover { opacity: 0.7; }
+.update-badge { font-size: 11.5px; color: var(--warm-ink-3); font-weight: 300; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.update-badge .dot-live { width: 5px; height: 5px; border-radius: 50%; background: var(--warm-accent); animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* ===== Idea Card ===== */
+.idea-card { padding: 18px 20px; background: var(--warm-card); border-radius: var(--radius); border: 0.5px solid var(--warm-line); margin-bottom: 10px; transition: all 0.25s ease; display: flex; gap: 14px; }
+.idea-card:hover { border-color: var(--warm-line-hover); box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.idea-rank { font-size: 22px; font-weight: 200; color: var(--warm-accent); min-width: 28px; padding-top: 2px; }
+.idea-body { flex: 1; min-width: 0; }
+.idea-title { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); margin-bottom: 4px; }
+.idea-desc { font-size: 12.5px; color: var(--warm-ink-3); font-weight: 300; line-height: 1.5; margin-bottom: 8px; }
+.idea-why { font-size: 12px; color: var(--warm-purple); background: #F8F4FC; padding: 8px 12px; border-radius: 8px; margin-bottom: 8px; font-weight: 300; line-height: 1.5; }
+.idea-why-label { font-size: 10px; font-weight: 400; margin-right: 4px; }
+.idea-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.idea-tag { font-size: 10.5px; padding: 2px 8px; border-radius: 8px; background: var(--warm-accent-soft); color: var(--warm-accent); font-weight: 300; }
+.idea-platform { font-size: 11px; color: var(--warm-ink-3); font-weight: 300; }
+.idea-views { font-size: 11px; color: var(--warm-orange); font-weight: 300; }
+
+/* ===== Book Card ===== */
+.book-item { padding: 18px 20px; background: var(--warm-card); border-radius: var(--radius); border: 0.5px solid var(--warm-line); margin-bottom: 10px; }
+.book-cat { font-size: 10px; padding: 2px 8px; border-radius: 8px; font-weight: 300; display: inline-block; margin-bottom: 6px; }
+.cat-classic { background: #F5F0E8; color: #8B7355; }
+.cat-econ { background: #E8F0EE; color: #5A7A6B; }
+.cat-scifi { background: #EEE8F5; color: #7B5B9B; }
+.cat-novel { background: #F8EEEE; color: #9B6B6B; }
+.book-title { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); margin-bottom: 3px; }
+.book-author { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; }
+.book-desc { font-size: 12px; color: var(--warm-ink-3); font-weight: 300; margin-top: 4px; line-height: 1.5; }
+.book-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+/* ===== 备忘录（截图样式重设计）===== */
+.memo-hero { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+.memo-big-num { font-size: 64px; font-weight: 200; color: var(--warm-ink); line-height: 1; }
+.memo-hero-sub { font-size: 15px; color: var(--warm-ink-3); font-weight: 300; letter-spacing: 0.5px; }
+.memo-done-count {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px;
+  background: var(--warm-card); border: 0.5px solid var(--warm-line); border-radius: 20px;
+  font-size: 12px; color: var(--warm-ink-2); font-weight: 300; margin-top: 16px;
+}
+.memo-done-count .done-num { color: var(--warm-accent); font-weight: 400; }
+.memo-tabs { display: flex; gap: 7px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 3px; }
+.memo-tab-btn {
+  padding: 7px 16px; border: 0.5px solid var(--warm-line); border-radius: 20px;
+  background: transparent; cursor: pointer; font-size: 12.5px; font-weight: 300;
+  color: var(--warm-ink-2); font-family: inherit; transition: all 0.2s; white-space: nowrap;
+}
+.memo-tab-btn.active { background: var(--warm-accent); color: #fff; border-color: var(--warm-accent); }
+.memo-tab-btn:not(.active):hover { border-color: var(--warm-accent); color: var(--warm-accent); }
+.memo-list { display: flex; flex-direction: column; gap: 10px; padding-bottom: 70px; }
+.memo-card-new {
+  display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+  background: var(--warm-card); border-radius: var(--radius-l);
+  border: 0.5px solid var(--warm-line); cursor: default;
+  transition: all 0.25s ease; position: relative;
+}
+.memo-card-new:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); border-color: var(--warm-line-hover); }
+.memo-card-new.done { opacity: 0.5; }
+.memo-card-new.done .memo-title-new { text-decoration: line-through; color: var(--warm-ink-3); }
+.memo-check {
+  appearance: none; -webkit-appearance: none; width: 22px; height: 22px;
+  border: 1.5px solid var(--warm-ink-3); border-radius: 50%; cursor: pointer;
+  transition: all 0.2s; position: relative; flex-shrink: 0; background: transparent;
+}
+.memo-check:checked { background: var(--warm-accent); border-color: var(--warm-accent); }
+.memo-check:checked::after {
+  content: ''; position: absolute; left: 7px; top: 3px;
+  width: 5px; height: 9px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.memo-body { flex: 1; min-width: 0; }
+.memo-title-new { font-size: 14.5px; font-weight: 400; color: var(--warm-ink); letter-spacing: 0.3px; }
+.memo-date-new { font-size: 11px; color: var(--warm-ink-4); font-weight: 300; margin-top: 3px; }
+.memo-cat-pill { font-size: 10px; padding: 2px 8px; border-radius: 8px; font-weight: 300; }
+.cat-work { background: #E8EEF4; color: #5A7A9B; }
+.cat-life { background: #F4EDE8; color: #9B7B5A; }
+.cat-reminder { background: #F0F4E8; color: #7A9B5A; }
+.cat-summary { background: #F4E8F0; color: #9B5B7B; }
+.memo-del-btn {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; font-size: 14px; cursor: pointer;
+  color: var(--warm-ink-4); opacity: 0; transition: all 0.2s; padding: 4px;
+}
+.memo-card-new:hover .memo-del-btn { opacity: 1; }
+.memo-del-btn:hover { color: var(--warm-red); }
+.memo-fab {
+  position: fixed; bottom: 32px; right: 44px; width: 52px; height: 52px;
+  border-radius: 50%; background: var(--warm-ink); color: #fff; border: none;
+  font-size: 26px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15); transition: all 0.25s ease; z-index: 50;
+  font-weight: 200;
+}
+.memo-fab:hover { transform: scale(1.08); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+
+.empty-state { text-align: center; padding: 48px 20px; color: var(--warm-ink-3); }
+.empty-state .icon { font-size: 40px; margin-bottom: 12px; }
+.empty-state div { font-size: 13px; font-weight: 300; }
+
+/* ===== Favorites Panel ===== */
+.fav-panel {
+  display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 380px;
+  background: var(--warm-card); border-left: 0.5px solid var(--warm-line);
+  z-index: 150; flex-direction: column; box-shadow: -8px 0 32px rgba(0,0,0,0.06);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); transform: translateX(100%);
+}
+.fav-panel.show { display: flex; transform: translateX(0); }
+.fav-panel-header { padding: 24px; border-bottom: 0.5px solid var(--warm-line); display: flex; align-items: center; justify-content: space-between; }
+.fav-panel-title { font-size: 17px; font-weight: 400; color: var(--warm-ink); }
+.fav-panel-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--warm-ink-3); padding: 4px; }
+.fav-panel-body { flex: 1; overflow-y: auto; padding: 16px 24px; }
+.fav-empty { text-align: center; color: var(--warm-ink-3); font-size: 13px; font-weight: 300; padding: 40px 0; }
+.fav-item { padding: 14px 0; border-bottom: 0.5px solid var(--warm-line); }
+.fav-item-title { font-size: 13.5px; font-weight: 400; color: var(--warm-ink); margin-bottom: 3px; cursor: pointer; }
+.fav-item-title:hover { color: var(--warm-accent); }
+.fav-item-meta { font-size: 11px; color: var(--warm-ink-4); font-weight: 300; }
+.fav-item-remove { float: right; background: none; border: none; font-size: 13px; cursor: pointer; color: var(--warm-ink-4); padding: 2px; }
+.fav-item-remove:hover { color: var(--warm-red); }
+
+/* ===== Overlay ===== */
+.overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.15); z-index: 140; }
+.overlay.show { display: block; }
+
+/* ===== Responsive ===== */
+@media (max-width: 820px) {
+  .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; } .menu-btn { display: block; }
+  .page-container { padding: 20px 20px 48px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .timer-badge { left: 50%; bottom: 16px; }
+  .fav-panel { width: 100%; }
+  .memo-fab { right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-decor"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo"><img src="vivi-logo.png" alt="Vivi" class="logo-img"></div>
+    <div class="sidebar-name">vivi</div>
+    <div class="sidebar-tag">WORKSPACE</div>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-item"><a class="nav-link active" data-page="daily" onclick="switchPage('daily')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h12M8 12h12M8 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span> 每日计划</a></li>
+    <li class="nav-item"><a class="nav-link" data-page="brand" onclick="switchPage('brand')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l9 5V5l-9 4H4a1 1 0 0 0-1 1z"/><path d="M18 8a4 4 0 0 1 0 8"/></svg></span> 营销案例</a></li>
+    <li class="nav-item"><a class="nav-link" data-page="design" onclick="switchPage('design')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8a2 2 0 0 0-3-3L5 16l-1 4z"/><path d="M14 7l3 3"/></svg></span> 设计灵感</a></li>
+    <li class="nav-item"><a class="nav-link" data-page="finance" onclick="switchPage('finance')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M21 8v5h-5"/></svg></span> 财经热点</a></li>
+    <li class="nav-item"><a class="nav-link" data-page="idea" onclick="switchPage('idea')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1.2 1.7 1.2 2.5h5.6c0-.8.4-1.7 1.2-2.5A6 6 0 0 0 12 3z"/></svg></span> 选题灵感</a></li>
+    <li class="nav-item"><a class="nav-link" data-page="memo" onclick="switchPage('memo')"><span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span> 备忘录</a></li>
+  </ul>
+  <div class="sidebar-footer"><div class="footer-status"><span class="dot"></span> Vivi Workbench</div></div>
+</aside>
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<main class="main-content">
+<div class="top-bar">
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <button class="back-btn" id="backBtn" onclick="goBack()">← 返回</button>
+    <h1 class="page-title" id="pageTitle">每日计划</h1>
+  </div>
+  <div class="current-date" id="currentDate"></div>
+</div>
+
+<!-- ==================== 每日计划页 ==================== -->
+<div class="page active" id="page-daily">
+  <div class="page-container">
+    <!-- 时钟模块 -->
+    <div class="clock-module">
+      <div class="clock-top">
+        <div><div class="clock-time" id="clockTime">00:00</div><div class="clock-date" id="clockDate"></div><div class="clock-greeting" id="clockGreeting"></div></div>
+      </div>
+      <div class="reminders"><div class="reminders-title">每日提醒</div><div class="reminder-row" id="reminderRow"></div></div>
+    </div>
+
+    <!-- 数据概览 -->
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num" id="statTotal">0</div><div class="stat-label">今日任务</div></div>
+      <div class="stat-card"><div class="stat-num" id="statDone">0</div><div class="stat-label">已完成</div></div>
+      <div class="stat-card"><div class="stat-num" id="statPending">0</div><div class="stat-label">待完成</div></div>
+      <div class="stat-card"><div class="stat-num" id="statRate">0%</div><div class="stat-label">完成率<div class="progress-wrap"><div class="progress-bar"><div class="progress-fill" id="progressBar" style="width:0%"></div></div></div></div></div>
+    </div>
+
+    <!-- 任务列表 -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+      <div class="section-title" style="font-size:16px;margin:0;">个人计划</div>
+      <div style="font-size:12px;color:var(--warm-ink-4);font-weight:300;">点击卡片进入详细学习页面 · 雅思 · 瑜伽 · 阅读 · 小提琴</div>
+    </div>
+    <div class="task-list" id="taskList"></div>
+    <div class="add-area" id="addArea"><div class="add-task-area" onclick="showAddForm()">＋ 新增任务</div></div>
+    <div class="add-form" id="addForm">
+      <input type="text" id="newTaskName" placeholder="任务名称" maxlength="30">
+      <input type="text" id="newTaskDuration" placeholder="时长（如 30min）" maxlength="10">
+      <div class="form-actions"><button class="btn-primary" onclick="addTask()">添加</button><button class="btn-ghost" onclick="hideAddForm()">取消</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 雅思练习详情页 ==================== -->
+<div class="page" id="page-ielts">
+  <div class="page-container detail-page">
+    <div class="detail-back" onclick="goBack()">← 返回每日计划</div>
+    <div class="section-header">
+      <div class="section-title">🎓 雅思练习</div>
+      <div class="section-desc">系统化备考，听说读写全覆盖。点击进入对应模块开始学习。</div>
+    </div>
+    <a href="https://yasi.team/mine" target="_blank" class="ielts-enter">
+      <div class="ielts-enter-text"><h3>🚀 进入我的雅思团备考中心</h3><p>yasi.team — 在线模考 / 真题 / 词汇 / 听力 / 口语 / 写作一站式备考</p></div>
+      <div class="ielts-enter-arrow">→</div>
+    </a>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchIeltsTab(this,'listening')">🎧 听力</button>
+      <button class="tab-btn" onclick="switchIeltsTab(this,'speaking')">💬 口语</button>
+      <button class="tab-btn" onclick="switchIeltsTab(this,'reading')">📖 阅读</button>
+      <button class="tab-btn" onclick="switchIeltsTab(this,'writing')">✍️ 写作</button>
+    </div>
+    <div class="tab-panel active" id="ielts-listening">
+      <div class="resource-card" onclick="window.open('https://yasi.team/listening','_blank')">
+        <div class="resource-title">yasi.team 听力训练 <span class="resource-badge">179考点词</span></div>
+        <div class="resource-subtitle">系统化听力考点词汇训练，覆盖雅思高频场景</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://yasi.team/vocabulary','_blank')">
+        <div class="resource-title">核心词汇记忆 <span class="resource-badge">词汇</span></div>
+        <div class="resource-subtitle">雅思核心词汇 + 同义替换，听力阅读双提升</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.bbc.co.uk/learningenglish/english/features/6-minute-english','_blank')">
+        <div class="resource-title">BBC 6 Minute English <span class="resource-badge">免费</span></div>
+        <div class="resource-subtitle">每天 6 分钟精听，提升语感与抓关键词能力</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://learningenglish.voanews.com/','_blank')">
+        <div class="resource-title">VOA Learning English <span class="resource-badge">慢速英语</span></div>
+        <div class="resource-subtitle">美国之音慢速新闻，适合精听跟读练习</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.ieltsonlinetests.com/academic-listening-tests','_blank')">
+        <div class="resource-title">IELTS 在线听力真题 <span class="resource-badge">真题</span></div>
+        <div class="resource-subtitle">免费在线模考，计时训练真实考试节奏</div>
+      </div>
+    </div>
+    <div class="tab-panel" id="ielts-speaking">
+      <div class="resource-card" onclick="window.open('https://yasi.team/writing','_blank')">
+        <div class="resource-title">yasi.team 翻译练习 <span class="resource-badge">100句翻译</span></div>
+        <div class="resource-subtitle">中英互译训练，同步提升口语表达与写作句型</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.ielts.org/for-test-takers/prepare-for-your-test-speaking','_blank')">
+        <div class="resource-title">IELTS 官方口语样题 <span class="resource-badge">IELTS官方</span></div>
+        <div class="resource-subtitle">Part 1 / Part 2 / Part 3 真题模拟与评分标准</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.youtube.com/results?search_query=IELTS+speaking+band+8+2025','_blank')">
+        <div class="resource-title">YouTube 高分口语示范 <span class="resource-badge">视频</span></div>
+        <div class="resource-subtitle">Band 7-9 口语回答示范，学习地道表达和逻辑结构</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://search.bilibili.com/all?keyword=雅思口语技巧','_blank')">
+        <div class="resource-title">B站 雅思口语技巧合集 <span class="resource-badge">B站</span></div>
+        <div class="resource-subtitle">国内名师口语方法论 + 真题解析</div>
+      </div>
+    </div>
+    <div class="tab-panel" id="ielts-reading">
+      <div class="resource-card" onclick="window.open('https://yasi.team/reading','_blank')">
+        <div class="resource-title">yasi.team 阅读同义替换 <span class="resource-badge">538组替换</span></div>
+        <div class="resource-subtitle">雅思阅读核心能力——同义替换速记与训练</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://yasi.team/vocabulary','_blank')">
+        <div class="resource-title">学术词汇强化 <span class="resource-badge">词汇</span></div>
+        <div class="resource-subtitle">阅读高频学术词汇，扫清长难文章障碍</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://learningenglish.voanews.com/','_blank')">
+        <div class="resource-title">VOA 慢速英语阅读 <span class="resource-badge">免费外刊</span></div>
+        <div class="resource-subtitle">双语对照文章，提升英文阅读速度与理解力</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.theguardian.com/international','_blank')">
+        <div class="resource-title">The Guardian 卫报 <span class="resource-badge">免费外刊</span></div>
+        <div class="resource-subtitle">观点鲜明、语言地道的英国主流媒体，无付费墙</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.ieltsonlinetests.com/academic-reading-tests','_blank')">
+        <div class="resource-title">IELTS 在线阅读真题 <span class="resource-badge">真题</span></div>
+        <div class="resource-subtitle">免费在线模考，计时训练真实考试节奏</div>
+      </div>
+    </div>
+    <div class="tab-panel" id="ielts-writing">
+      <div class="resource-card" onclick="window.open('https://yasi.team/writing','_blank')">
+        <div class="resource-title">yasi.team 写作训练 <span class="resource-badge">写作系统</span></div>
+        <div class="resource-subtitle">大作文/小作文框架、模板、批改反馈一体化</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://yasi.team/grammar','_blank')">
+        <div class="resource-title">语法思维导图 <span class="resource-badge">语法</span></div>
+        <div class="resource-subtitle">雅思写作必备语法体系可视化梳理</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://www.ielts-writing.com/','_blank')">
+        <div class="resource-title">IELTS Writing 模板库 <span class="resource-badge">工具</span></div>
+        <div class="resource-subtitle">Task 1 图表描述模板 + Task 2 议论文框架</div>
+      </div>
+      <div class="resource-card" onclick="window.open('https://search.bilibili.com/all?keyword=雅思写作 Simon','_blank')">
+        <div class="resource-title">Simon 写作方法论 <span class="resource-badge">B站</span></div>
+        <div class="resource-subtitle">雅思写作权威导师的四大段法与高分范文</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 小提琴练习详情页 ==================== -->
+<div class="page" id="page-violin">
+  <div class="page-container detail-page">
+    <div class="detail-back" onclick="goBack()">← 返回每日计划</div>
+    <div class="stage-nav">
+      <div class="stage-dots" id="stageDots"></div>
+      <div class="stage-info"><span id="violinStageDone">0</span>/5 阶段完成</div>
+    </div>
+    <div class="section-header">
+      <div class="stage-title" id="violinCurrentStage">第 1 阶段</div>
+      <div class="stage-goal" id="violinStageGoal"></div>
+      <div class="stage-standard" id="violinStageStandard"></div>
+    </div>
+    <div class="practice-list" id="violinPracticeList"></div>
+  </div>
+</div>
+
+<!-- ==================== 瑜伽练习详情页 ==================== -->
+<div class="page" id="page-yoga">
+  <div class="page-container detail-page">
+    <div class="detail-back" onclick="goBack()">← 返回每日计划</div>
+    <div class="stage-nav">
+      <div class="stage-dots" id="yogaStageDots"></div>
+      <div class="stage-info"><span id="yogaStageDone">0</span>/5 阶段完成</div>
+    </div>
+    <div class="section-header">
+      <div class="stage-title" id="yogaCurrentStage">第 1 阶段</div>
+      <div class="stage-goal" id="yogaStageGoal"></div>
+      <div class="stage-standard" id="yogaStageStandard"></div>
+    </div>
+    <div class="practice-list" id="yogaPracticeList"></div>
+  </div>
+</div>
+
+<!-- ==================== 保持阅读详情页 ==================== -->
+<div class="page" id="page-reading">
+  <div class="page-container detail-page">
+    <div class="detail-back" onclick="goBack()">← 返回每日计划</div>
+    <div class="section-header">
+      <div class="section-title">📚 保持阅读</div>
+      <div class="section-desc">每周一更新推荐。点「加入书单」永久收藏，点「找书」跳转免费平台下载。</div>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchReadingTab(this,'books')">📖 好书推荐</button>
+      <button class="tab-btn" onclick="switchReadingTab(this,'booklist')">📑 我的书单</button>
+    </div>
+    <div class="tab-panel active" id="reading-books">
+      <div id="bookList"></div>
+    </div>
+    <div class="tab-panel" id="reading-booklist">
+      <div id="myBookList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 品牌营销案例页（升级版） ==================== -->
+<div class="page" id="page-brand">
+  <div class="page-container">
+    <div class="update-badge" id="brandBadge"><span class="dot-live"></span> 更新中…</div>
+    <div class="feed-toolbar">
+      <span class="toolbar-title">营销案例</span>
+      <button class="toolbar-btn" onclick="manualRefresh('brand')" title="刷新最新内容"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><span>刷新</span></button>
+      <button class="toolbar-btn" id="brandFavBtn" onclick="toggleFavPanel('brand')" title="查看收藏夹"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l2.5 5.1 5.6.8-4 4 1 5.6L12 16.9 6.9 19l1-5.6-4-4 5.6-.8z"/></svg></span><span>收藏</span></button>
+      <div class="date-picker" id="brandDatePicker"></div>
+    </div>
+    <div id="brandList"></div>
+  </div>
+</div>
+
+<!-- ==================== 设计灵感页（升级版） ==================== -->
+<div class="page" id="page-design">
+  <div class="page-container">
+    <div class="update-badge" id="designBadge"><span class="dot-live"></span> 更新中…</div>
+    <div class="feed-toolbar">
+      <span class="toolbar-title">设计灵感</span>
+      <button class="toolbar-btn" onclick="manualRefresh('design')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><span>刷新</span></button>
+      <button class="toolbar-btn" id="designFavBtn" onclick="toggleFavPanel('design')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l2.5 5.1 5.6.8-4 4 1 5.6L12 16.9 6.9 19l1-5.6-4-4 5.6-.8z"/></svg></span><span>收藏</span></button>
+      <div class="date-picker" id="designDatePicker"></div>
+    </div>
+    <div id="designList"></div>
+  </div>
+</div>
+
+<!-- ==================== 财经热点更新页（升级版） ==================== -->
+<div class="page" id="page-finance">
+  <div class="page-container">
+    <div class="update-badge" id="financeBadge"><span class="dot-live"></span> 更新中…</div>
+    <div class="feed-toolbar">
+      <span class="toolbar-title">财经热点</span>
+      <button class="toolbar-btn" onclick="manualRefresh('finance')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><span>刷新</span></button>
+      <button class="toolbar-btn" id="financeFavBtn" onclick="toggleFavPanel('finance')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l2.5 5.1 5.6.8-4 4 1 5.6L12 16.9 6.9 19l1-5.6-4-4 5.6-.8z"/></svg></span><span>收藏</span></button>
+      <div class="date-picker" id="financeDatePicker"></div>
+    </div>
+    <div id="financeList"></div>
+  </div>
+</div>
+
+<!-- ==================== 每日选题灵感页（升级版） ==================== -->
+<div class="page" id="page-idea">
+  <div class="page-container">
+    <div class="update-badge" id="ideaBadge"><span class="dot-live"></span> 更新中…</div>
+    <div class="feed-toolbar">
+      <span class="toolbar-title">选题灵感</span>
+      <button class="toolbar-btn" onclick="manualRefresh('idea')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><span>刷新</span></button>
+      <button class="toolbar-btn" id="ideaFavBtn" onclick="toggleFavPanel('idea')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l2.5 5.1 5.6.8-4 4 1 5.6L12 16.9 6.9 19l1-5.6-4-4 5.6-.8z"/></svg></span><span>收藏</span></button>
+      <div class="date-picker" id="ideaDatePicker"></div>
+    </div>
+    <div id="ideaList"></div>
+  </div>
+</div>
+
+<!-- ==================== 备忘录页（截图样式重设计） ==================== -->
+<div class="page" id="page-memo">
+  <div class="page-container" style="position:relative;">
+    <div class="memo-hero">
+      <div>
+        <div class="memo-big-num" id="memoBigNum">0</div>
+        <div class="memo-hero-sub">to do list</div>
+      </div>
+    </div>
+    <div class="memo-tabs">
+      <button class="memo-tab-btn active" onclick="switchMemoCat(this,'work')">💼 待办工作</button>
+      <button class="memo-tab-btn" onclick="switchMemoCat(this,'life')">🏠 待办生活</button>
+      <button class="memo-tab-btn" onclick="switchMemoCat(this,'reminder')">⏰ 提醒事项</button>
+      <button class="memo-tab-btn" onclick="switchMemoCat(this,'summary')"><span class="btn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><span>个人总结</span></button>
+    </div>
+    <div class="memo-done-count">✅ Done: <span class="done-num" id="memoDoneNum">0</span></div>
+    <div class="memo-list" id="memoList"></div>
+    <button class="memo-fab" onclick="addMemo()" title="新增备忘录">＋</button>
+  </div>
+</div>
+</main>
+
+<!-- 收藏夹面板 -->
+<div class="fav-panel" id="favPanel">
+  <div class="fav-panel-header">
+    <div class="fav-panel-title" id="favPanelTitle">收藏夹</div>
+    <button class="fav-panel-close" onclick="closeFavPanel()">✕</button>
+  </div>
+  <div class="fav-panel-body" id="favPanelBody"></div>
+</div>
+<div class="overlay" id="favOverlay" onclick="closeFavPanel()"></div>
+
+<!-- 自动计时浮标 -->
+<div class="timer-badge" id="timerBadge">
+  <span class="tb-ico">⏱</span>
+  <span class="tb-time" id="timerTime">00:00</span>
+  <span class="tb-bar"><span class="tb-fill" id="timerFill" style="width:0%"></span></span>
+  <span class="tb-tip">满 30 分钟自动完成</span>
+</div>
+
+<!-- Toast 提示 -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ==================== DATA ====================
+const STORAGE_KEY = 'vivi_workbench_tasks';
+const MEMO_KEY = 'vivi_workbench_memos';
+const VIOLIN_KEY = 'vivi_violin_stage';
+const YOGA_KEY = 'vivi_yoga_stage';
+const REMINDER_KEY = 'vivi_reminders';
+const BOOKLIST_KEY = 'vivi_booklist';
+const FAV_KEY = 'vivi_favorites_';
+const FEED_HISTORY_KEY = 'vivi_feed_history_';
+
+let tasks = [];
+let memos = [];
+let booklist = [];
+let reminders = [];
+let currentMemoCat = 'work';
+let violinStage = 0;
+let yogaStage = 0;
+
+// 自动计时状态
+const TASK_PAGES = ['ielts', 'violin', 'yoga', 'reading'];
+const TASK_GOAL_SEC = 1800;
+let taskTimers = {};
+let activeTimer = null;
+let timerInterval = null;
+
+// 当前选中的日期筛选
+let currentFilterDate = {}; // { brand: 'today', design: 'today', ... }
+
+const defaultTasks = [
+  { id: 1, name: '雅思练习', duration: '30min', done: false, tag: '每日必做', page: 'ielts' },
+  { id: 2, name: '瑜伽练习', duration: '30min', done: false, tag: '每日必做', page: 'yoga' },
+  { id: 3, name: '保持阅读', duration: '30min', done: false, tag: '每日必做', page: 'reading' },
+  { id: 4, name: '小提琴练习', duration: '30min', done: false, tag: '每日必做', page: 'violin' },
+];
+
+const defaultReminders = [
+  { id: 1, name: '英语打卡', done: false },
+  { id: 2, name: '视频网课', done: false },
+  { id: 3, name: '瑜伽打卡', done: false },
+  { id: 4, name: '阅读打卡', done: false },
+  { id: 5, name: '营养补剂', done: false },
+  { id: 6, name: '认真护肤', done: false },
+];
+
+// ===== 小提琴阶段数据（带真实链接）=====
+const violinStages = [
+  { name: '准备与空弦运弓', goal: '建立正确持琴/持弓姿势，找到全弓平面与均匀音色。', standard: '能独立调音(A=440Hz)；四弦各拉全弓声音均匀无明显杂音；夹琴姿势稳定保持2分钟。', practices: [
+    { title: '空弦热身（每弦全弓×10）', desc: '开手、找音色，约 5 分钟', search: '小提琴 空弦 全弓 练习 教程',
+      links: ['https://www.bilibili.com/video/BV1xx411c7mu/', 'https://www.youtube.com/watch?v=jp1j5MBWRjM'] },
+    { title: '认识乐器 & 调音', desc: '认识 4 根弦（G-D-A-E）；用调音器 App 把空弦调准（A=440Hz），手机录自己回听。', search: '小提琴 认弦 调音 入门',
+      links: ['https://www.bilibili.com/video/BV1gW411e7Ld/', 'https://www.youtube.com/watch?v=RNfKztZKScw'] },
+    { title: '夹琴 & 持弓姿势', desc: '下巴贴肩托、琴身约 45 度；拇指与中指捏弓，其余手指自然搭弓杆，肩肘腕放松。', search: '小提琴 夹琴 持弓 正确姿势',
+      links: ['https://www.bilibili.com/video/BV1KE411R7Qz/', 'https://www.youtube.com/watch?v=JzdP4XcPgjE'] },
+    { title: '中弓短弓 → 全弓（分弓）', desc: '先中弓短弓找平面，再上半弓/下半弓，最后拉全弓；G-D-A-E 四弦各练，追求声音均匀。', search: '小提琴 分弓 全弓 基本功',
+      links: ['https://www.bilibili.com/video/BV1iJ411c7wN/', 'https://www.youtube.com/watch?v=UoYNKMmJLOE'] },
+    { title: '连弓换弦', desc: '一弓拉两弦体会换弦时右臂高度变化（D↔A↔E 好拉，G 弦稍难）。', search: '小提琴 连弓 换弦 练习',
+      links: ['https://www.bilibili.com/video/BV1aJ411c7cR/', 'https://www.youtube.com/watch?v=mJWrGBbNPGk'] },
+  ]},
+  { name: '左手按弦入门', goal: '建立左手手型，能在 A/D 弦一把位演奏简单音阶。', standard: '左手手腕平直不塌；1指自然弯曲不扁按；能慢速演奏 C 大调音阶（一个八度）。', practices: [
+    { title: '左手手型建立', desc: '拇指与 2 指相对成框状，肘部在琴下方，手腕保持直线。', search: '小提琴 左手 手型 指法',
+      links: ['https://www.bilibili.com/video/BV1Kx411c7eT/', 'https://www.youtube.com/watch?v=aTq7r0jbo-Y'] },
+    { title: 'A 弦 1 把位音阶', desc: 'A-B-C#-D-E-F#-G#-A，每个音用 2 指检查是否音准。', search: '小提琴 A弦 一把位 音阶',
+      links: ['https://www.bilibili.com/video/BV1t4411W77V/', 'https://www.youtube.com/watch?v=EYtWCqctJmI'] },
+    { title: 'D 弦 1 把位音阶', desc: 'D-E-F#-G-A-B-C#-D，注意与 A 弦相同的指距。', search: '小提琴 D弦 一把位 音阶',
+      links: ['https://www.bilibili.com/video/BV1jx411c7kH/', 'https://www.youtube.com/watch?v=gLqJx8tBGyw'] },
+    { title: '简单旋律练习', desc: '《小星星》《欢乐颂》等单音旋律，用全弓或分弓。', search: '小提琴 小星星 欢乐颂 入门',
+      links: ['https://www.bilibili.com/video/BV1ka411w7eW/', 'https://www.youtube.com/watch?v=0WNtWbwCzrY'] },
+    { title: '空弦双音', desc: '同时拉两根空弦（如 A+E），体会双音共鸣。', search: '小提琴 双音 练习',
+      links: ['https://www.bilibili.com/video/BV1kJ411c7sB/', 'https://www.youtube.com/watch?v=rTZrQKjvz2Y'] },
+  ]},
+  { name: '双音与弓法进阶', goal: '掌握基本双音与常用弓法（顿弓/跳弓），丰富表现手段。', standard: '三度双音音阶能连贯演奏；顿弓发音清晰有弹性；跳弓能自然弹起。', practices: [
+    { title: '三度双音音阶', desc: '从 A 弦开始，慢练三度双音音阶，注意两指同时落下。', search: '小提琴 三度双音 音阶',
+      links: ['https://www.bilibili.com/video/BV1eA411w7sV/', 'https://www.youtube.com/watch?v=k9OMe_e7Zic'] },
+    { title: '顿弓 Détaché', desc: '每音分开但不断弓，用手臂重量自然压弦。', search: '小提琴 顿弓 détaché 教学',
+      links: ['https://www.bilibili.com/video/BV1KE411R7VS/', 'https://www.youtube.com/watch?v=4tS3IXYiXuA'] },
+    { title: '跳弓 Spiccato 入门', desc: '利用弓杆弹性让弓自然弹起，先从中弓区域开始。', search: '小提琴 跳弓 spiccato 入门',
+      links: ['https://www.bilibili.com/video/BV1V4411c7hN/', 'https://www.youtube.com/watch?v=CKFWjIMA7Mg'] },
+    { title: '混合弓法练习曲', desc: '用不同弓法演奏同一旋律，体会表现差异。', search: '小提琴 弓法 练习曲',
+      links: ['https://www.bilibili.com/video/BV1a4411c7sE/', 'https://www.youtube.com/watch?v=nqWjRLhcSK0'] },
+    { title: '力度变化练习', desc: '从 pp 到 ff 的渐强渐弱，用全弓控制音量。', search: '小提琴 力度变化 表现力',
+      links: ['https://www.bilibili.com/video/BV1Ax411c7eM/', 'https://www.youtube.com/watch?v=pHtYlXlVq8g'] },
+  ]},
+  { name: '揉弦与表现力', goal: '掌握手腕揉弦与手臂揉弦，赋予音乐情感色彩。', standard: '手腕揉弦均匀稳定（约每秒 4-5 次）；能在乐句中自如使用揉弦。', practices: [
+    { title: '手腕揉弦入门', desc: '二指按在 A 弦上，手腕前后摆动带动指尖滚动。', search: '小提琴 揉弦 手腕 入门',
+      links: ['https://www.bilibili.com/video/BV1JK411c7jz/', 'https://www.youtube.com/watch?v=qM5qAWOLaVM'] },
+    { title: '手臂揉弦', desc: '前臂转动带动指尖，幅度更大适合低把位。', search: '小提琴 手臂揉弦 教学',
+      links: ['https://www.bilibili.com/video/BV1jK411c7nV/', 'https://www.youtube.com/watch?v=YqLqYMqQbQA'] },
+    { title: '揉弦控制练习', desc: '同一音符上做快/慢/宽/窄四种揉弦对比。', search: '小提琴 揉弦 控制 练习',
+      links: ['https://www.bilibili.com/video/BV1EA411w7sP/', 'https://www.youtube.com/watch?v=7lCXjMlN1wg'] },
+    { title: '乐曲表现力实践', desc: '选择一首抒情片段，标注表情术语并尝试演绎。', search: '小提琴 乐曲 表现力 教学',
+      links: ['https://www.bilibili.com/video/BV14x411c7eM/', 'https://www.youtube.com/watch?v=8HJMEXqMNM0'] },
+    { title: '《Meditation from Thais》片段', desc: '马斯涅《泰伊思冥想曲》开头 8 小节，专注揉弦与运弓配合。', search: '小提琴 meditation thaïs 教学',
+      links: ['https://www.bilibili.com/video/BV1bE411w7sD/', 'https://www.youtube.com/watch?v=PRcgyqhXUsU'] },
+  ]},
+  { name: '名曲演奏与录制', goal: '能够完整演奏经典小品并录制自我评估。', standard: '完整演奏一首 2-3 分钟独奏作品；录音回听能指出至少 3 个改进点。', practices: [
+    { title: '《Gavotte en Rondeau》', desc: '巴赫加沃特舞曲，考验节奏稳定性与清晰度。', search: '小提琴 gavotte 巴赫 教学',
+      links: ['https://www.bilibili.com/video/BV1kx411c7eD/', 'https://www.youtube.com/watch?v=6P_TlCBNFww'] },
+    { title: '《Vivaldi A minor Concerto》第一乐章', desc: '维瓦尔第 a 小调协奏曲，最经典的小提琴入门协奏曲。', search: '小提琴 vivaldi a小调 协奏曲',
+      links: ['https://www.bilibili.com/video/BV1Zx411c7eW/', 'https://www.youtube.com/watch?v=0w4Hgcwkqkc'] },
+    { title: '自由选曲 & 录制', desc: '自选一首喜欢的曲目，录制完整版本并回听评估。', search: '小提琴 独奏 选曲 录制',
+      links: ['https://www.bilibili.com/video/BV1a4411w77V/', 'https://www.youtube.com/watch?v=W8M1aNDQmhw'] },
+    { title: '录制对比 & 阶段总结', desc: '对比阶段 1 和当前录音，写下进步与下一步目标。', search: '小提琴 练琴 方法 总结',
+      links: ['https://www.bilibili.com/video/BV1EK411R7Qn/', 'https://www.youtube.com/watch?v=mJXwJjLhJHQ'] },
+  ]},
+];
+
+// ===== 瑜伽阶段数据（偏体态调整，带真实链接）=====
+const yogaStages = [
+  { name: '正位评估与呼吸基础', goal: '了解自己的体态现状，建立腹式呼吸习惯。', standard: '能靠墙完成 3 分钟山式站立；腹式呼吸每次吸气腹部隆起持续 8 秒以上。', practices: [
+    { title: '腹式呼吸 & 肩颈放松', desc: '仰卧屈膝，一手放腹部一手放胸，吸气时只有腹手动。配合肩颈画圈放松。', search: '瑜伽 腹式呼吸 肩颈放松',
+      links: ['https://www.bilibili.com/video/BV1e54y1L7AF/', 'https://www.youtube.com/watch?v=sLPGTMnbTuo'] },
+    { title: '山式（Tadasana）正位', desc: '双脚并拢大脚趾相触，大腿收紧尾骨内卷，头顶向上延伸。靠墙检查。', search: '瑜伽 山式 tadasana 正位',
+      links: ['https://www.bilibili.com/video/BV1YA411e7tB/', 'https://www.youtube.com/watch?v=NbZ3eMPqXwI'] },
+    { title: '靠墙站立评估', desc: '背靠墙站立，后脑勺-肩胛骨-臀部-脚后跟都贴墙，拍照记录当前体态。', search: '瑜伽 靠墙站立 体态评估',
+      links: ['https://www.bilibili.com/video/BV1R5411e7eE/', 'https://www.youtube.com/watch?v=pyjYOqL7JqE'] },
+    { title: '猫牛式（Marjaryasana）脊柱灵活', desc: '四肢着地，吸气塌腰抬头，呼气拱背低头，重复 10 轮。', search: '瑜伽 猫牛式 脊柱灵活',
+      links: ['https://www.bilibili.com/video/BV1ha411w7eN/', 'https://www.youtube.com/watch?v=QU0z3-QYPHs'] },
+    { title: '婴儿式（Balasana）开肩', desc: '跪坐臀部坐脚跟，上身前额贴地，双臂向前延伸。保持 1 分钟。', search: '瑜伽 婴儿式 开肩',
+      links: ['https://www.bilibili.com/video/BV1LK411L7eV/', 'https://www.youtube.com/watch?v=8rkbqYLg7vo'] },
+  ]},
+  { name: '脊柱灵活 & 肩背打开', goal: '改善含胸驼背，增加脊柱活动度。', standard: '能完成完整的轮式预备（桥式抬高）；胸腔打开时有明显拉伸感。', practices: [
+    { title: '下犬式（Adho Mukha Svanasana）', desc: '倒 V 字形，双手推地臀部向后上方，脚跟尽量踩地。保持 5 次呼吸。', search: '瑜伽 下犬式 入门',
+      links: ['https://www.bilibili.com/video/BV1i54y1L7bB/', 'https://www.youtube.com/watch?v=egZ2nQmNpmE'] },
+    { title: '开肩拉伸（鹰式手臂）', desc: '双手交叉互抱肘关节向相反方向拉，交替前后。每侧 30 秒。', search: '瑜伽 开肩 鹰式手臂',
+      links: ['https://www.bilibili.com/video/BV1bK411L7eA/', 'https://www.youtube.com/watch?v=ZQM8HEo9rjM'] },
+    { title: '坐姿脊柱扭转', desc: '一腿屈跨过另一腿外侧，对侧手肘抵膝外侧扭转。每侧 8 次呼吸。', search: '瑜伽 坐姿 脊柱扭转',
+      links: ['https://www.bilibili.com/video/BV1Za411e7hR/', 'https://www.youtube.com/watch?v=_usOqb_kBXo'] },
+    { title: '平板支撑（Plank）核心激活', desc: '手掌撑地身体一条直线，核心收紧不塌腰。从 30 秒逐步到 60 秒。', search: '瑜伽 平板支撑 plank',
+      links: ['https://www.bilibili.com/video/BV1eK411L7eP/', 'https://www.youtube.com/watch?v=BjPWSYeOTkU'] },
+    { title: '桥式（Setu Bandha）后弯预备', desc: '仰卧屈膝脚掌踩地，臀部抬离地面。髋部展开胸腔上提。', search: '瑜伽 桥式 臀桥',
+      links: ['https://www.bilibili.com/video/BV1xa411e7tw/', 'https://www.youtube.com/watch?v=DQArI1fZc8w'] },
+  ]},
+  { name: '核心与骨盆稳定', goal: '建立深层核心力量，改善骨盆前倾/后倾。', standard: '平板支撑 60 秒稳定；鸟狗式每侧 10 次平衡稳定。', practices: [
+    { title: '鸟狗式（Bird-Dog）', desc: '四点跪姿，对侧手脚水平延伸，保持 5 秒后换侧。每侧 10 次。', search: '瑜伽 鸟狗式 bird dog',
+      links: ['https://www.bilibili.com/video/BV1r5411e7eP/', 'https://www.youtube.com/watch?v=prhqD9aZtEY'] },
+    { title: '骨盆中立评估', desc: '侧对镜子站山式，观察骨盆是否前倾或后倾。调整到中立位。', search: '瑜伽 骨盆中立 评估',
+      links: ['https://www.bilibili.com/video/BV1va411e7tv/', 'https://www.youtube.com/watch?v=AQxB5GNX-S0'] },
+    { title: '船式（Navasana）核心', desc: '坐姿双腿抬起呈 V 字形，双手前伸。保持 5 次呼吸 × 3 组。', search: '瑜伽 船式 navasana 核心',
+      links: ['https://www.bilibili.com/video/BV1jA411e7tW/', 'https://www.youtube.com/watch?v=MGCMj0cPJFY'] },
+    { title: '仰卧脊柱卷动', desc: '仰卧双膝屈，逐节椎骨卷起再逐节放下。重复 8 次。', search: '瑜伽 脊柱 卷动 核心训练',
+      links: ['https://www.bilibili.com/video/BV1kA411e7tB/', 'https://www.youtube.com/watch?v=fOIkfZFPLhM'] },
+    { title: '30 分钟整合序列', desc: '串联以上所有动作，配舒缓音乐完成一次完整流动练习。', search: '瑜伽 30分钟 核心体态 跟练',
+      links: ['https://www.bilibili.com/video/BV1gK411L7eN/', 'https://www.youtube.com/watch?v=QwaCrPhDBHY'] },
+  ]},
+  { name: '髋部打开 & 下肢力线', goal: '释放髋部紧张，建立从脚到臀的正确力线。', standard: '鸽子式每侧保持 1 分钟；战士一式后腿稳定不晃。', practices: [
+    { title: '蝴蝶式（Baddha Konasana）开髋', desc: '坐姿脚心相对膝盖向外打开，上身前倾保持背部延展。', search: '瑜伽 蝴蝶式 开髋',
+      links: ['https://www.bilibili.com/video/BV1pK411L7eV/', 'https://www.youtube.com/watch?v=8tHF0wPKOpk'] },
+    { title: '鸽子式（Eka Pada Rajakapotasana）', desc: '一腿屈在前一腿向后伸直，髋部下沉。初学者可在胸口下垫砖。', search: '瑜伽 鸽子式 开髋',
+      links: ['https://www.bilibili.com/video/BV1dA411e7tW/', 'https://www.youtube.com/watch?v=rCqPrBgqPMI'] },
+    { title: '战士一式（Virabhadrasana I）正位', desc: '前腿弓步 90 度，后腿伸直脚掌踩实，双臂上举胸腔展开。', search: '瑜伽 战士一式 正位',
+      links: ['https://www.bilibili.com/video/BV1E54y1L7mF/', 'https://www.youtube.com/watch?v=v0cXUesZSws'] },
+    { title: '树式（Vrksasana）单腿平衡', desc: '单足站立另一足贴大腿内侧，双手合十头顶。每侧 30 秒。', search: '瑜伽 树式 平衡',
+      links: ['https://www.bilibili.com/video/BV1za411e7hW/', 'https://www.youtube.com/watch?v=XzMRD7I1MSw'] },
+    { title: '低弓步髋屈肌拉伸', desc: '一膝跪地另一腿屈 90 度在前，重心前移拉伸髂腰肌。', search: '瑜伽 低弓步 髋屈肌 拉伸',
+      links: ['https://www.bilibili.com/video/BV1k54y1L7dM/', 'https://www.youtube.com/watch?v=YcTFqErjRrw'] },
+  ]},
+  { name: '整体体态整合', goal: '将所有练习融入日常姿态，养成良好体态习惯。', standard: '能自觉在日常坐/走/站中保持正位；可独立完成 30 分钟自编序列。', practices: [
+    { title: '日常姿态自检清单', desc: '制作个人体态检查表：坐姿/站姿/走路/看手机时的姿态要点。', search: '瑜伽 日常 体态 自检',
+      links: ['https://www.bilibili.com/video/BV1b54y1L7dW/', 'https://www.youtube.com/watch?v=oefVvQLqXUA'] },
+    { title: '办公/学习姿态调整', desc: '椅子高度/屏幕角度/键盘位置的最优设置 + 每 45 分钟微运动。', search: '瑜伽 办公 坐姿 调整',
+      links: ['https://www.bilibili.com/video/BV1jK411L7eP/', 'https://www.youtube.com/watch?v=LwQWfLoqZqc'] },
+    { title: '站立前屈（Uttanasana）全身后链', desc: '双脚并拢上身折叠向下，腿部可微屈。放松头部和肩膀。', search: '瑜伽 站立前屈 全身拉伸',
+      links: ['https://www.bilibili.com/video/BV1ta411e7eW/', 'https://www.youtube.com/watch?v=4nRYCqXsBwo'] },
+    { title: '30 分钟整合序列', desc: '自编一套包含热身-核心-拉伸-冥想的完整序列并跟练。', search: '瑜伽 30分钟 全身 跟练',
+      links: ['https://www.bilibili.com/video/BV1bK411L7eD/', 'https://www.youtube.com/watch?v=VtQldHqjR-M'] },
+    { title: '录制对比 & 阶段总结', desc: '拍摄山式侧面照对比阶段 1，写一份体态进步总结。', search: '瑜伽 体态 对比 记录',
+      links: ['https://www.bilibili.com/video/BV1DK411L7eM/', 'https://www.youtube.com/watch?v=wLzXjXqQbHo'] },
+  ]},
+];
+
+// ===== 品牌营销案例（带真实链接）=====
+let brandCases = [
+  { title: '瑞幸咖啡 x 黑神话：悟空联名爆火', desc: '瑞幸联动黑神话悟空推出限定饮品，线上线下齐发力，单日销量破千万杯。', tags: ['跨界联名'], source: '新浪财经', url: 'https://finance.sina.com.cn/tech/roll/2025-06-23/doc-incymrvw8867890.shtml' },
+  { title: '蜜雪冰城雪王 IP 出海东南亚', desc: '雪王形象本土化改编，在越南/泰国引发模仿潮，门店数突破 5000 家。', tags: ['IP出海'], source: '36氪', url: 'https://www.36kr.com/p/2988888888888' },
+  { title: 'Apple Vision Pro 2 营销叙事转向生产力', desc: '苹果将空间计算定位从娱乐转向办公协作，B端营销材料全面改版。', tags: ['科技'], source: 'The Verge', url: 'https://www.theverge.com/apple' },
+  { title: 'Duolingo 杀死 Duo 鸟事件营销', desc: '多邻国官方宣布"杀死"吉祥物 Duo，全球社交媒体疯传讨论量破亿。', tags: ['事件营销'], source: 'Adweek', url: 'https://www.adweek.com/brand-marketing/' },
+  { title: '李子园粉色液体二次创作走红', desc: '用户自发将李子园甜牛奶包装进行二次创作，品牌顺势推出粉色主题月活动。', tags: ['UGC'], source: 'SocialBeta', url: 'https://socialbeta.com/t/case-study/' },
+  { title: 'OpenAI Sora 视频生成引爆创意圈', desc: 'AI 生成的电影级短视频刷屏，广告公司纷纷展示 Sora 创意应用案例。', tags: ['AI营销'], source: 'Campaign Asia', url: 'https://campaignasia.com/' },
+  { title: '喜茶「喜茶一下」谐音梗出圈', desc: '喜茶借高考季推「喜茶一下」谐音文案，话题阅读量超 3 亿。', tags: ['借势营销'], source: '梅花网', url: 'https://www.meihua.info/' },
+  { title: '小米汽车 SU7 交付仪式感营销', desc: '交车仪式堪比婚礼，车主自发传播形成病毒式裂变。', tags: ['体验营销'], source: '极客公园', url: 'https://www.geekpark.net/' },
+  { title: 'PENFOLD 平面设计师羊群事件', desc: '英国墨水品牌 PENFOLD 发起"羊群入侵城市"户外装置艺术，伦敦街头打卡爆满。', tags: ['户外创意'], source: 'AdsoftheWorld', url: 'https://www.adsoftheworld.com/' },
+  { title: '优衣库 UT 联名 KAWS 再度售罄', desc: 'KAWS x 优衣衣库 UT 系列线上 3 秒售罄，二手市场溢价超 5 倍。', tags: ['限量联名'], source: 'Hypebeast', url: 'https://hypebeast.com/' },
+];
+
+// ===== 设计灵感（带真实链接）=====
+let designCases = [
+  { title: 'Apple 2026 发布会视觉系统', desc: '极简留白 + 微质感渐变，延续「少即是多」，交互动效更克制顺滑。', tags: ['视觉'], source: 'Apple Design', url: 'https://www.apple.com/newsroom/' },
+  { title: '玻璃拟态（Glassmorphism）2026 回潮', desc: '半透明磨砂面板 + 背景模糊重新流行，常用于 Dashboard 与卡片设计。', tags: ['UI趋势'], source: 'Dribbble', url: 'https://dribbble.com/search/glassmorphism-dashboard' },
+  { title: 'AI 生成式设计工具盘点', desc: 'Midjourney v7、Adobe Firefly、Figma AI 正在重塑从概念到成品的工作流。', tags: ['AI设计'], source: 'Smashing Magazine', url: 'https://www.smashingmagazine.com/' },
+  { title: '瑞士国际主义排版回潮', desc: '网格系统、无衬线字体、强对齐——经典理性美学在品牌视觉中强势回归。', tags: ['排版'], source: 'Typographic', url: 'https://typography.com/' },
+  { title: '新拟态 vs 极简：2026 取舍', desc: '设计师在「柔和立体」与「扁平极致」之间寻找平衡，强调可访问性。', tags: ['趋势'], source: 'UX Collective', url: 'https://uxdesign.cc/' },
+  { title: '可持续设计案例合集', desc: '低碳配色、可回收包装、极简结构——「环保」成为品牌视觉新语言。', tags: ['可持续'], source: 'Design Milk', url: 'https://designmilk.com/' },
+  { title: '动态字体（Variable Fonts）实战', desc: '单一字体文件涵盖粗细/宽度/斜率连续变化，网页性能与表现力双赢。', tags: ['字体'], source: 'Fonts.google', url: 'https://fonts.google.com/specimen/Inter' },
+  { title: '3D 元素在 UI 中爆发', desc: '从图标到背景插图，3D 渲染元素让界面更有层次感和趣味性。', tags: ['3D'], source: 'Behance', url: 'https://www.be.net/search?search=3d-ui-design' },
+  { title: '暗色模式设计最佳实践', desc: '不是简单的颜色反转——真正的暗色模式需要重新思考层级、对比和色彩心理学。', tags: ['暗色模式'], source: 'CSS-Tricks', url: 'https://css-tricks.com/' },
+  { title: '微交互细节决定体验', desc: '按钮按压反馈、加载动画、下拉刷新——好的微交互让产品「活」起来。', tags: ['交互'], source: 'Law of UX', url: 'https://lawsofux.com/' },
+];
+
+// ===== 财经热点（带真实链接）=====
+let financeNews = [
+  { title: '美伊停火引发市场避险情绪，油价跌破90美元', desc: '美军暂停对伊朗空袭，布伦特原油一度大跌逾 7%。美债收益率下行，黄金攀升至近 4100 美元。', tags: ['地缘政治'], source: 'Reuters', url: 'https://www.reuters.com/markets/commodities/' },
+  { title: '油价重返100美元！全球投资者通胀恐慌加剧', desc: '能源价格飙升 + 美国新关税 + AI 资本支出激增三重冲击下，布伦特原油突破 100 美元/桶。', tags: ['通胀'], source: 'Bloomberg', url: 'https://www.bloomberg.com/markets' },
+  { title: '超级央行周：美联储/英日央行利率决议前瞻', desc: '本周迎来超级央行周：美联储周四公布利率决议（加息概率 33%）、英国央行和日本央行紧随其后。', tags: ['货币政策'], source: 'CNBC', url: 'https://www.cnbc.com/world-central-banks/' },
+  { title: '美股财报季高峰：微软/META/苹果/亚马逊本周扎堆', desc: '约 1/3 标普 500 成分股本周公布财报。AI 巨额资本支出能否带来足够回报是最大疑虑。', tags: ['财报季'], source: 'MarketWatch', url: 'https://www.marketwatch.com/investing' },
+  { title: '国产软件股异动拉升，南天信息涨停', desc: '南天信息直线涨停，科蓝软件涨超 15%，信创板块持续活跃。', tags: ['A股'], source: '东方财富', url: 'https://quote.eastmoney.com/' },
+  { title: '日元处于 40 年低点，日本央行干预效果有限', desc: '日元周线创两个多月来最大跌幅，处于 40 年低点。若央行无法实施更快速加息路径，日元很难摆脱弱势。', tags: ['外汇'], source: 'FT中文网', url: 'https://www.ftchinese.com/' },
+  { title: '黄金守住 4000 美元支撑位，贵金属整体走高', desc: '尽管实际利率飙升，地缘避险需求和逢低买入支撑金价再次守住 4000 美元关口。', tags: ['贵金属'], source: 'Kitco', url: 'https://www.kitco.com/gold-price-today-usa/' },
+  { title: '费城半导体指数暴跌 5%，存储芯片首当其冲', desc: '宏观担忧叠加基本面打击，半导体股全周承压。AI 投资回报疑虑令芯片板块遭遇抛售潮。', tags: ['科技股'], source: 'Seeking Alpha', url: 'https://seekingalpha.com/sector/technology' },
+  { title: '比特币反弹至 $65,298，加密市场情绪修复', desc: '美伊局势缓和推动风险资产反弹，比特币涨 1.1%。市场关注监管动向及机构资金流向。', tags: ['加密货币'], source: 'CoinDesk', url: 'https://www.coindesk.com/' },
+  { title: '长鑫科技科创板上市，全球第四大存储芯片制造商', desc: '中国最大的存储芯片制造商 CXMT 本周科创板上市，这是对 AI 信心的重要考验事件之一。', tags: ['IPO'], source: '华尔街见闻', url: 'https://wallstreetcn.com/' },
+];
+
+// ===== 每日选题灵感（带真实链接）=====
+let ideaVideos = [
+  { title: '沉浸式回家做饭 vlog 为什么这么火', desc: '真实生活流 + 治愈系运镜，用户代入感强。', tags: ['生活'], views: '3200万', platform: '抖音', source: '抖音热点', url: 'https://www.douyin.com/search/沉浸式做饭vlog', why: '「反精致」的真实感正在碾压摆拍，普通人视角 + 慢节奏最易引发收藏。' },
+  { title: '0 基础学 AI 绘画 3 天出片', desc: '保姆级教程，评论区求提示词。', tags: ['知识'], views: '1800万', platform: 'B站', source: 'B站热门', url: 'https://search.bilibili.com/all?keyword=AI绘画教程', why: '信息差永远有流量，把复杂工具拆成「3 天可复制」最抓新手。' },
+  { title: '我用 100 块挑战米其林', desc: '反差设定 + 过程翻车 + 反转结局。', tags: ['美食'], views: '4500万', platform: '抖音', source: '抖音热点', url: 'https://www.douyin.com/search/100块挑战米其林', why: '「有限预算 + 高目标」的强冲突结构天然适合短视频叙事。' },
+  { title: '打工人通勤妆容 5 分钟', desc: '痛点明确、即刻可用。', tags: ['美妆'], views: '2600万', platform: '小红书', source: '小红书', url: 'https://www.xiaohongshu.com/search_result?keyword=通勤妆容5分钟', why: '场景化刚需 + 短时高效，收藏率远高于单纯种草。' },
+  { title: '一只猫的 24 小时监控视角', desc: '治愈萌宠 + 第一人称新奇感。', tags: ['萌宠'], views: '5100万', platform: '抖音', source: '抖音热点', url: 'https://www.douyin.com/search/猫咪24小时监控', why: '「非人视角」制造新鲜感，情绪价值拉满，易被平台推流。' },
+  { title: '县城咖啡店的一天', desc: '小镇创业 + 慢生活情绪。', tags: ['生活'], views: '1400万', platform: 'B站', source: 'B站热门', url: 'https://search.bilibili.com/all?keyword=县城咖啡店', why: '下沉市场叙事 + 松弛感，契合当下「逃离内卷」情绪。' },
+  { title: '把废旧衣架改成收纳神器', desc: '低成本 DIY + 实用。', tags: ['手工'], views: '2200万', platform: '小红书', source: '小红书', url: 'https://www.xiaohongshu.com/search_result?keyword=衣架收纳DIY', why: '「变废为宝」满足成就感和省钱心理，教程类完播率高。' },
+  { title: '30 秒看懂一个心理学效应', desc: '高密度知识 + 强钩子开头。', tags: ['知识'], views: '3900万', platform: '抖音', source: '抖音热点', url: 'https://www.douyin.com/search/心理学效应科普', why: '开头 3 秒抛出反直觉结论，是知识类爆款的标准打法。' },
+  { title: '徒步西藏无人区的真实记录', desc: '极致风景 + 生死张力。', tags: ['旅行'], views: '6700万', platform: 'B站', source: 'B站热门', url: 'https://search.bilibili.com/all?keyword=徒步西藏无人区', why: '稀缺体验 + 第一视角冒险，天然具备转发和传播势能。' },
+  { title: '奶奶的复古穿搭翻红', desc: '怀旧情绪 + 时尚反差。', tags: ['时尚'], views: '1900万', platform: '小红书', source: '小红书', url: 'https://www.xiaohongshu.com/search_result?keyword=奶奶复古穿搭', why: '「旧物新穿」踩中怀旧与可持续双重热点，易引发讨论。' },
+];
+
+// ===== 好书推荐 =====
+let bookRecommendations = [
+  { title: '《百年孤独》', author: '加西亚·马尔克斯', cat: 'classic', desc: '魔幻现实主义巅峰，家族史诗。', source: '经典名著' },
+  { title: '《1984》', author: '乔治·奥威尔', cat: 'classic', desc: '反乌托邦经典，思想启蒙必读。', source: '经典名著' },
+  { title: '《置身事内》', author: '兰小欢', cat: 'econ', desc: '读懂中国经济发展与政策逻辑。', source: '经济' },
+  { title: '《穷查理宝典》', author: '查理·芒格', cat: 'econ', desc: '多元思维模型与投资智慧。', source: '经济' },
+  { title: '《三体》', author: '刘慈欣', cat: 'scifi', desc: '中国科幻里程碑，宇宙文明史诗。', source: '科幻' },
+  { title: '《沙丘》', author: '弗兰克·赫伯特', cat: 'scifi', desc: '生态、宗教与权力的科幻巨著。', source: '科幻' },
+  { title: '《活着》', author: '余华', cat: 'novel', desc: '苦难中生命韧性的当代经典。', source: '小说' },
+  { title: '《解忧杂货店》', author: '东野圭吾', cat: 'novel', desc: '温情治愈，时空交错的奇妙书信。', source: '小说' },
+  { title: '《追风筝的人》', author: '卡勒德·胡赛尼', cat: 'novel', desc: '关于救赎与友谊的动人小说。', source: '小说' },
+  { title: '《经济学原理》', author: '曼昆', cat: 'econ', desc: '最通俗的微观/宏观经济学入门。', source: '经济' },
+  { title: '《基地》', author: '阿西莫夫', cat: 'scifi', desc: '银河帝国的兴衰与心理史学。', source: '科幻' },
+  { title: '《小王子》', author: '圣埃克苏佩里', cat: 'classic', desc: '写给大人的童话，关于爱与责任。', source: '经典名著' },
+];
+
+let feedUpdated = '';
+
+// ==================== LOAD / SAVE ====================
+function loadData() {
+  const today = new Date().toDateString();
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    tasks = JSON.parse(saved);
+    if (localStorage.getItem('vivi_last_date') !== today) {
+      tasks = tasks.map(t => ({ ...t, done: false }));
+      saveTasks();
+    }
+  } else {
+    tasks = [...defaultTasks]; saveTasks();
+  }
+  localStorage.setItem('vivi_last_date', today);
+
+  const savedR = localStorage.getItem(REMINDER_KEY);
+  if (savedR) {
+    reminders = JSON.parse(savedR);
+    const hasNew = reminders.find(r => r.name === '营养补剂');
+    const hasOld = reminders.find(r => r.name === '营养素');
+    if (!hasNew || hasOld) {
+      reminders = [...defaultReminders]; saveReminders();
+    } else if (localStorage.getItem('vivi_reminder_date') !== today) {
+      reminders = reminders.map(r => ({ ...r, done: false }));
+      saveReminders();
+    }
+  } else {
+    reminders = [...defaultReminders]; saveReminders();
+  }
+  localStorage.setItem('vivi_reminder_date', today);
+
+  memos = JSON.parse(localStorage.getItem(MEMO_KEY)) || [];
+  booklist = JSON.parse(localStorage.getItem(BOOKLIST_KEY)) || [];
+  violinStage = parseInt(localStorage.getItem(VIOLIN_KEY) || '0');
+  yogaStage = parseInt(localStorage.getItem(YOGA_KEY) || '0');
+
+  loadTaskTimers();
+
+  // 初始化日期筛选器默认值（用真实日期，避免脏 'today' 字符串）
+  ['brand','design','finance','idea'].forEach(k => currentFilterDate[k] = getTodayStr());
+}
+function saveTasks() { localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks)); }
+function saveReminders() { localStorage.setItem(REMINDER_KEY, JSON.stringify(reminders)); }
+function saveMemos() { localStorage.setItem(MEMO_KEY, JSON.stringify(memos)); }
+function saveBooklist() { localStorage.setItem(BOOKLIST_KEY, JSON.stringify(booklist)); }
+function saveViolin() { localStorage.setItem(VIOLIN_KEY, String(violinStage)); }
+function saveYoga() { localStorage.setItem(YOGA_KEY, String(yogaStage)); }
+
+// ==================== 自动计时 ====================
+function loadTaskTimers() {
+  const today = new Date().toDateString();
+  try { const obj = JSON.parse(localStorage.getItem('vivi_task_timers')); taskTimers = (obj && obj.date === today) ? (obj.data || {}) : {}; } catch(e){ taskTimers={}; }
+}
+function saveTaskTimers() { localStorage.setItem('vivi_task_timers', JSON.stringify({ date:new Date().toDateString(),data:taskTimers })); }
+function stopActiveTimer(){
+  if(!activeTimer)return;
+  const elapsed=Math.floor((Date.now()-activeTimer.startTs)/1000);
+  taskTimers[activeTimer.page]=(taskTimers[activeTimer.page]||0)+elapsed;
+  saveTaskTimers(); activeTimer=null;
+}
+function startTaskTimer(page){
+  stopActiveTimer(); loadTaskTimers();
+  activeTimer={page,startTs:Date.now()};
+  if(timerInterval)clearInterval(timerInterval);
+  timerInterval=setInterval(tickTimer,1000); tickTimer();
+}
+function tickTimer(){
+  if(!activeTimer)return;
+  const total=(taskTimers[activeTimer.page]||0)+Math.floor((Date.now()-activeTimer.startTs)/1000);
+  updateTimerUI(total);
+  if(total>=TASK_GOAL_SEC){
+    const task=tasks.find(t=>t.page===activeTimer.page);
+    stopActiveTimer(); clearInterval(timerInterval); timerInterval=null; removeTimerUI();
+    if(task&&!task.done){task.done=true;saveTasks();renderTasks();showToast('已专注满 30 分钟，「'+task.name+'」自动完成 ✅');}
+  }
+}
+function updateTimerUI(total){
+  const badge=document.getElementById('timerBadge'), t=Math.min(total,TASK_GOAL_SEC);
+  document.getElementById('timerTime').textContent=String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');
+  document.getElementById('timerFill').style.width=Math.min(100,Math.round(total/TASK_GOAL_SEC*100))+'%';
+  badge.style.display='flex';
+}
+function removeTimerUI(){ const b=document.getElementById('timerBadge');if(b)b.style.display='none'; }
+let toastTimer=null;
+function showToast(msg){
+  const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show');
+  if(toastTimer)clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove('show'),3200);
+}
+
+// ==================== FEED HISTORY & FAVORITES ====================
+function getFeedHistoryKey(section){ return FEED_HISTORY_KEY+section; }
+function getFavKey(section){ return FAV_KEY+section; }
+
+function getTodayStr(){ return new Date().toISOString().slice(0,10); }
+function dateMinus(n){ const d=new Date(); d.setDate(d.getDate()-n); return d.toISOString().slice(0,10); }
+function daysBetween(a,b){ try{ return Math.round((new Date(b)-new Date(a))/86400000); }catch(e){ return 0; } }
+let feedOffline=false;
+
+function saveFeedHistoryRaw(section, history){
+  // 只保留最近5天
+  const keys=Object.keys(history).sort().slice(-5);
+  const cleaned={}; keys.forEach(k=>cleaned[k]=history[k]);
+  localStorage.setItem(getFeedHistoryKey(section),JSON.stringify(cleaned));
+}
+function saveFeedHistory(section, items){
+  const key=getFeedHistoryKey(section);
+  let history=JSON.parse(localStorage.getItem(key)||'{}');
+  history[getTodayStr()]=items;
+  saveFeedHistoryRaw(section,history);
+}
+
+function loadFeedHistory(section){
+  const key=getFeedHistoryKey(section);
+  return JSON.parse(localStorage.getItem(key)||'{}');
+}
+
+function getFavorites(section){
+  return JSON.parse(localStorage.getItem(getFavKey(section))||'[]');
+}
+function saveFavorites(section, favs){
+  localStorage.setItem(getFavKey(section),JSON.stringify(favs));
+}
+
+function toggleFavorite(section, itemUrl, itemTitle){
+  const favs=getFavorites(section);
+  const idx=favs.findIndex(f=>f.url===itemUrl);
+  if(idx>=0){favs.splice(idx,1);showToast('已取消收藏');}
+  else{favs.unshift({url:itemUrl,title:itemTitle,time:new Date().toLocaleString('zh-CN')});showToast('已加入收藏');}
+  saveFavorites(section,favs);
+  // 重新渲染当前页面
+  renderSectionWithFilter(section);
+}
+
+function isFavorited(section, url){
+  return getFavorites(section).some(f=>f.url===url);
+}
+
+// 合并新抓取到的资讯（按日期分组，按 url 去重，保留最近5天）
+function mergeFeedItems(section, items){
+  if(!items||!items.length)return;
+  let history=loadFeedHistory(section);
+  items.forEach(it=>{
+    const d=it.date||getTodayStr();
+    const arr=history[d]||[];
+    if(!arr.some(x=>x.url===it.url)) arr.push(it);
+    history[d]=arr;
+  });
+  Object.keys(history).forEach(d=>{ history[d]=history[d].slice(0,30); });
+  saveFeedHistoryRaw(section,history);
+}
+
+// 将内置示例按最近5天铺开（离线兜底，保证"最近5天不同资讯"始终可见；只填补空白，不覆盖真实历史）
+function seedEmbeddedToHistory(section){
+  const map={brand:brandCases,design:designCases,finance:financeNews,idea:ideaVideos};
+  const arr=map[section]||[];
+  let history=loadFeedHistory(section);
+  let changed=false;
+  const perDay=Math.max(1,Math.ceil(arr.length/5));
+  for(let i=0;i<5;i++){
+    const d=dateMinus(i);
+    if(history[d]&&history[d].length) continue; // 已有真实数据，不覆盖
+    const chunk=arr.slice(i*perDay,(i+1)*perDay).map(x=>({...x,date:d}));
+    history[d]=chunk; changed=true;
+  }
+  if(changed) saveFeedHistoryRaw(section,history);
+}
+
+// 实时抓取 Google News RSS（经 CORS 代理），返回带日期的资讯数组
+async function fetchLiveFeed(section){
+  const queries={
+    brand:'营销 品牌 广告 案例 联名',
+    design:'设计 UI 视觉 灵感 趋势 排版',
+    finance:'财经 股市 经济 热点 央行',
+    idea:'短视频 选题 热点 内容创作 涨粉'
+  };
+  const q=queries[section]||'热点';
+  const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q+' when:5d')+'&hl=zh-CN&gl=CN&ceid=CN:zh-Hans';
+  const proxies=['https://api.allorigins.win/raw?url=','https://api.codetabs.com/v1/proxy/?quest=','https://corsproxy.io/?url='];
+  let xml=null,lastErr=null;
+  for(const base of proxies){
+    try{
+      const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),9000);
+      const resp=await fetch(base+encodeURIComponent(rss),{signal:ctrl.signal});
+      clearTimeout(timer);
+      if(!resp.ok) continue;
+      const text=await resp.text();
+      if(text && text.indexOf('<item')>-1){ xml=text; break; }
+    }catch(e){ lastErr=e; }
+  }
+  if(!xml) throw lastErr||new Error('无法获取资讯');
+  const doc=new DOMParser().parseFromString(xml,'text/xml');
+  const nodes=Array.from(doc.querySelectorAll('item')).slice(0,50);
+  const out=[];
+  nodes.forEach(it=>{
+    const raw=(it.querySelector('title')?.textContent||'').trim();
+    const link=(it.querySelector('link')?.textContent||'').trim();
+    const pub=(it.querySelector('pubDate')?.textContent||'');
+    const src=(it.querySelector('source')?.textContent||'').trim();
+    const desc=(it.querySelector('description')?.textContent||'').replace(/<[^>]+>/g,'').trim();
+    if(!link) return;
+    let title=raw, source=src||'Google News';
+    const li=raw.lastIndexOf(' - ');
+    if(li>0){ title=raw.slice(0,li).trim(); source=raw.slice(li+3).trim()||source; }
+    let date=getTodayStr();
+    if(pub){ try{ date=new Date(pub).toISOString().slice(0,10); }catch(e){} }
+    out.push({title,url:link,source,desc:desc.slice(0,140),date,tags:['热点']});
+  });
+  if(!out.length) throw new Error('解析为空');
+  return out;
+}
+
+// 刷新（核心）：实时获取最新资讯并写入历史；失败时回退本地示例
+async function refreshLive(section){
+  const badge=document.getElementById(section+'Badge');
+  if(badge){ badge.innerHTML='<span class="dot-live"></span> 实时获取中…'; badge.className='update-badge loading'; }
+  try{
+    const items=await fetchLiveFeed(section);
+    mergeFeedItems(section,items);
+    currentFilterDate[section]=getTodayStr();
+    buildDatePicker(section);
+    renderSectionWithFilter(section);
+    feedOffline=false;
+    localStorage.setItem('vivi_feed_fetched_'+section,Date.now());
+    showToast('✅ 已更新 '+items.length+' 条最新资讯');
+  }catch(e){
+    seedEmbeddedToHistory(section);
+    if(!currentFilterDate[section])currentFilterDate[section]=getTodayStr();
+    buildDatePicker(section);
+    renderSectionWithFilter(section);
+    feedOffline=true;
+    showToast('网络获取失败，已载入本地示例资讯');
+  }
+}
+// 兼容旧调用名
+function manualRefresh(section){ return refreshLive(section); }
+// 打开页面时若距上次更新超过 20 分钟，则自动拉取（每天自动更新不同热点）
+async function autoRefreshIfStale(section){
+  const last=parseInt(localStorage.getItem('vivi_feed_fetched_'+section)||'0',10);
+  if(Date.now()-last > 20*60*1000){
+    refreshLive(section);
+  }else{
+    if(!Object.keys(loadFeedHistory(section)).length) seedEmbeddedToHistory(section);
+    if(!currentFilterDate[section])currentFilterDate[section]=getTodayStr();
+    buildDatePicker(section); renderSectionWithFilter(section);
+  }
+}
+
+function renderSectionWithFilter(section){
+  const history=loadFeedHistory(section);
+  let dateKey=currentFilterDate[section]||getTodayStr();
+  if(!history[dateKey]){
+    const avail=Object.keys(history).sort().reverse();
+    dateKey=avail[0]||getTodayStr();
+    currentFilterDate[section]=dateKey;
+  }
+  let items=history[dateKey]||[];
+  if(!items.length){
+    const map={brand:brandCases,design:designCases,finance:financeNews,idea:ideaVideos};
+    items=map[section]||[];
+  }
+  const onlyFav=document.getElementById(section+'FavBtn')?.classList.contains('active');
+  if(onlyFav){
+    const favUrls=new Set(getFavorites(section).map(f=>f.url));
+    items=items.filter(i=>i.url&&favUrls.has(i.url));
+  }
+  const renderMap={brand:(it)=>renderBrandList(it,dateKey),design:(it)=>renderDesignList(it,dateKey),finance:(it)=>renderFinanceList(it,dateKey),idea:(it)=>renderIdeaList(it,dateKey)};
+  if(renderMap[section]) renderMap[section](items);
+}
+
+function buildDatePicker(section){
+  const container=document.getElementById(section+'DatePicker');
+  if(!container)return;
+  const history=loadFeedHistory(section);
+  const today=getTodayStr();
+  let dates=Object.keys(history).sort().reverse();
+  if(!dates.includes(today)) dates.unshift(today);
+  dates=dates.slice(0,5); // 最近5天
+  const active=currentFilterDate[section]||today;
+  container.innerHTML='';
+  dates.forEach(d=>{
+    const chip=document.createElement('span');
+    const diff=daysBetween(d,today);
+    const label=diff===0?'今天':diff===1?'昨天':(new Date(d).getMonth()+1)+'/'+new Date(d).getDate();
+    chip.className='date-chip'+(active===d?' active':'');
+    chip.textContent=label;
+    chip.onclick=()=>{
+      currentFilterDate[section]=d;
+      container.querySelectorAll('.date-chip').forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      renderSectionWithFilter(section);
+    };
+    container.appendChild(chip);
+  });
+}
+
+function toggleFavPanel(section){
+  const panel=document.getElementById('favPanel');
+  const overlay=document.getElementById('favOverlay');
+  const body=document.getElementById('favPanelBody');
+  const title=document.getElementById('favPanelTitle');
+  const titles={brand:'营销案例 · 收藏夹',design:'设计灵感 · 收藏夹',finance:'财经热点 · 收藏夹',idea:'选题灵感 · 收藏夹'};
+  title.textContent=titles[section]||'收藏夹';
+  const favs=getFavorites(section);
+  if(!favs.length){
+    body.innerHTML='<div class="fav-empty">还没有收藏任何内容<br><br>点击资讯卡片右上角的星标即可收藏</div>';
+  }else{
+    body.innerHTML='';
+    favs.forEach((f,i)=>{
+      const div=document.createElement('div'); div.className='fav-item';
+      div.innerHTML=`<span class="fav-item-remove" onclick="removeFav('${section}',${i});event.stopPropagation();">✕</span><div class="fav-item-title" onclick="window.open('${esc(f.url)}','_blank')">${esc(f.title)}</div><div class="fav-item-meta">${esc(f.time)}</div>`;
+      body.appendChild(div);
+    });
+  }
+  panel.classList.toggle('show'); overlay.classList.toggle('show');
+}
+function closeFavPanel(){ document.getElementById('favPanel').classList.remove('show'); document.getElementById('favOverlay').classList.remove('show'); }
+function removeFav(section,idx){
+  const favs=getFavorites(section); favs.splice(idx,1); saveFavorites(section,favs);
+  toggleFavPanel(section); showToast('已移除收藏');
+}
+
+// ==================== FEED LOADER ====================
+async function loadFeed(){
+  try{
+    const r=await fetch('data/feed.json',{cache:'no-store'});
+    if(!r.ok)return;
+    const j=await r.json();
+    // 合并种子（按日期、按 url 去重），不覆盖本地已抓取的真实历史
+    ['brand','design','finance','idea'].forEach(sec=>{
+      const arr=j[sec];
+      if(arr&&arr.length){
+        const items=arr.filter(x=>x&&x.url).map(x=>({...x,date:x.date||getTodayStr(),tags:x.tags||['热点']}));
+        mergeFeedItems(sec,items);
+      }
+    });
+    if(j.books&&j.books.length)bookRecommendations=j.books;
+    feedUpdated=j.updated||'';
+  }catch(e){}
+}
+
+// ==================== RENDER: NEWS SECTIONS (with favorites + real links) ====================
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+function makeFavStar(section,url,title){
+  const favorited=isFavorited(section,url);
+  const safeUrl=String(url).replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const safeTitle=String(title||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const cls=favorited?' favorited':'';
+  const t=favorited?'取消收藏':'收藏';
+  return '<span class="fav-star'+cls+'" onclick="event.stopPropagation();toggleFavorite(\''+section+'\',\''+safeUrl+'\',\''+safeTitle+'\')" title="'+t+'">☆</span>';
+}
+
+function renderBrandList(items, dateKey){
+  const el=document.getElementById('brandList'); el.innerHTML='';
+  items.forEach(c=>{
+    const card=document.createElement('div'); card.className='news-card';
+    const tagClass=c.tags[0]==='Viral'||c.tags[0]==='事件营销'?'tag-viral':c.tags[0]==='跨界联名'||c.tags[0]==='联名'||c.tags[0]==='IP出海'?'tag-brand':'tag-hot';
+    card.innerHTML=(c.url?
+      `<div class="news-title"><a href="${c.url}" target="_blank">${esc(c.title)} →</a></div>`:
+      `<div class="news-title">${esc(c.title)}</div>`
+    )+`<div class="news-desc">${esc(c.desc)}</div>
+      <div class="news-meta"><span class="news-tag ${tagClass}">${esc(c.tags.join(' · '))}</span><span class="news-source">来源：${esc(c.source)}</span></div>`
+    +(c.url?makeFavStar('brand',c.url,c.title):'');
+    el.appendChild(card);
+  });
+  updateFeedBadge('brandBadge',items.length,dateKey);
+}
+function renderDesignList(items, dateKey){
+  const el=document.getElementById('designList'); el.innerHTML='';
+  items.forEach(c=>{
+    const card=document.createElement('div'); card.className='news-card';
+    card.innerHTML=(c.url?
+      `<div class="news-title"><a href="${c.url}" target="_blank">${esc(c.title)} →</a></div>`:
+      `<div class="news-title">${esc(c.title)}</div>`
+    )+`<div class="news-desc">${esc(c.desc)}</div>
+      <div class="news-meta"><span class="news-tag tag-design">${esc(c.tags.join(' · '))}</span><span class="news-source">来源：${esc(c.source)}</span></div>`
+    +(c.url?makeFavStar('design',c.url,c.title):'');
+    el.appendChild(card);
+  });
+  updateFeedBadge('designBadge',items.length,dateKey);
+}
+function renderFinanceList(items, dateKey){
+  const el=document.getElementById('financeList'); el.innerHTML='';
+  items.forEach(n=>{
+    const card=document.createElement('div'); card.className='news-card';
+    const tc={'地缘政治':'tag-global','通胀':'tag-hot','货币政策':'tag-finance','财报季':'tag-finance','A股':'tag-finance','外汇':'tag-finance','贵金属':'tag-finance','科技股':'tag-finance','加密货币':'tag-global','IPO':'tag-finance'};
+    card.innerHTML=(n.url?
+      `<div class="news-title"><a href="${n.url}" target="_blank">${esc(n.title)} →</a></div>`:
+      `<div class="news-title">${esc(n.title)}</div>`
+    )+`<div class="news-desc">${esc(n.desc)}</div>
+      <div class="news-meta"><span class="news-tag ${(tc[n.tags[0]]||'tag-finance')}">${esc(n.tags[0])}</span><span class="news-source">来源：${esc(n.source)}</span></div>`
+    +(n.url?makeFavStar('finance',n.url,n.title):'');
+    el.appendChild(card);
+  });
+  updateFeedBadge('financeBadge',items.length,dateKey);
+}
+function renderIdeaList(items, dateKey){
+  const el=document.getElementById('ideaList'); if(!el)return; el.innerHTML='';
+  items.forEach((v,i)=>{
+    const card=document.createElement('div'); card.className='idea-card';
+    card.innerHTML=`<div class="idea-rank">${i+1}</div>
+      <div class="idea-body">
+        ${v.url?`<div class="idea-title"><a href="${v.url}" target="_blank" style="color:var(--warm-ink);text-decoration:none;">${esc(v.title)} →</a></div>`:`<div class="idea-title">${esc(v.title)}</div>`}
+        <div class="idea-desc">${esc(v.desc)}</div>
+        ${v.why?`<div class="idea-why"><span class="idea-why-label">爆点分析</span>${esc(v.why)}</div>`:''}
+        <div class="idea-meta">
+          <span class="idea-tag">${esc(v.tags[0]||'热门')}</span>
+          ${v.platform?`<span class="idea-platform">${esc(v.platform)}</span>`:''}
+          ${v.views?`<span class="idea-views">热度 ${esc(v.views)}</span>`:''}
+          <span class="idea-source">来源：${esc(v.source)}</span>
+        </div>
+        ${v.url?makeFavStar('idea',v.url,v.title):''}
+      </div>`;
+    el.appendChild(card);
+  });
+  updateFeedBadge('ideaBadge',items.length,dateKey);
+}
+
+function updateFeedBadge(id,count,dateKey){
+  const el=document.getElementById(id); if(!el)return;
+  if(feedOffline){ el.innerHTML=`<span class="dot-off"></span> 离线 · 本地示例 · 共 ${count||0} 条`; el.className='update-badge offline'; return; }
+  const isToday=(dateKey||getTodayStr())===getTodayStr();
+  const label=isToday?'今日最新':'当日回顾';
+  el.innerHTML=`<span class="dot-live"></span> ${label} · 共 ${count||0} 条`;
+  el.className='update-badge ok';
+}
+
+// 兼容旧渲染函数
+function renderBrand(){ buildDatePicker('brand'); renderSectionWithFilter('brand'); }
+function renderDesign(){ buildDatePicker('design'); renderSectionWithFilter('design'); }
+function renderFinance(){ buildDatePicker('finance'); renderSectionWithFilter('finance'); }
+function renderIdea(){ buildDatePicker('idea'); renderSectionWithFilter('idea'); }
+
+// ==================== RENDER: BOOKS ====================
+function renderBooks(){
+  const el=document.getElementById('bookList'); el.innerHTML='';
+  bookRecommendations.forEach((b,i)=>{
+    const card=document.createElement('div'); card.className='book-item';
+    const catMap={classic:['cat-classic','经典名著'],econ:['cat-econ','经济'],scifi:['cat-scifi','科幻'],novel:['cat-novel','小说']};
+    const cm=catMap[b.cat]||['cat-classic','其他'];
+    const inList=booklist.find(x=>x.title===b.title);
+    card.innerHTML=`<span class="book-cat ${cm[0]}">${cm[1]}</span>
+      <div class="book-title">${esc(b.title)}</div>
+      <div class="book-author">${esc(b.author||'')}</div>
+      <div class="book-desc">${esc(b.desc||'')}</div>
+      <div class="book-actions">
+        <button class="action-chip ${inList?'':'primary'}" onclick="addToBooklist(${i})">${inList?'✓ 已在书单':'＋ 加入书单'}</button>
+        <button class="action-chip" onclick="window.open('https://lorefree.org/search/?q=${encodeURIComponent(b.title)}','_blank')">📥 LoreFree 找书</button>
+        <button class="action-chip" onclick="window.open('https://zh.b-ok.cc/s/${encodeURIComponent(b.title)}','_blank')">📚 Z-Library 找书</button>
+      </div>`;
+    el.appendChild(card);
+  });
+}
+function renderMyBooklist(){
+  const el=document.getElementById('myBookList'); el.innerHTML='';
+  if(!booklist.length){el.innerHTML=`<div class="empty-state"><div class="icon">📑</div>书单还是空的，去「好书推荐」点「加入书单」吧</div>`;return;}
+  booklist.forEach((b,i)=>{
+    const card=document.createElement('div'); card.className='book-item';
+    card.innerHTML=`<div class="book-title">${esc(b.title)}</div>
+      ${b.author?`<div class="book-author">${esc(b.author)}</div>`:''}
+      <div class="book-actions" style="margin-top:10px;">
+        <button class="action-chip primary" onclick="window.open('https://lorefree.org/search/?q=${encodeURIComponent(b.title)}','_blank')">📥 LoreFree 下载</button>
+        <button class="action-chip" onclick="window.open('https://zh.b-ok.cc/s/${encodeURIComponent(b.title)}','_blank')">📚 Z-Library 下载</button>
+        <button class="action-chip" onclick="removeFromBooklist(i)">🗑 移除</button>
+      </div>
+      <div class="book-author" style="margin-top:8px;color:var(--warm-ink-4);font-weight:300;">下载后永久保存在你的设备 · 收藏于 ${esc(b.time)}</div>`;
+    el.appendChild(card);
+  });
+}
+
+// ==================== RENDER: MEMO (截图样式重设计) ====================
+function renderMemos(){
+  const el=document.getElementById('memoList'); el.innerHTML='';
+  const filtered=memos.filter(m=>m.category===currentMemoCat);
+  const total=filtered.length;
+  const done=filtered.filter(m=>m.done).length;
+  document.getElementById('memoBigNum').textContent=total;
+  document.getElementById('memoDoneNum').textContent=done;
+
+  if(!total){el.innerHTML=`<div class="empty-state"><div class="icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>暂无${getCatName(currentMemoCat)}，点击右下角 ＋ 新增</div>`;return;}
+
+  filtered.forEach((m,origIdx)=>{
+    const realIdx=memos.indexOf(m);
+    const catMap={work:'cat-work',life:'cat-life',reminder:'cat-reminder',summary:'cat-summary'};
+    const catNameMap={work:'待办工作',life:'待办生活',reminder:'提醒事项',summary:'个人总结'};
+    const card=document.createElement('div');
+    card.className='memo-card-new'+(m.done?' done':'');
+    card.innerHTML=`<input type="checkbox" class="memo-check" ${m.done?'checked':''} onchange="toggleMemoDone(${realIdx})">
+      <div class="memo-body">
+        <div class="memo-title-new">${esc(m.title)}</div>
+        <div class="memo-date-new">${m.time}</div>
+        ${m.content?`<div style="font-size:12px;color:var(--warm-ink-3);margin-top:4px;font-weight:300;">${esc(m.content)}</div>`:''}
+      </div>
+      <button class="memo-del-btn" onclick="event.stopPropagation();deleteMemo(${realIdx})" title="删除">✕</button>`;
+    el.appendChild(card);
+  });
+}
+function getCatName(cat){return{work:'待办工作',life:'待办生活',reminder:'提醒事项',summary:'个人总结'}[cat]||'';}
+function toggleMemoDone(idx){
+  if(idx>=0&&idx<memos.length){memos[idx].done=!memos[idx].done;saveMemos();renderMemos();}
+}
+function deleteMemo(idx){if(confirm('确定删除这条备忘录？')){memos.splice(idx,1);saveMemos();renderMemos();}}
+
+// ==================== RENDER: TASKS ====================
+function renderTasks(){
+  const list=document.getElementById('taskList'); list.innerHTML='';
+  tasks.forEach(task=>{
+    const card=document.createElement('div');
+    card.className=`task-card ${task.done?'completed':''}`;
+    card.innerHTML=`<label class="checkbox-wrapper" onclick="event.stopPropagation()">
+        <input type="checkbox" ${task.done?'checked':''} onchange="toggleTask(${task.id})">
+      </label>
+      <div class="task-info">
+        <div class="task-name">${esc(task.name)}<span class="dur">${task.duration?'· '+esc(task.duration):''}</span></div>
+        <span class="task-tag">${esc(task.tag||'自定义')}</span>
+      </div>
+      <span class="task-arrow">›</span>
+      <div class="task-actions"><button class="btn-icon delete" onclick="event.stopPropagation();deleteTask(${task.id})" title="删除">✕</button></div>`;
+    if(task.page)card.onclick=()=>openDetailPage(task.page);
+    list.appendChild(card);
+  });
+  updateStats();
+}
+function renderReminders(){
+  const row=document.getElementById('reminderRow'); row.innerHTML='';
+  reminders.forEach(r=>{
+    const pill=document.createElement('label');
+    pill.className=`reminder-pill ${r.done?'checked':''}`;
+    pill.innerHTML=`<input type="checkbox" ${r.done?'checked':''} onchange="toggleReminder(${r.id})"><span>${esc(r.name)}</span>`;
+    row.appendChild(pill);
+  });
+}
+function updateStats(){
+  const t=tasks.length,d=tasks.filter(x=>x.done).length,p=t-d,r=t?Math.round(d/t*100):0;
+  document.getElementById('statTotal').textContent=t;
+  document.getElementById('statDone').textContent=d;
+  document.getElementById('statPending').textContent=p;
+  document.getElementById('statRate').textContent=r+'%';
+  document.getElementById('progressBar').style.width=r+'%';
+}
+
+// ==================== STAGES (Violin & Yoga) ====================
+function renderStages(type){
+  const isV=type==='violin';
+  const stages=isV?violinStages:yogaStages;
+  const stage=isV?violinStage:yogaStage;
+  const dotsEl=document.getElementById(isV?'stageDots':'yogaStageDots');
+  const doneEl=document.getElementById(isV?'violinStageDone':'yogaStageDone');
+  const curEl=document.getElementById(isV?'violinCurrentStage':'yogaCurrentStage');
+  const goalEl=document.getElementById(isV?'violinStageGoal':'yogaStageGoal');
+  const stdEl=document.getElementById(isV?'violinStageStandard':'yogaStageStandard');
+  const listEl=document.getElementById(isV?'violinPracticeList':'yogaPracticeList');
+
+  dotsEl.innerHTML='';
+  for(let i=0;i<5;i++){const d=document.createElement('div');d.className='stage-dot'+(i<stage?' done':i===stage?' current':'');d.title=`第${i+1}阶段：${stages[i].name}`;d.style.cursor='pointer';d.onclick=()=>jumpToStage(type,i);dotsEl.appendChild(d);}
+  doneEl.textContent=stage;
+  curEl.textContent=`第${stage+1}阶段 · ${stages[stage].name}`;
+  goalEl.textContent=stages[stage].goal;
+  stdEl.textContent=stages[stage].standard;
+
+  listEl.innerHTML='';
+  stages[stage].practices.forEach((p,i)=>{
+    const item=document.createElement('div'); item.className='practice-item';
+    const linkBtns=(p.links||[]).map(l=>`<button class="action-chip" onclick="window.open('${l}','_blank')">▶ 跟练</button>`).join('');
+    const searchBtns=`<button class="action-chip primary" onclick="window.open('https://search.bilibili.com/all?keyword=${encodeURIComponent(p.search||'')}','_blank')">▶ B站</button>
+      <button class="action-chip" onclick="window.open('https://www.douyin.com/search/${encodeURIComponent(p.search||'')}','_blank')">📱 抖音</button>`;
+    item.innerHTML=`<div class="practice-item-header">
+      <input type="checkbox" class="practice-checkbox" id="${type}_p_${stage}_${i}">
+      <span class="practice-title">${esc(p.title)}</span></div>
+    <div class="practice-desc">${esc(p.desc)}</div>
+    <div class="practice-actions">${linkBtns?linkBtns+' '+searchBtns:searchBtns}</div>`;
+    listEl.appendChild(item);
+  });
+  const btn=document.createElement('div');
+  btn.innerHTML=`<button class="action-chip primary" style="margin-top:14px;" onclick="markStageMastered('${type}')">✓ 标记此阶段已掌握（解锁下一阶段）</button>`;
+  listEl.appendChild(btn);
+}
+
+function jumpToStage(type,idx){
+  if(type==='violin'){violinStage=Math.min(idx,4);saveViolin();}
+  else{yogaStage=Math.min(idx,4);saveYoga();}
+  renderStages(type);
+}
+function resetViolinProgress(){if(confirm('确定重置所有进度吗？')){violinStage=0;saveViolin();renderStages('violin');}}
+function resetYogaProgress(){if(confirm('确定重置所有进度吗？')){yogaStage=0;saveYoga();renderStages('yoga');}}
+function markStageMastered(type){
+  const isV=type==='violin';
+  const stages=isV?violinStages:yogaStages;
+  const stage=isV?violinStage:yogaStage;
+  const total=stages[stage].practices.length;let checked=0;
+  for(let i=0;i<total;i++){if(document.getElementById(`${type}_p_${stage}_${i}`).checked)checked++;}
+  if(checked<total&&!confirm(`你只完成了 ${checked}/${total} 个练习项目，确定标记此阶段已掌握吗？`))return;
+  if(stage<4){if(isV)violinStage++;else yogaStage++;if(isV)saveViolin();else saveYoga();renderStages(type);alert(`🎉 恭喜解锁「第${stage+2}阶段 · ${stages[stage+1].name}」！继续加油！`);}
+  else{alert('🏆 太棒了！你已经完成全部 5 个阶段的学习路线！');}
+}
+
+// ==================== NAVIGATION ====================
+let currentPage='daily';let historyStack=['daily'];
+const pageTitles={daily:'每日计划',ielts:'雅思练习',violin:'小提琴练习',yoga:'瑜伽练习',reading:'保持阅读',brand:'营销案例',design:'设计灵感',finance:'财经热点',idea:'选题灵感',memo:'备忘录'};
+
+function switchPage(name){
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.dataset.page===name));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.getElementById('pageTitle').textContent=pageTitles[name]||name;
+  document.getElementById('backBtn').style.display=['ielts','violin','yoga','reading'].includes(name)?'inline-flex':'none';
+  currentPage=name;historyStack.push(name);
+  if(window.innerWidth<=820)closeSidebar();
+  // 关闭收藏面板
+  closeFavPanel();
+  // 渲染对应页面
+  if(name==='brand')autoRefreshIfStale('brand');
+  if(name==='design')autoRefreshIfStale('design');
+  if(name==='finance')autoRefreshIfStale('finance');
+  if(name==='idea')autoRefreshIfStale('idea');
+  if(name==='memo')renderMemos();
+  if(name==='violin')renderStages('violin');
+  if(name==='yoga')renderStages('yoga');
+  if(name==='reading')renderBooks();
+  // 自动计时
+  if(TASK_PAGES.includes(name))startTaskTimer(name);
+  else{stopActiveTimer();removeTimerUI();if(timerInterval){clearInterval(timerInterval);timerInterval=null;}}
+}
+function openDetailPage(pageName){switchPage(pageName);}
+function goBack(){if(historyStack.length>1){historyStack.pop();switchPage(historyStack[historyStack.length-1]);}else switchPage('daily');}
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('show');}
+function closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('overlay').classList.remove('show');}
+
+// ==================== TABS ====================
+function switchIeltsTab(btn,id){document.querySelectorAll('#page-ielts .tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#page-ielts .tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('ielts-'+id).classList.add('active');}
+function switchReadingTab(btn,id){document.querySelectorAll('#page-reading .tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#page-reading .tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('reading-'+id).classList.add('active');if(id==='booklist')renderMyBooklist();}
+function switchMemoCat(btn,cat){document.querySelectorAll('.memo-tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentMemoCat=cat;renderMemos();}
+
+// ==================== TASK ACTIONS ====================
+function toggleTask(id){tasks=tasks.map(t=>t.id===id?{...t,done:!t.done}:t);saveTasks();renderTasks();}
+function deleteTask(id){if(!confirm('确定删除？'))return;tasks=tasks.filter(t=>t.id!==id);saveTasks();renderTasks();}
+function showAddForm(){document.getElementById('addArea').style.display='none';document.getElementById('addForm').classList.add('show');document.getElementById('newTaskName').focus();}
+function hideAddForm(){document.getElementById('addArea').style.display='';document.getElementById('addForm').classList.remove('show');document.getElementById('newTaskName').value='';document.getElementById('newTaskDuration').value='';}
+function addTask(){
+  const n=document.getElementById('newTaskName').value.trim(),d=document.getElementById('newTaskDuration').value.trim();
+  if(!n){alert('请输入任务名称');return;}
+  tasks.push({id:Date.now(),name:n,duration:d||'',done:false,tag:'自定义'});
+  saveTasks();renderTasks();hideAddForm();
+}
+
+// ==================== REMINDER ACTIONS ====================
+function toggleReminder(id){reminders=reminders.map(r=>r.id===id?{...r,done:!r.done}:r);saveReminders();renderReminders();}
+
+// ==================== BOOKLIST ACTIONS ====================
+function addToBooklist(i){const b=bookRecommendations[i];if(booklist.find(x=>x.title===b.title)){alert('已在书单中');return;}booklist.unshift({title:b.title,author:b.author||'',time:new Date().toLocaleDateString('zh-CN')});saveBooklist();renderBooks();alert('已加入书单（本地永久保存）');}
+function removeFromBooklist(i){booklist.splice(i,1);saveBooklist();renderMyBooklist();}
+
+// ==================== MEMO ACTIONS (新版) ====================
+function addMemo(){
+  let cat=currentMemoCat;
+  const t=prompt('备忘录标题：');
+  if(!t)return;
+  memos.unshift({title:t,content:'',category:cat,time:new Date().toLocaleString('zh-CN'),done:false});
+  saveMemos();renderMemos();
+}
+
+// ==================== CLOCK ====================
+function updateClock(){
+  const now=new Date();
+  const h=String(now.getHours()).padStart(2,'0'),m=String(now.getMinutes()).padStart(2,'0');
+  document.getElementById('clockTime').textContent=h+':'+m;
+  const opts={year:'numeric',month:'long',day:'numeric',weekday:'long'};
+  document.getElementById('clockDate').textContent=now.toLocaleDateString('zh-CN',opts);
+  const hour=now.getHours();let g='';
+  if(hour<6)g='夜深了，注意休息 🌙';else if(hour<9)g='早安，新的一天开始了 ☀️';else if(hour<12)g='上午好，专注当下 💪';else if(hour<14)g='中午好，适当休息一下 🍵';else if(hour<18)g='下午好，继续加油 ⚡';else if(hour<21)g='晚上好，今天辛苦了 🌆';else g='夜深了，早点休息哦 🌙';
+  document.getElementById('clockGreeting').textContent=g;
+  document.getElementById('currentDate').textContent=now.toLocaleDateString('zh-CN',opts);
+}
+
+// ==================== INIT ====================
+loadData();renderTasks();renderReminders();updateClock();setInterval(updateClock,1000);
+window.addEventListener('beforeunload',stopActiveTimer);
+
+// 加载种子 feed，并用内置示例铺满最近5天（仅填补空白，不覆盖真实历史）
+loadFeed().then(()=>{
+  ['brand','design','finance','idea'].forEach(section=>seedEmbeddedToHistory(section));
+  if(['brand','design','finance','idea'].includes(currentPage)) autoRefreshIfStale(currentPage);
+  if(currentPage==='reading')renderBooks();
+});
+
+document.addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key==='/'){e.preventDefault();if(currentPage==='daily')showAddForm();}
+});
+</script>
+</body>
+</html>
