@@ -1,15 +1,6 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "brand": [
-    {
-      "title": "2026杰出营销年度案例即将揭晓_国内经济",
-      "desc": "2026杰出营销年度案例即将揭晓_国内经济 证券之星",
-      "tags": [
-        "创意"
-      ],
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE45Z1ctejBrMmoydGtTcmFxaUtOY0FMbFdBc0VqN1VzSTVKNEhEbGd4akd2TXhWcEZkMDdfUXEwUFB1ay1UTzJpdURhMktWTXJlZDdLUEt6YmRJRlAyZldSSVoxa2E?oc=5"
-    },
     {
       "title": "本周值得关注的 6 个品牌营销案例 | 案例一周 Vol.418",
       "desc": "本周值得关注的 6 个品牌营销案例 | 案例一周 Vol.418 SocialBeta",
@@ -18,6 +9,15 @@
       ],
       "source": "SocialBeta",
       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1KRVJsVDRBdndpbDlyUkpybTlHTUxiLVRQZnpwZk1tdWp3Vjd5Y1k3YXF2blhtanBjUWlqdmFDV3V1TzU3VW5GSmFNWjYwZw?oc=5"
+    },
+    {
+      "title": "2026杰出营销年度案例即将揭晓",
+      "desc": "2026杰出营销年度案例即将揭晓 搜狐",
+      "tags": [
+        "创意"
+      ],
+      "source": "搜狐",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSFkzTlJ6Vjd2NmdmV3QxLXRCdEJNZDNvdi1xV0dzU01McTJ2aFlfSnVwcGJGMTRkczdmbXJQWE03NFlxa0ptX2tJZW4xbmE5ZFZIMmUyaGpPb2JBT3ZlTWRhWTRkZXNiNXBXdkx5RnJhN3Z3QVYwSzZHY0pTLVg3SVhrQmJVOGs1?oc=5"
     },
     {
       "title": "第27届IAI 传鉴国际广告奖作品案例征集启动",
@@ -47,15 +47,6 @@
       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPMlVCS2ZYZWplR2tCVlRvZXlYeVo4eE5ONmg3NmFNTmRTZlc5cVpvbHFrVGlNWk5uVVkwd3lYWmpNXzRyUEFOVzlmVmo4MFAwalJKNElhejBvMUFCOV9xZTBoN0t2ZF9VQmswZGIwbFZEckpwc0tEVG1nT0ZqcmM4dldKcURlMmxkc0pKWWpEWk9MQjZoQ2F2Z1BhZ01XMlg4dUhabTZCaE5lMDlNMERCdWkzUEpRSTdMbk5IbEQ3MF9HNUZmZ2FMSVNzZzNDTUpxSUtRNi1INHpTdVduc09wTVJjRENOT2REVW41YUxlTmduS1hvUkl4ZTBKUjZYNG5zUDdnckNDMW41enJUcnczR1MzYU1FSlNiSWpHck4zUQ?oc=5"
     },
     {
-      "title": "广告创意致胜之道：赢得Z世代与低线城市消费者",
-      "desc": "广告创意致胜之道：赢得Z世代与低线城市消费者 Kantar",
-      "tags": [
-        "创意"
-      ],
-      "source": "Kantar",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPU2pvZVhWdENzeUJObk5JQWF4OGl4QXBHZ3F4ZjFLV3AzYTZfLURsaHRxS2dwdHc1ZE5ZM1MyQkFTaGRteFdkYnlZZ3Z6dkdqTUN1ZlNkVjhWSUxLc3RVWERqemllMjBaSnZ6aDhleldORlBnanFkSjd5b3c5T1laRkxlRXVYa0EyQi1tUXRPZlFUbGFxdkF6YmNvc2l2RFB0TUdj?oc=5"
-    },
-    {
       "title": "Campaign独家专访阳狮北京和上海首席创意官| 广告",
       "desc": "Campaign独家专访阳狮北京和上海首席创意官| 广告 Campaign 中国",
       "tags": [
@@ -74,13 +65,13 @@
       "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxPUHptY29uVkhXZWY5VVY5UGNwZUJJSW5WcU84SnRtQlBwNTh4bHJZNWQ2VXd2Z0VncjhQUF9wU1Q2YUY1cmh3dmxyRE50NVQtOWJJVUtyd0stVU94bUhnTUFiNS1ETHlUUWZPeUdOamJGellnZkxSVEVfVUYwdVdIYTVYZlFQZl9mcEtoaXpGcEJ2NWhBdG52akJOeWhGQnFmeUZwMUF0VDBnYnk0elVaNDg5SzQ4S2dVMktpS1llUnNKSnVDby1CUDFqMzVJanROcDg5TU81Z0NYUGhUS2FCbXRTMFlZU0Q3Nzdzc0J6eVdlRzJBWHJKNnBWNlJ3TUdNYWlXMlpOT3JDWktmVkJYVjRuQmdsU0p6dnA2WHpEQ3ZraGRaRXlYNHVmM0hYMndfUlJIVDAyOTZWNEF5cnJTdGlwcWNmWDZFZFRfSTJRcy14Rl82?oc=5"
     },
     {
-      "title": "Influur 分析质疑按粉丝数量选择创作者的做法",
-      "desc": "Influur 分析质疑按粉丝数量选择创作者的做法 InterSpace Music Distribution",
+      "title": "Campaign独家专访：电通创意中国区首席创意官| 作品",
+      "desc": "Campaign独家专访：电通创意中国区首席创意官| 作品 Campaign 中国",
       "tags": [
         "创意"
       ],
-      "source": "InterSpace Music Distribution",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ0dyQ3JFOXJGMHVRZ2c3ZkhEamhFd21ab1NfX2pRQ3ZlZDdnaTU1QUcxZi10ZUNaTlg0MFdSNnM2ZEs2bEMwcHN5eXBOWGVvNEJsZU54TFQ5Ukp6Z1B3Ty1yUU5JTTJwZEdCUDB0NmNGVkROeUVaa0tqOGpxQkFxaFJXb2tEOWZPcjVMVHlXYlJVTXhscXEwWnJTd2t4Y3NXenRR?oc=5"
+      "source": "Campaign 中国",
+      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPbW5jMEZQQWtuaUJPM1F1RHNFLWZwMG01WjdiQkZzakRKN1c0NkdQa3I4THd5NHkyRWZCZ1pqOEJ6c0FOc21ackN6SEljMEl4UGJ4dURUNEczMXFkUGRZQXRCS2ZQaVdpaUtJQW9BS0dFcFVORlRQY2RkX0tBSll6YXcyNklPSktnM0Q3U2YyaGQ2azZWdjdiZkQ5VFB3WGRla0VKUndRZGFXS0l4elFBLUwxSGd3dTNNRXhXY3lpdGVacC04QzJrc3Itb3BkbEFjN1NUWUIzTVVmYXdVdTlLc0JaREJ1ejF2V1FKcW11YnF0MmdaTUZoN1ZPSHBtMTFseWRfYzhzeTlYa0V6c1kzNlp2VnRYc2wzOHo0V1BFYy1oNk9vcnhvRHppVWctWDQ?oc=5"
     },
     {
       "title": "2026 年病毒式营销活动：哪些方法有效，为何能够传播，以及品牌如何将注意力转化为收入",
@@ -90,6 +81,15 @@
       ],
       "source": "ALM Corp",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE93TVR3WDhSYjEtYjNrNndKUEFjcjVVVktsNzJGdmllMUpFV1ZkNV9KMEpZdERUNERQMTIyazB3YjhId0c5bG5lME5ZelJvLW5xS3RuMmlNeDlZUmQ3QVFPWGxWa2FhWVdwM1Rfa0dRQQ?oc=5"
+    },
+    {
+      "title": "Influur 分析质疑按粉丝数量选择创作者的做法",
+      "desc": "Influur 分析质疑按粉丝数量选择创作者的做法 InterSpace Music Distribution",
+      "tags": [
+        "创意"
+      ],
+      "source": "InterSpace Music Distribution",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ0dyQ3JFOXJGMHVRZ2c3ZkhEamhFd21ab1NfX2pRQ3ZlZDdnaTU1QUcxZi10ZUNaTlg0MFdSNnM2ZEs2bEMwcHN5eXBOWGVvNEJsZU54TFQ5Ukp6Z1B3Ty1yUU5JTTJwZEdCUDB0NmNGVkROeUVaa0tqOGpxQkFxaFJXb2tEOWZPcjVMVHlXYlJVTXhscXEwWnJTd2t4Y3NXenRR?oc=5"
     }
   ],
   "design": [
@@ -112,15 +112,6 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1pbDRUaFUxNWdjZnhyUkhBX3l2Mk83Y3FTckNSRXBtZl9JQW5xblpBY2NLQVNFR0czaUtvcHUyV0I4NmFjNF9mWlV1Y2VZUGpvTDEyZUhsNUUwVFlXVDgwTFF6VnpEQk5VMW1yM19YUno5UEZCelFKNGZ3?oc=5"
     },
     {
-      "title": "淘天黄金饰品「101饰物所」：在趋势被定义之前，先让原创商家被看见_行业动态",
-      "desc": "淘天黄金饰品「101饰物所」：在趋势被定义之前，先让原创商家被看见_行业动态 投资界",
-      "tags": [
-        "趋势"
-      ],
-      "source": "投资界",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE95Z2xma0RCN2ZxWnRzcVFVQmdqUlluc1ZYLVkyVFBONmZCcTNtWUFCM0p6a1o3R0Y2Z2J2Wmp4NkF5RWVQX2xzSTNxekF3T255YlFRb1hxYmc?oc=5"
-    },
-    {
       "title": "箭牌瓷砖赴博洛尼亚展，洞见建陶行业美学新风向",
       "desc": "箭牌瓷砖赴博洛尼亚展，洞见建陶行业美学新风向 凤凰网",
       "tags": [
@@ -128,6 +119,15 @@
       ],
       "source": "凤凰网",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5tUnhiby1SWHdsbDkyR3JscHdOQjRxb2NJdkUyRUhLMGpLc1o4alhsaF9PYjROU09vWUU3N1lzNTdwUC1jenV1cFB1QUlwTzg?oc=5"
+    },
+    {
+      "title": "TINTAshift智能变色美甲亮相施华洛世奇灵感趋势发布会_产经_资讯频道",
+      "desc": "TINTAshift智能变色美甲亮相施华洛世奇灵感趋势发布会_产经_资讯频道 信阳新闻网",
+      "tags": [
+        "趋势"
+      ],
+      "source": "信阳新闻网",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8yOElmV1hBaUtyeWJ2Y0NLVTdfQm12ZFlGakd2TkMtVkxldEhKRE0zMDRpRXVLWVlpemJkWlBBaHdiWlhQWmQ1VDZENnR4OWxiSWVJcWhBYmhYVk0?oc=5"
     },
     {
       "title": "Pixel 10 在 Pwn2Own 2026 上被攻破，一天内遭三次远程攻击",
@@ -139,22 +139,13 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYXBuTVZFeXV4YnZISHoyYUJMWk9vUFhfRUp3NjBQSkRZclBoV1VJOWJGNDRGb2llMF91OUwyUzljOEItbk9hZHJFeWQ5YXhkVWZkd2FDcG85eWNMSGx2R3RRNjFSTE9PUFFsS1hweDJwSXVUV3dsYkhrVm5LVUNQb01QaDJsNHBVSkhqVnY0d3BCbG8?oc=5"
     },
     {
-      "title": "2026年PHP与Web开发：真正改变了什么",
-      "desc": "2026年PHP与Web开发：真正改变了什么 Pasquale Pillitteri",
+      "title": "2026 年抓取互联网的 10 个 GitHub 仓库 (附真实星标)",
+      "desc": "2026 年抓取互联网的 10 个 GitHub 仓库 (附真实星标) Pasquale Pillitteri",
       "tags": [
         "灵感"
       ],
       "source": "Pasquale Pillitteri",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9NZTVqT3V0WXZfYWtsaEI1M0hIbmZJVDBvV1lLMUJXdlN5MHdVSlA0SklFU3ZQYmlwRXJ3ODJVMjk0MXk4TzUtYjF2aGRLSzJkN3dwUEQ2X0lDVG5vSEZSUHFXdFlVYTcwYkZHVFFLUW5aeG1HTXUySG1yY3B5QQ?oc=5"
-    },
-    {
-      "title": "React Native 2026：8 个技术栈选择与 Flutter 对比",
-      "desc": "React Native 2026：8 个技术栈选择与 Flutter 对比 Pasquale Pillitteri",
-      "tags": [
-        "灵感"
-      ],
-      "source": "Pasquale Pillitteri",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNbWxjaUNlajc0SkRVSXF4UlJXdkJwZWtHdmhIVi1nQmtHWk41MjFJT0lCNjRDVGgwRUpBQS13NVRFRUlBNGs0dzBTV3lxbEwxbG9wN2VWeFBSMk1JaUs4OHZfb3hGTmN4NWViVnBSUFlJV0hyOGlFVEFaR0lqbU1SRUUwVjJ0cDJRN3lfUA?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORGZEaDBndmMzUDdFYUdOTnRmeG9QQUw0RHRIZUFCTlNTMncyTjJIUWRWOVpLejNMa011VU5XeXNaZzQ1R0dEWk1IMWQweUFNZ2hyQjJMdlE3cy0xSDYxYTB0QllyOFh0QU1nNWxXVjRTazVzdDd1MTJ5R2VnbXdVRFpVenA?oc=5"
     },
     {
       "title": "GitHub Trending Top 10: 智能体、内存与端侧运行主导本周",
@@ -166,13 +157,13 @@
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNM1ZBcTJfZHVXUFVRWFoyMmhnamh1OFNfbUVOQkRQTjR0ZHJjd3lMNElHdXJqal83RlZHemJXLVNTUkNkdmlWbFM1Ml9YN0tKOXVKNDBZSWZSWnhaZV9OWFZudXowYTREVE5Fc0J0MmtjOGN3bHVFZjZvdTh4QUd3V3p3?oc=5"
     },
     {
-      "title": "武汉新城展示中心 | 道合设计",
-      "desc": "武汉新城展示中心 | 道合设计 ARCHINA",
+      "title": "离开 Claude Max 或 Codex 转投 OpenCode Go? 2026 年到底值不值",
+      "desc": "离开 Claude Max 或 Codex 转投 OpenCode Go? 2026 年到底值不值 Pasquale Pillitteri",
       "tags": [
         "灵感"
       ],
-      "source": "ARCHINA",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9wcldnWTBVTkVITUxxOHNyY0pKdFFVNmt2bHNqLW9iM2ZxekJTLXpCOVZlSGZMbUQ5bnF0Y2FsQXVxb3JhSTE4MFhBMWoxYUlPTS1xRUlIQy1Uak9sbXZBWVd3MXBuaXdQVWVTX0hYWHRzNzA?oc=5"
+      "source": "Pasquale Pillitteri",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaW9jdlJ5WG9COFJJelFMVXRUNlFWQ1kwaENtdzBvU1pBRVdYeDFPalE4YmZHdjRwZVh0aEZxUU5IRWVsaVRfNlhraGV0X2lMcFhUTF9SSk4yTC1HRXlCQWloT1FvMkp3NlloTTJxaVRtdGZOSE0xcWJ6S0VYcHFTZ3N4UHA?oc=5"
     },
     {
       "title": "Heemin Chung and Alvaro Barrington Miniature BMW i7 arrives in Frieze Seoul as a",
@@ -182,6 +173,15 @@
       ],
       "source": "Thaddaeus Ropac",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYTI5em4zeWNRVzBFcjhNbnVjdy15VnFDRGlCbHVRaVFiOGdIR0xyaC1qQ3JrVWk5RlhDOVFDUEl0Yl84VnhiYnVrUTVGRXZOWGxrMXJxeGt4SDhTb2J6Nzgtb0gzaFZzblNKVDRpTlVJUWg0VVdmR01lc0pSNzZmYnltZmxsQ3B1UTEybUtxODhmUm1OdXppbVJQSUlCOHFhTjZkN2M0U1pTUTR0U0c4?oc=5"
+    },
+    {
+      "title": "THE 5 BEST Coffee Shop Menu Design Ideas and Items",
+      "desc": "THE 5 BEST Coffee Shop Menu Design Ideas and Items Toast",
+      "tags": [
+        "灵感"
+      ],
+      "source": "Toast",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0taV9NUlhZM01uNnFCb1JmeV9la2t6UG9sbF9KU0MyZzhXR3NmVm01aXpSM1E0NWdCc2M2a1U2WVNnVkxVTGFvc2pnYWFlNExYTVhuWjJMRGdwOVVTb0UwWGVlTFktdGp4ZzNmeW1sd2pfc2xPMUtFT0p3?oc=5"
     }
   ],
   "finance": [
@@ -195,15 +195,6 @@
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VNEg5bFQ3YzFBU1dJTkZnLUNZaVl6N1VsNnRkd2NWdi1jYThmeERaSDJLWXBMNWlfeWxSUkxXNy1vT1FDQWdNbDY2dWxkUE04SU5JdVJDZzFBZG1JZ0tMSnRR?oc=5"
     },
     {
-      "title": "新华财媒｜金融街论坛年会今启幕 A股分红破2万亿元",
-      "desc": "新华财媒｜金融街论坛年会今启幕 A股分红破2万亿元 东方财富",
-      "tags": [
-        "A股"
-      ],
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE55b2FWMzNfYi1LQldwN0ZET3E3NGc1UW5sMlhra3VtXzBzNEpEN1dIaHhnM19WNy1BSkxHU0tVZl9veG4tMWU1bHdGYjBUcHNhUWZDa2RkeEM5NU9ycV82WlphTzFZQQ?oc=5"
-    },
-    {
       "title": "早新闻 | 重磅金融论坛，今日开幕",
       "desc": "早新闻 | 重磅金融论坛，今日开幕 21财经",
       "tags": [
@@ -213,13 +204,31 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSFNqeFNEQl9GM0xCXzhPWWotUk9Nekp5TzM2cTZVdHJRek9UT0tDT3NlQTdVM0hzVzc1VEREdzJSZG9vMEJicVZvMzI5V2twY3VCN085MzdxNHpqMnRXY0ZTbFhyTmxiSTJSSDBEZ0FLWG02Y0dfVVktc202QWRlYjlYcFkwc0EwS0VRdGp0RQ?oc=5"
     },
     {
-      "title": "今日大行评级 | SpaceX获花旗看高至240美元，美国超微公司获韦德布什看高至600美元",
-      "desc": "今日大行评级 | SpaceX获花旗看高至240美元，美国超微公司获韦德布什看高至600美元 Moomoo",
+      "title": "〔股市・今日展望〕回调＝美国AI相关股票下跌、原油价格上涨构成压力（19日）",
+      "desc": "〔股市・今日展望〕回调＝美国AI相关股票下跌、原油价格上涨构成压力（19日） Moomoo",
+      "tags": [
+        "大宗商品"
+      ],
+      "source": "Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYm5IVjNTallNVlpZVTBzZldkYkNDZTlXektjRXRlY3E2NFZycUJZQ3RWSTk4NXBCRm5vLUd2RHc3M2JqU3plRmUzeGo4Sm0xa1Q0Q3hHOFNDcFdVSmtRVjRLSElLS2x0LUZaRGd6S3JRQXU2RTRROUg2TzlacHZzSldILW9BMldfc3Vfc3NWQ2JSSDVDQXk2LWdLOE43UFNoSnNzNWlkVEYwNWlSZ0M4?oc=5"
+    },
+    {
+      "title": "10月14日热点题材概念分析：手机游戏、短剧游戏领涨",
+      "desc": "10月14日热点题材概念分析：手机游戏、短剧游戏领涨 新浪财经",
       "tags": [
         "市场"
       ],
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObnZ6aFlCYU1uVnpXalplWmRHYndBVGY2UDY0SWp0eEo2eTNjNHZjeWI2YklYbXBEWXFvdnNSZ08zdk5aaXBMLUtPTGpvbE53M1Y0UFRhbjUzTENscFZ5NzRua2Q0TjFzT2Y4TU5LdjhQWGZOc0pGNzd2cE1lRWFUMXlGcFoxNFU3MmxRWWE2UFp2UERWYjFhSUh2V2FEeXF5bFU2aHUySGE?oc=5"
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVDFiaW9ORHF2NVc4dzBoT1dySzNDOGV1UjFFOWRCMmdMc1hxT0tDamdfUEkyLXJ1NXFMS1BUSmxXcDBBTUkxRGFjV3ZQblE5dTZYY1JScjBmZjhGZ2lzUFVsYTkzaGVrTldJUEdaWFh0TTI3QVNRZjcyREVVb0Z1ZEFoYndfczFNbllHY0pvRWw3dw?oc=5"
+    },
+    {
+      "title": "全球股市“黑色星期四”：中东局势升级与AI交易拖累",
+      "desc": "全球股市“黑色星期四”：中东局势升级与AI交易拖累 观点网",
+      "tags": [
+        "地缘政治"
+      ],
+      "source": "观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE50SzVScXhOalR1THJJaHAzNldVQVk3NERnVlFYS3ljSEZKcG9zcVU3d3ZrTnhKMDFJNnBOcEtLVHY2dkhBUHpoWWd6eGhxcjVrMkp2Vmdia3lMWVR2NGc3dWRR?oc=5"
     },
     {
       "title": "全球股市大跌，资金重返美债！10年期收益率降至三周低点，10月或创12年最佳-市场参考",
@@ -231,31 +240,31 @@
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE03ZTJRVDR2M0RkcS1Kc0FwZTZiVWlTdWgzX2NzUEc2SHdsa2lyM1VwQUJDUHhwWl9faGxySTVhMUtCbEsxRnl2MWRpTS1xbTg?oc=5"
     },
     {
-      "title": "韩国股市：全球风险资产的“金丝雀”？",
-      "desc": "韩国股市：全球风险资产的“金丝雀”？ 证券时报",
+      "title": "美国下令外交人员撤离沙特！全球市场大避险，股市、黄金、比特币都跌了",
+      "desc": "美国下令外交人员撤离沙特！全球市场大避险，股市、黄金、比特币都跌了 FX168",
       "tags": [
-        "市场"
+        "大宗商品"
       ],
-      "source": "证券时报",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBnZWNyOVVDYlNLNW9nemE4MzhPSkl5VS0xS0d6ajZfMTd0Ujg0Uk5GSmdOWjlhQXNmX3ZyeklEN05mYjNvQUhfdDFSSXU4SWhFaW5EYkF0d2hEYjNl?oc=5"
+      "source": "FX168",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSlFfVkpMREpKUjFxTmY0OGhLT1pVQXptY0FyRnF0WlFpVGc3MnF0UmRpTGJ2cjc4Q2JqZHp6WHBjZWpqSnAta09NWElLQUMxMGlBUlVTalVITWpTeV9MSWNhNUk2WldCVE5CZHJzODJCM1NrSERFMmRHeW8zVldlYXRHak8?oc=5"
     },
     {
-      "title": "高盛预警：AI 利差飙升，股市或跌15%_全球市场_财经",
-      "desc": "高盛预警：AI 利差飙升，股市或跌15%_全球市场_财经 证券之星",
+      "title": "《全球市场》亚洲股市走低，投资者权衡科技股财报及海湾地区局势",
+      "desc": "《全球市场》亚洲股市走低，投资者权衡科技股财报及海湾地区局势 TradingView",
       "tags": [
-        "市场"
+        "地缘政治"
       ],
-      "source": "证券之星",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBlSEFfWHhTb2JjaEp6VWFZUXRNZ1RBeG9qaTBvMTduTTNZaEJLNjVKZFJ2R21oRFV5ckpFYjNpbUdUQXZSZURzTk1iQ1NBQXV1TWtnV0NjalVTWFY1Q2RMLQ?oc=5"
+      "source": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBYN3dIZ3U4U2doLVcteDB6RFRHTU9IS1dka0FxV1o1bl9CWnU4Rm9Kdkp0dXpFZnpuRUdmakRkSnNrbEtyQi1XVGJubXdxY1M2aUVlc2R1MGVzMElzaFRQT3BnUEVKQ3g2ZnpFREpRRHZHNFFoVnItUA?oc=5"
     },
     {
-      "title": "债券收益率企稳将有力支撑股市：摩根大通全球市场策略报告",
-      "desc": "债券收益率企稳将有力支撑股市：摩根大通全球市场策略报告 Moomoo",
+      "title": "美联储料维持利率不变，但通胀攻坚战远未结束",
+      "desc": "美联储料维持利率不变，但通胀攻坚战远未结束 汇通财经",
       "tags": [
-        "市场"
+        "货币政策"
       ],
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1nSWlXcFZoajFfQXBXTUNQeU4td251OFJhVUpEQ1F2X1JFY2xkNnZCMm43dm1oU1p6dUNGYlNCdng2S19HVUpCLVFVdUZZSmRiajlZZXMtbFZDQjRy?oc=5"
+      "source": "汇通财经",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1CdGVtT0ZXZ25XODI4dy1zRFptSU5NX1ZHNVhvQ3RvNEQ4NGI0dVNnU3pObTdHNmU3MkRmT2pMb2RVSExzQUhjSFVIVHFFUENheFk1R1htV1k4alE?oc=5"
     },
     {
       "title": "100位经济学家一致预计美联储12月再加息！10月暂缓行动，通胀顽固与经济韧性令政策两难-市场参考",
@@ -265,15 +274,6 @@
       ],
       "source": "金十数据",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9idmJOSkpuUkF1Q1RBMFJUVGRKOTlNRk5KYWtESV9HUi1aeXZyREp0M0p4a19vRXRBdTNHamtqZ0FxMUYxMU56VEdmZTZEdHM?oc=5"
-    },
-    {
-      "title": "美联储的通胀战争，正在把美国楼市推入寒冬",
-      "desc": "美联储的通胀战争，正在把美国楼市推入寒冬 财联社",
-      "tags": [
-        "货币政策"
-      ],
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBIR0VYNGg2ZWNzcDZJTVc2OTR6UDF6RkxuQUhOdDdFVloyMTB0VTByV0V4c1pnNThoSFpvT2tkbWc5ZlZQMTB0UQ?oc=5"
     }
   ],
   "books": [
@@ -350,13 +350,25 @@
   ],
   "idea": [
     {
+      "title": "红果短剧越骂越火，腾讯和微博也坐不住了_行业新闻",
+      "desc": "红果短剧越骂越火，腾讯和微博也坐不住了_行业新闻 证券之星",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "3100万",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYNDdVRzNFcFBOM2o4T0VISThZZHFzeGZDVTlTU0p0ZWQ0N0w3cmlsZTBMU25Fdi02cjI4VTd0RHVfWWpmQjRwQVdZcFFJVTVrcnNjdFgyb3NmU3U1R2JHMnJNY0k?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
       "title": "德芙广告翻车，品牌为何越来越爱“出格”？| 风向标工作室",
       "desc": "德芙广告翻车，品牌为何越来越爱“出格”？| 风向标工作室 新京报",
       "tags": [
         "热门"
       ],
       "platform": "抖音",
-      "views": "4500万",
+      "views": "3100万",
       "source": "新京报",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBrc0ItOUFhZFpGSHpnMGpJc25rMEU3T1BlWmUyZmFxQkd6Y2dYWHZjUy1uSE1xTlg0Um1CQkxnWTIzMHRjMU1SVVF0UDloUzZWRXUzT29JRjFtLUxBbXBzdHln?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
@@ -368,7 +380,7 @@
         "科技"
       ],
       "platform": "抖音",
-      "views": "2400万",
+      "views": "5200万",
       "source": "36Kr",
       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1QbDhSQWxJS2VtZC10TTBtU1p4eEZfMlNxdXd2cEdWd1JyUGo4TElPeUZrOWk0YTF1S1cwcHFDMVJwczZSWktmcGF1dnQxQQ?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
@@ -380,57 +392,21 @@
         "热门"
       ],
       "platform": "抖音",
-      "views": "1800万",
+      "views": "3900万",
       "source": "QQ News",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaaGhMN2lOSlctbmVlY2VoZzFCZFpXbWFDV3hKNTYtcUwxSkJJdVZqMGNvSUhJcGpQLW5mU3RQMG5ZOFN2MnltbkZrSWVLYnBROGVacHVR?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
-      "title": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍",
-      "desc": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍 中华网",
-      "tags": [
-        "科技"
-      ],
-      "platform": "抖音",
-      "views": "1800万",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1KeVRBaE1hOXo3RVgyLUo5cTRWZjNRS1JWTUhxUjd1dXprTFl2X1diOWZFam85WGpwcGw4TW16dmx6VlRhbEVOS2Rib3h5OVhoeUdtcXZIWTNKT3B4U1lCck5JREltamJvOXY2ZXk2Z2JEWHljY2c?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "What's going viral on China's Social Media #douyin抖音#fyp #vira l#trending #douyi",
-      "desc": "What's going viral on China's Social Media #douyin抖音#fyp #vira l#trending #douyin #douyin_china YouTube",
+      "title": "万斯计划将访匈牙利 为欧尔班助选",
+      "desc": "万斯计划将访匈牙利 为欧尔班助选 RFI",
       "tags": [
         "热门"
       ],
       "platform": "抖音",
-      "views": "2400万",
-      "source": "YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE40a1VkdnhodzFYaEptZWZLRmNIajdWenEwZzRBN2pYc19SdFlGV1EwX1dSTzgzdzJPeU5MeWNaVjN5cmd1OTJQTU9ZVTMyTGhSMVRtenZ1Sjl2N1hL?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "Video: Viral clip of Chinese student's emotional recital triggers debate over na",
-      "desc": "Video: Viral clip of Chinese student's emotional recital triggers debate over national education Hong Kong Free Press HKFP",
-      "tags": [
-        "热门"
-      ],
-      "platform": "抖音",
-      "views": "1200万",
-      "source": "Hong Kong Free Press HKFP",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTEZ3b1F5N1VUY3U4aGVBZ1d2RFVNRXViTHFhM2dXYnBLYmFGZEhoclBGZWNjcWk4ejl4LU5JdW02TUdacS1mZmFHaG9hWXVVWUQ3OVVTeDlaMGpnekM3Zm5nUjZmT1BxSnJVUkFsWkJrVUFVd3BXYXd5b3hodmFsanhSRVRUdjZsSXhwakZIVTNKbmV3MkR1bWZ1U290aHhkbjJUMTdFcHQ3MXNOWFBDakd0SWIxcmhNUEJreXJB?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "The Disturbing Wedding Trend in China of Groomsmen Sexually Assaulting Bridesmai",
-      "desc": "The Disturbing Wedding Trend in China of Groomsmen Sexually Assaulting Bridesmaids Global Voices",
-      "tags": [
-        "热门"
-      ],
-      "platform": "抖音",
-      "views": "1800万",
-      "source": "Global Voices",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUEkwSEF2QVZfM3hjT1N5WnBQRWI0dW11MkpYbURBSThCQlcxX21FcHhnS0JMVUVQYWdPdVVudXBBeDNzNE1sSURHV2NNUUZBTjd5LTVWVkZTY0xJN2lLc3hTZXlyb0dncFpSdmhyNnpzc0VSS3VxY25HbkpicnQ0WUdlWlhhTG1tOW9ENVZLZ2FTZTV4Y21qUmRNZWFKWVJtOEhIV29lWExUNTBOSDg4c3RVcUxhZG5jSVZN?oc=5",
+      "views": "3100万",
+      "source": "RFI",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQME5VMDFzelZzdlJmaElQaldHN2xzUm1VQmdRXzRKRGFQaC1wMHdHaS1TZ21Wa01Eby1veUU5OGJReVVjd0p4alk4SVE0QUdfSng2WEwxNUxUVnhSV3UySjAwbjhWV2h3dFhZdS05ak5hcEZZOUQwMmE5WUx3MDF2TTJEWFUwTWlHN0k4QjBWenByNGFhNXZ6X085SGdPNVVtNkNyRGdpRzNIa05Qb2o5UDllSFdIVjlQRklpNlhjYVBiTkVQRGwwMURpUjVBNkdDTkY4U1o0TWZzRTlIZWttc25HVldVWFcyWXloTjItOThlMmxHYmdRaHdXb3Byak8wSnFEU3l1YVFuSlFoSXZhdmVZcHk?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
@@ -446,27 +422,51 @@
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
+      "title": "What's trending online?一起开启英文社交平台之旅吧",
+      "desc": "What's trending online?一起开启英文社交平台之旅吧 中国日报网英语点津",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "3100万",
+      "source": "中国日报网英语点津",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNS1BCQ21lRXFZd095RHVPamhuM2lNSGZkUXlvQUpuQVBIeS1aMUpPWGlnWUFpLS1JeDBpR2xtblF5N1QzVXgzbFNZX251N0JaYTlTNnBMRG9GTG82T3o0OWJ4ZkdHWGFlNzdEYnNfVlRCcEF4eFBId3daVUgzQUVidmotZ28?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "Trending in China: 3 ‘animal’ stars are taking over China’s social media for the",
+      "desc": "Trending in China: 3 ‘animal’ stars are taking over China’s social media for their mental health traits China Skinny",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "1200万",
+      "source": "China Skinny",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1malBoZU9LcmE1azB3VDk3TUZsOElkVnVManpuY2ZhQk55NlV2Y1NYRWNoODVic0p0cC1BQnBFMm90ZXIxd0ZzQzQxRkZ3YkFSVnMtRjBOVkpKeDdUX09wc05ITnZLdlUzRVc4T1ZvZWFoZjJDZEE?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "“双11”抖音京东舆论之争：热点话题是否受商业因素影响成公共议题",
+      "desc": "“双11”抖音京东舆论之争：热点话题是否受商业因素影响成公共议题 手机新浪网",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "5200万",
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE14MVd6ZWFIQi1lWDJSVy1OMTlVT21kZ2NVRjI4a04xVWlIbjBpM0F0NzROVTFpcTZPQTNtQWp3eThXRExqS0Q5NDBfMUJRbGtSWk9VcjNCTnAyelFOQ1N4dFJDUy1malpyYTNscTJmdmo?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
       "title": "这帮景区顶流NPC集体出逃，在杭州干了件大事_北晚在线",
       "desc": "这帮景区顶流NPC集体出逃，在杭州干了件大事_北晚在线 北晚在线",
       "tags": [
         "热门"
       ],
       "platform": "抖音",
-      "views": "2400万",
+      "views": "1200万",
       "source": "北晚在线",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBDdzNOVjJhb3NremMyWGx5N3Z2WGk0T3hJVmJCZE9fQVl2akM1SUszZVNQM25WY0pxQThFc2VCSzVVdjFzXzZHMFJ2OGZNTy1LcDM3VTJucldkMGM2MzFLT0FnbHo?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "《2025年抖音热点年度数据报告》正式发布",
-      "desc": "《2025年抖音热点年度数据报告》正式发布 中国日报网",
-      "tags": [
-        "热门"
-      ],
-      "platform": "抖音",
-      "views": "1200万",
-      "source": "中国日报网",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1XdU1uSFZNZ1B0YWlMbjBVQk9iR2JQX1BpWTB2N2hTdjJSUkNhU1JEZGRjeE0taTE5eEtCb1hfQjdTLW1uWkkwcF8wZEphOC1ERXBNWWRwR2dtanlvYjVqY0pYTjZvdVZ5SDJQOExPZHZZZzNwZUtzS1lHd2s?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     }
   ]
