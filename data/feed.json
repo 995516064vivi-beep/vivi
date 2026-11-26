@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "brand": [
     {
       "title": "本周值得关注的 7 个品牌营销案例 | 案例一周 Vol.423",
@@ -29,13 +29,13 @@
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBHZ2tJSi0yWXo3WUtRZUtwWlNJMTVqb3AwU3IxLTB1dHV5WnMyd2puVFo5WTgwZjMxT01mRXZyTElTb2o3aDN6M2JOMi1ITllGTVc5c0FVQQ?oc=5"
     },
     {
-      "title": "2025 年，「场景营销」该更新了！",
-      "desc": "2025 年，「场景营销」该更新了！ SocialBeta",
+      "title": "重磅官宣！张宁出任2026杰出品牌营销案例专家评委",
+      "desc": "重磅官宣！张宁出任2026杰出品牌营销案例专家评委 凤凰网财经",
       "tags": [
         "创意"
       ],
-      "source": "SocialBeta",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5hOXVZRlB6UXpGTk9ZM09zWTRvd1o3QnhoRU1WVkFLTFFRbTFVaHBwRWdBdDhOcDB1Si10RVRpNF9vZHdZMi1pYVpLbWVXQQ?oc=5"
+      "source": "凤凰网财经",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE55THNVX3V2WjBVai1NcVZKWGkzRUtKVmxLR0RxXy1USGdWMlR2ZG4tVVpib2QxVzJYcGpXVmJ2MWZxLXJxU2EyQ2VhaDBoNVpV?oc=5"
     },
     {
       "title": "2025 创意格局重塑：解码品牌叙事新趋势 | 广告",
@@ -74,15 +74,6 @@
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNM3RXVHhpc1ZfQ3VwY0h1aTZGS3R2djVBbTk5NFJPQnN3QjBBSFhwb3NPdmpXY3EySllpaXhsejBibmF0cmszSG1CRnlQb3ZOUmF1TXlHTC1WZjZHWE9kVmFYcUZ4WlNkbmIwT2FPWl9mc1AwTVJhMldjb2N5U2gzd1gwSDZyQ3FJNjNWdENIbXFGM1Qyb0VGZ2d0aXN0OXVmc1JSZ0N6ck4yTm90RHc2cDN3clhQSGNtWEVpTXJSSWdPelFHbkgyckVGV1l3NG5I?oc=5"
     },
     {
-      "title": "Sage Growth Partners通过聘请Raheim Bundle加强了数字营销能力",
-      "desc": "Sage Growth Partners通过聘请Raheim Bundle加强了数字营销能力 动脉网",
-      "tags": [
-        "创意"
-      ],
-      "source": "动脉网",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA2bm9ZM3lTU0JqMVZPYkw3ck5abExKV2czcWZoazZ1NWlwNWNjNWIwczFTMjAyMEZRTkxSbFkxX1k0eVZfRHhKNTdWY1N3ZTF5LXZN?oc=5"
-    },
-    {
       "title": "Green Man Gaming Partners with Regroup China to Launch and Promote PC Game Bundl",
       "desc": "Green Man Gaming Partners with Regroup China to Launch and Promote PC Game Bundles in China Green Man Gaming",
       "tags": [
@@ -90,6 +81,15 @@
       ],
       "source": "Green Man Gaming",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcFZmMTBzZDJic3l0b3QxQU44cHU5X0JMdU05Y1ZYYTNnR3BpWDk4akdXNVAwZHVueDVxcWZybjFiTFFNaG1IVkdFQUJXME9xRWlvSkFmTHhRYW50Z3M0eS1TTDJrUlVGekU4dWpFYWxVbm55emUyeVpvak9CX1pSZGlEQk9FZ1h2NVFKUjRmanpYcDBJeEQ1SnNBdDNmYVFlZXIzbQ?oc=5"
+    },
+    {
+      "title": "Qixi 2026: the campaign films breaking out of the love-story formula",
+      "desc": "Qixi 2026: the campaign films breaking out of the love-story formula Dao Insights",
+      "tags": [
+        "创意"
+      ],
+      "source": "Dao Insights",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBoQVFHTmpOcktKTllxLTB4VmxaN2ZWWTJoZThvQVNsdVJGZzVVYkczdmZfcDdtU3ZlVFRSY2FsZnhJZi1pVXdwQmlEZjJtS1hhN2c?oc=5"
     }
   ],
   "design": [
@@ -175,16 +175,43 @@
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc3lVYWRtY1lFUjU1X0p1Wk83R3F6NmhkSkpOZ1RNMm1CdnVDUGUzaEd1bnVSYnlXUkNPQTNMZ1JyTDYtdXdkN01NbmNHTTZ5RlFRcnRuS2hZbF8wVEtBNjhOTk0xVDF3YWRDS3lXU0tKVlpqT0ZBb0dCay16bVhzNHdaXzRzdDVWVEhNZFozb3dlRERPbFk1NGsxUjVha1BBMUx4SUxFNmtOQnFBdmg4ZFdXb0U0bno4SjI0cUF5MnlCVlpwdk1uQ3JNNUphNjhSZ0FhYW1wbjBkaUlxRGdmMmVIQ2xha29xcVdiNkpJRQ?oc=5"
     },
     {
-      "title": "Design Vocabulary",
-      "desc": "Design Vocabulary Howl.Link",
+      "title": "THOMAS SHEIBITZ: ABOUT 90 ELEMENTS/TOD IM DSCHUNGEL | 2008年2月22日 - 4月19日",
+      "desc": "THOMAS SHEIBITZ: ABOUT 90 ELEMENTS/TOD IM DSCHUNGEL | 2008年2月22日 - 4月19日 Tanya Bonakdar Gallery",
       "tags": [
         "灵感"
       ],
-      "source": "Howl.Link",
-      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1rMk1jcC1CN182bDV5Qko1YzFwMzBTanJaazVteEtHRVJXeS01UnRsTEV4elZuZWU2dUZN?oc=5"
+      "source": "Tanya Bonakdar Gallery",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNckZwa01sajE4MVNZLTdTSTdqTXcyQUZGNEQycGpnQkhsaVNEazhmUVJXaTc5T2c1TW05TDlCaE1FOXhfODI3bFBIVjFMTm81b0FxUjM3YnJad1I0QjVfMFRzZC1wTEZwaTFKUjlVbDVzQXhqY1lwalNMLUdBRTh5ZDZlNldZb2RzcWRiV0JKNlBkRU0tcGRBaTRPcnBRWkROOXFORmRLQlpwcXZKX0ZxOFotV0g2STZHRUFsYjJDbVdYRVNHbVZ2QzFITFA?oc=5"
     }
   ],
   "finance": [
+    {
+      "title": "财经早知道｜习近平今日访美",
+      "desc": "财经早知道｜习近平今日访美 财新",
+      "tags": [
+        "市场"
+      ],
+      "source": "财新",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBaRUhtd18yTmpMNnI3QzhnTE1fekdSaVJHMU5aUEtzUllaZ0YwVEZHaDZ4UFpqc3dJZlllbHU0X2UzMVhIZHE4UlphY0VpODVGem9zcnZKTWtVOEh4UmhjMDhR?oc=5"
+    },
+    {
+      "title": "新浪网·",
+      "desc": "新浪网· 手机新浪网",
+      "tags": [
+        "市场"
+      ],
+      "source": "手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE84X0YwR29UUDhaQWJpLXNUTlNDclpHMzJqOTRBY2VWdENDTmNmdnhBWGkySDAza2k5VHRBTk1JRlhpVzczSkdDVjNDVlhtWi1VbUNyMGNyT3dBeDloRzNKaVR5UQ?oc=5"
+    },
+    {
+      "title": "今日投资舆情热点",
+      "desc": "今日投资舆情热点 财联社电报",
+      "tags": [
+        "市场"
+      ],
+      "source": "财联社电报",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9WM2VtbElManJNZllvQ0hqTnhhckpNNE5xRVloZm1yTndQVWw3alQwSkpXeklZeFJhX29GMzdUakNrblZrR0E?oc=5"
+    },
     {
       "title": "一图速览慧与科技(HPE.US)今日评级，最高看至80美元",
       "desc": "一图速览慧与科技(HPE.US)今日评级，最高看至80美元 Moomoo",
@@ -193,33 +220,6 @@
       ],
       "source": "Moomoo",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2ZfLXJlcjhJYUtKLUhicEN5TlNCelV5MUhfOUFxTVdVRVBIalliSkVHSVh2SnVFWTU2d0czN3ZTR19SQkNHZ1psR3VEbVBHdTVxMTUxOE1LS0preVJWN2VUY0FPZ2RHRGNJMmNvSlAzTFMwZXU1WWtfa2pDYTF6T21HMnFtMnk3YUR6UUhabktOTW9GcDNOdkU3YjZHZmZkX3c?oc=5"
-    },
-    {
-      "title": "财经晚报AI速递：今日财经热点一览 丨2026年1月8日",
-      "desc": "财经晚报AI速递：今日财经热点一览 丨2026年1月8日 新浪新闻_手机新浪网",
-      "tags": [
-        "市场"
-      ],
-      "source": "新浪新闻_手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxV1kwOG52U2Z2T05oaWJyTjlCdjcyc2IxZzRGS28wUkMtcXVIb2pEdUlZVzZvYWhBeTZFTFpCWXY1RmlDSWk3aEJacGdBTXZ3OGkzR0tyM3dHTV9WdWN0Wkl2ektuQVlQY3JWMTVPU0dDajVV?oc=5"
-    },
-    {
-      "title": "南向资金今日净卖出96.27亿港元",
-      "desc": "南向资金今日净卖出96.27亿港元 Moomoo",
-      "tags": [
-        "市场"
-      ],
-      "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KTVlESUEwYzdWc2I3WWNIUXBHSlhsUW5hWl9GYjNwWjZZREt4bHloNkU5TWVuTVdCNWpOXzAxUFU3OGxydFJzdGYxLTZ3SVdmaHBLaFFzSWNRQjA1?oc=5"
-    },
-    {
-      "title": "今日看点｜国台办将举行新闻发布会，发言人就近期两岸热点问题回答记者提问",
-      "desc": "今日看点｜国台办将举行新闻发布会，发言人就近期两岸热点问题回答记者提问 Sohu",
-      "tags": [
-        "市场"
-      ],
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbkNYNmxZTk9ReVlNQmw0M1VrMTJ4N00xWmxSYmYydHJSMGdnVHF1YlVVa0JvbDBMOFJneUhwOG1NMVFucE5vbi1OVDVPRzdnQUllRGhnVFVPdndsMU5BOS1hSFctLXlPNi1VWWF3SGlYN3NMZjBJRE8wMmQ1ZTBvLWd3d05LUi1y?oc=5"
     },
     {
       "title": "财经夜行线1120丨“黑色星期五”笼罩全球股市 市场聚焦AI交易热情为何冷却",
@@ -231,40 +231,40 @@
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5mbzlQVWdEeWh6RG8zZ2hjNWZmSHV0dS14bG5YNGNVcXRCN185WUZMU1k0b2c0LXlPTWQ3T1lRQUZRY21FSm0yYzAwcFVrazNHbzI2dQ?oc=5"
     },
     {
-      "title": "大宗商品全军覆没、全球股市步履蹒跚！一文读懂：市场在交易什么？",
-      "desc": "大宗商品全军覆没、全球股市步履蹒跚！一文读懂：市场在交易什么？ 东方财富网",
+      "title": "AI股抛售资金轮动印度股市11月涨逾12% 市值重回全球第五_公司新闻",
+      "desc": "AI股抛售资金轮动印度股市11月涨逾12% 市值重回全球第五_公司新闻 证券之星",
+      "tags": [
+        "市场"
+      ],
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBNUjc3M0ZDSnZ2Z3VvWG1fSWstNHdjTXRNTW9pLWNlZnNJYTJSWXlCamFRWXJETTNuNm5keC1qWDl0enE1azVqZVo4Um1YYzZlNUZ3R2x2cjBkczRfQUp6QkJQcXk?oc=5"
+    },
+    {
+      "title": "全球市场上演惊魂一日！纳指从暴跌4.6%到收跌0.6% 黄金、白银、比特币上演深V反转",
+      "desc": "全球市场上演惊魂一日！纳指从暴跌4.6%到收跌0.6% 黄金、白银、比特币上演深V反转 金融界",
       "tags": [
         "大宗商品"
       ],
+      "source": "金融界",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE16RGFDZDhkamU3ZHRDeFRocHFzU1AxTElFNkYzaFQtUU0wbUxESFZKZm1NTkNVN0x1Y2V3ekNBVjZXVHcwUmRVUUNhY1NDaFJxYURkblBvQW03TFFtOFFkN0pYNnRUWG5EYS1DWGlqVFM2cHp3?oc=5"
+    },
+    {
+      "title": "全球股市“黑色星期五” A股如何更抗跌？多家机构这样说",
+      "desc": "全球股市“黑色星期五” A股如何更抗跌？多家机构这样说 东方财富网",
+      "tags": [
+        "A股"
+      ],
       "source": "东方财富网",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OOWIzQjM3Mm5WN2hqanRhNlhvN1N4QU1pSE1kcnpIRFRUSTRKU3ZsLUY1Tk1lRkxlMzFnMEYyZm9rN3Z5YWJORWlPdDQtV1Bna2NHMnUwN0duSjBwRTI5LQ?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA3SkdFRFc2Mk9oTXJWNFlCZWRyUFdwRW1pczZIYkgwazhyTDRLRDQ5S0lhRWd2U3lJbC1XaG5tT2pNamp4LUtyNEl2VnBFbl9Pd3hNb1BqalM3VGV2LTY0Qw?oc=5"
     },
     {
-      "title": "纳指一周蒸发逾4万亿美元! 全球股市“黑色星期五”过后，市场开始憧憬AI产业链超跌反弹提供者智通财经",
-      "desc": "纳指一周蒸发逾4万亿美元! 全球股市“黑色星期五”过后，市场开始憧憬AI产业链超跌反弹提供者智通财经 英为财情 Investing.com",
-      "tags": [
-        "市场"
-      ],
-      "source": "英为财情 Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cWRLeTNhOXdDUFdUcmJ5MjhYNUR1NFhHS05pSC13a1ZjM0xaR2VGdTRac29jZ0VocFZDTXZ2cGRub1dzV05XaGdzWVNOSlVEcXNTdjloQV9BYmpQM1pMU0NlSDNEQ0x6cTFOVi16eXU?oc=5"
-    },
-    {
-      "title": "海外研选 | 高盛：2027年全球股市仍看涨 企业盈利增速或显著放缓",
-      "desc": "海外研选 | 高盛：2027年全球股市仍看涨 企业盈利增速或显著放缓 财联社",
-      "tags": [
-        "市场"
-      ],
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBBczVlcFFBelY3UzF4dFR3MFh4ZlFjMTlYaUZiZmQ5TlNvYTR1cjI4aVRwM1otQmJwUVlKYXJabE5qRzBuSnhHaQ?oc=5"
-    },
-    {
-      "title": "美联储多官员接连放鹰：通胀目标仍未实现 有必要进一步加息",
-      "desc": "美联储多官员接连放鹰：通胀目标仍未实现 有必要进一步加息 财联社",
+      "title": "美联储激辩高通胀成因，连续加息还是静待物价回落？-市场参考",
+      "desc": "美联储激辩高通胀成因，连续加息还是静待物价回落？-市场参考 金十数据",
       "tags": [
         "货币政策"
       ],
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBOY0prX29WOHBUbWJvZnpIOVhqcW9xbG9LUksyRGUwdFYtRXptaGwtX3V0QjlEREFKQjdsLUM1a1ZWQ3U2ZnloVA?oc=5"
+      "source": "金十数据",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1iSFV3M1I1YnAzLUxVd3J4Z0cteDJKclVKN19pRTZJNmF6T2pDSHVXNHhUVFZBSHMxanYtYUF5Sl83a2c2TjZrb1ZhMTJYbkU?oc=5"
     },
     {
       "title": "美联储“三把手”：通胀仍未达标，需逐步采取行动，不排除连续加息的可能",
@@ -350,51 +350,51 @@
   ],
   "idea": [
     {
-      "title": "扒了上百条AI爆款视频，我们得出了6点观察",
-      "desc": "扒了上百条AI爆款视频，我们得出了6点观察 36Kr",
+      "title": "服务54万商家后 AINU AI打造爆款视频生产流水线",
+      "desc": "服务54万商家后 AINU AI打造爆款视频生产流水线 36Kr",
       "tags": [
         "科技"
       ],
       "platform": "抖音",
-      "views": "3900万",
+      "views": "3100万",
       "source": "36Kr",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0yZkpXS0FHX2FHNTBkQUl2aVBfc0hqRDR3Sl9sMEFCbzc1ejJtQ3VrcjBuU0U3YTJ5WnF3bmVwQV81S0NITDJieTFXaVZBQQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBvNGRMME1taF81M0lNdW0yZFBCSEg4dEltVlhDR0g4bFlRcHlGZ0pLT1BzU3Y2VVhmR1FnRHNoalJSRWM4OVNnWjY5ck84Ymlaa3A0?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
-      "title": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍",
-      "desc": "短视频矩阵新玩法：用沃创AI一键复刻爆款，流量直接翻倍 中华网",
-      "tags": [
-        "科技"
-      ],
-      "platform": "抖音",
-      "views": "4500万",
-      "source": "中华网",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1KeVRBaE1hOXo3RVgyLUo5cTRWZjNRS1JWTUhxUjd1dXprTFl2X1diOWZFam85WGpwcGw4TW16dmx6VlRhbEVOS2Rib3h5OVhoeUdtcXZIWTNKT3B4U1lCck5JREltamJvOXY2ZXk2Z2JEWHljY2c?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "普通人创作千万播放量爆款视频不是梦！从字节走出的产品人，做了一款 AIGC 视频神器",
-      "desc": "普通人创作千万播放量爆款视频不是梦！从字节走出的产品人，做了一款 AIGC 视频神器 InfoQ.cn",
-      "tags": [
-        "科技"
-      ],
-      "platform": "抖音",
-      "views": "4500万",
-      "source": "InfoQ.cn",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBQNi1CMWpPWTBiQi1USlJ0c3FTNVpoX3RzeU4yUTE5V0JuSHVkNHExZ3p1b1VHV25UMFpXQVE2U2xZM1dzNF9FZXFnQllld0N6dVRCd1lCMW41LWpUU0E?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "我国短视频发展现状与出海热点分析",
-      "desc": "我国短视频发展现状与出海热点分析 人民日报",
+      "title": "红果短剧越骂越火，腾讯和微博也坐不住了_行业新闻",
+      "desc": "红果短剧越骂越火，腾讯和微博也坐不住了_行业新闻 证券之星",
       "tags": [
         "热门"
       ],
       "platform": "抖音",
+      "views": "3100万",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYNDdVRzNFcFBOM2o4T0VISThZZHFzeGZDVTlTU0p0ZWQ0N0w3cmlsZTBMU25Fdi02cjI4VTd0RHVfWWpmQjRwQVdZcFFJVTVrcnNjdFgyb3NmU3U1R2JHMnJNY0k?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "OiiOii 2.0实测：一句话复刻爆款短片",
+      "desc": "OiiOii 2.0实测：一句话复刻爆款短片 news.qq.com",
+      "tags": [
+        "热门"
+      ],
+      "platform": "抖音",
+      "views": "2400万",
+      "source": "news.qq.com",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaaGhMN2lOSlctbmVlY2VoZzFCZFpXbWFDV3hKNTYtcUwxSkJJdVZqMGNvSUhJcGpQLW5mU3RQMG5ZOFN2MnltbkZrSWVLYnBROGVacHVR?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "播放超千万，灰太狼红太狼拍上AI恋爱大戏；教室监控拍出中式恐怖，吓哭千万网友｜AIGC热门精选",
+      "desc": "播放超千万，灰太狼红太狼拍上AI恋爱大戏；教室监控拍出中式恐怖，吓哭千万网友｜AIGC热门精选 新榜",
+      "tags": [
+        "科技"
+      ],
+      "platform": "抖音",
       "views": "5200万",
-      "source": "人民日报",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNS3d5T3EzaUNJc2c5bzQtU1ZPekEzU1BfNFJuTVM0WkJ0d3FYNE9lTlBlYW8tbzJMQkJzSHV0ZjRuYmhUbTJ0REx6UVllVXo1YlNKcjk1Y2pzNHg5UjNJYU5LWFNmeVo1R1BlUkV3Vll6VlU0YWFJdVdOR1d5c0xKNw?oc=5",
+      "source": "新榜",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE41dkREX0N6TWp1dWVsZHRKc3pKczIxbG1LZjhoV1Q5b0RldVFhNEIxc2hQZUNDVTBiX0E5NzdmV1BaNUhHT2FMM2lHSWwzOVA3TFc1djlR?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
@@ -404,21 +404,33 @@
         "热门"
       ],
       "platform": "抖音",
-      "views": "4500万",
+      "views": "3100万",
       "source": "Google Play",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PRS1odEltNXZpeXQ5WjBxcU5qLThNR1NydnlOWHMtOGczLU81RUJFM0VFTVBkNGVxZWU4Uzdqd056RC1MX2JSV0NnVEZLX2VFM2ZOM3pYS0NpUkRMODZSaXl0MUtRckFWeEhTYVZyYmtkb3M3anc?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
-      "title": "万斯计划将访匈牙利 为欧尔班助选",
-      "desc": "万斯计划将访匈牙利 为欧尔班助选 RFI",
+      "title": "What's trending online?一起开启英文社交平台之旅吧",
+      "desc": "What's trending online?一起开启英文社交平台之旅吧 中国日报网英语点津",
       "tags": [
         "热门"
       ],
       "platform": "抖音",
-      "views": "3100万",
-      "source": "RFI",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQME5VMDFzelZzdlJmaElQaldHN2xzUm1VQmdRXzRKRGFQaC1wMHdHaS1TZ21Wa01Eby1veUU5OGJReVVjd0p4alk4SVE0QUdfSng2WEwxNUxUVnhSV3UySjAwbjhWV2h3dFhZdS05ak5hcEZZOUQwMmE5WUx3MDF2TTJEWFUwTWlHN0k4QjBWenByNGFhNXZ6X085SGdPNVVtNkNyRGdpRzNIa05Qb2o5UDllSFdIVjlQRklpNlhjYVBiTkVQRGwwMURpUjVBNkdDTkY4U1o0TWZzRTlIZWttc25HVldVWFcyWXloTjItOThlMmxHYmdRaHdXb3Byak8wSnFEU3l1YVFuSlFoSXZhdmVZcHk?oc=5",
+      "views": "2400万",
+      "source": "中国日报网英语点津",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNS1BCQ21lRXFZd095RHVPamhuM2lNSGZkUXlvQUpuQVBIeS1aMUpPWGlnWUFpLS1JeDBpR2xtblF5N1QzVXgzbFNZX251N0JaYTlTNnBMRG9GTG82T3o0OWJ4ZkdHWGFlNzdEYnNfVlRCcEF4eFBId3daVUgzQUVidmotZ28?oc=5",
+      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
+    },
+    {
+      "title": "'Did you save a fox on a snowy mountain?' Viral Chinese video created using AI i",
+      "desc": "'Did you save a fox on a snowy mountain?' Viral Chinese video created using AI in 5 hours with $7 AsiaOne.com",
+      "tags": [
+        "科技"
+      ],
+      "platform": "抖音",
+      "views": "3900万",
+      "source": "AsiaOne.com",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbEdZaFA1YktlZkVrWjVjakhjY3NJeHpnN25HWHlYRVJDcFVvTWptMmhMWVEyX0s4cTRzVC1NaG02Wnc5aWRYY2tNazZ4eTRMNDVOd3N4RVF5QnZwOEdITnF0VlgyYnJHeEpqNlUyMmdQRDUtd0NUTkdJMFpWaFQyQUNHWHF1WXRwYndGSGsxdw?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
@@ -428,21 +440,9 @@
         "热门"
       ],
       "platform": "抖音",
-      "views": "3900万",
+      "views": "4500万",
       "source": "China Skinny",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1malBoZU9LcmE1azB3VDk3TUZsOElkVnVManpuY2ZhQk55NlV2Y1NYRWNoODVic0p0cC1BQnBFMm90ZXIxd0ZzQzQxRkZ3YkFSVnMtRjBOVkpKeDdUX09wc05ITnZLdlUzRVc4T1ZvZWFoZjJDZEE?oc=5",
-      "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
-    },
-    {
-      "title": "Video: Viral clip of Chinese student's emotional recital triggers debate over na",
-      "desc": "Video: Viral clip of Chinese student's emotional recital triggers debate over national education Hong Kong Free Press HKFP",
-      "tags": [
-        "热门"
-      ],
-      "platform": "抖音",
-      "views": "2400万",
-      "source": "Hong Kong Free Press HKFP",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTEZ3b1F5N1VUY3U4aGVBZ1d2RFVNRXViTHFhM2dXYnBLYmFGZEhoclBGZWNjcWk4ejl4LU5JdW02TUdacS1mZmFHaG9hWXVVWUQ3OVVTeDlaMGpnekM3Zm5nUjZmT1BxSnJVUkFsWkJrVUFVd3BXYXd5b3hodmFsanhSRVRUdjZsSXhwakZIVTNKbmV3MkR1bWZ1U290aHhkbjJUMTdFcHQ3MXNOWFBDakd0SWIxcmhNUEJreXJB?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
     },
     {
@@ -452,7 +452,7 @@
         "热门"
       ],
       "platform": "抖音",
-      "views": "2400万",
+      "views": "3100万",
       "source": "中国日报网",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1XdU1uSFZNZ1B0YWlMbjBVQk9iR2JQX1BpWTB2N2hTdjJSUkNhU1JEZGRjeE0taTE5eEtCb1hfQjdTLW1uWkkwcF8wZEphOC1ERXBNWWRwR2dtanlvYjVqY0pYTjZvdVZ5SDJQOExPZHZZZzNwZUtzS1lHd2s?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
@@ -464,7 +464,7 @@
         "热门"
       ],
       "platform": "抖音",
-      "views": "5200万",
+      "views": "4500万",
       "source": "每日经济新闻",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ialVPQjA5YVZzbFBYdDVINnllQzQzMHI1TE1DV25VdElXb0k3akVuWDZjQ0JxNzZBemNlY1pLZmhILXdlTzR6aWtlQURGZF9KZThHYktzTWFWbTgzWEVYVnlpazJJUQ?oc=5",
       "why": "由大数据检索到的近期高传播内容，建议结合「强冲突开头 + 真实情绪 + 可复制结构」拆解复用。"
